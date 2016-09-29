@@ -6,18 +6,18 @@
 /* Clear Sans Font */
 @font-face {
     font-family: 'Clear Sans';
-    src: url('./fonts/clearsans/ClearSans-Regular.eot') format('embedded-opentype'),
-        url('./fonts/clearsans/ClearSans-Regular.woff') format('woff'),
-        url('./fonts/clearsans/ClearSans-Regular.ttf')  format('truetype'),
-        url('./fonts/clearsans/ClearSans-Regular.svg#ClearSans-Regular') format('svg');
+    src: url('./fonts/clearsans/EOT/ClearSans-Regular.eot') format('embedded-opentype'),
+        url('./fonts/clearsans/WOFF/ClearSans-Regular.woff') format('woff'),
+        url('./fonts/clearsans/TTF/ClearSans-Regular.ttf')  format('truetype'),
+        url('./fonts/clearsans/SVG/ClearSans-Regular.svg#ClearSans-Regular') format('svg');
 }
 @font-face {
     font-family: 'Clear Sans';
     font-weight: 700;
-    src: url('./fonts/clearsans/ClearSans-Bold.eot') format('embedded-opentype'),
-        url('./fonts/clearsans/ClearSans-Bold.woff') format('woff'),
-        url('./fonts/clearsans/ClearSans-Bold.ttf')  format('truetype'),
-        url('./fonts/clearsans/ClearSans-Bold.svg#ClearSans-Bold') format('svg');
+    src: url('./fonts/clearsans/EOT/ClearSans-Bold.eot') format('embedded-opentype'),
+        url('./fonts/clearsans/WOFF/ClearSans-Bold.woff') format('woff'),
+        url('./fonts/clearsans/TTF/ClearSans-Bold.ttf')  format('truetype'),
+        url('./fonts/clearsans/SVG/ClearSans-Bold.svg#ClearSans-Bold') format('svg');
 }
 
 /***********
