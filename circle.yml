@@ -6,4 +6,4 @@ deployment:
   production:
     branch: master
     commands:
-      - rsync -avz -e --delete --rsh="ssh -o BatchMode=yes -p 22 -i" . circleci@getkap.co:/var/www/getkap.co/html/
+      - rsync -avz -e --delete --rsh="ssh -o BatchMode=yes -p 22" . circleci@getkap.co:/var/www/getkap.co/html/
