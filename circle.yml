@@ -1,0 +1,5 @@
+deployment:
+  production: # just a label
+    branch: master
+    commands:
+      - scp -r * circleci@getkap.co:/var/www/getkap.co/html/
