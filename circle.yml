@@ -6,4 +6,4 @@ deployment:
   production:
     branch: master
     commands:
-      - rsync -avz . tim@getkap.co:/var/www/getkap.co/html/
+      - rsync -avz -e "ssh" . circleci@getkap.co:/var/www/getkap.co/html/
