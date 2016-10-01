@@ -1,5 +1,9 @@
+test:
+  override:
+    - echo "test"
+
 deployment:
-  production: # just a label
+  production:
     branch: master
     commands:
       - scp -r * circleci@getkap.co:/var/www/getkap.co/html/
