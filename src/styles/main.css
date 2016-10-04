@@ -204,13 +204,13 @@ a.button svg, a.button img {
   margin-right: 17px;
   margin-right: 1.7rem;
 }
-.footer__brand a { line-height: 0; }
-.footer__brand p { color: $grey-light; }
-
-.footer__brand > a:last-child {
-  margin-left: 25px;
+.footer__brand a {
+  line-height: 0;
   font-weight: 600;
 }
+.footer__brand p { color: $grey-light; }
+
+.footer__brand > a:last-child { margin-left: 25px; }
 
 
 
