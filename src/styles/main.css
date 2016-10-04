@@ -207,6 +207,11 @@ a.button svg, a.button img {
 .footer__brand a { line-height: 0; }
 .footer__brand p { color: $grey-light; }
 
+.footer__brand > a:last-child {
+  margin-left: 25px;
+  font-weight: 600;
+}
+
 
 
 
@@ -271,8 +276,8 @@ a.button svg, a.button img {
   .header { justify-content: flex-start; }
   .footer {
     padding-top: 175px;
-    height: 564px;
-    height: 56.4rem;
+    height: 594px;
+    height: 59.4rem;
   }
 
   .hero {
@@ -313,6 +318,7 @@ a.button svg, a.button img {
     margin-right: 0;
     margin-bottom: 24px;
     margin-bottom: 2.4rem;
+    line-height: normal;
   }
 
   .footer__brand {
@@ -323,5 +329,12 @@ a.button svg, a.button img {
   .footer__brand-logo {
     margin-bottom: 16px;
     margin-bottom: 1.6rem;
+  }
+
+  .footer__brand-logo img { margin: 0; }
+
+  .footer__brand > a:last-child {
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
