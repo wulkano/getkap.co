@@ -1,9 +1,10 @@
-test:
-  override:
-    - echo "test"
+dependencies:
+  post:
+    - npm install -g gulp-cli
+    - gulp
 
 deployment:
   production:
     branch: master
     commands:
-      - rsync -avz -e -O --delete --rsh="ssh -o BatchMode=yes -p 22" . circleci@getkap.co:/var/www/getkap.co/html/
+      - rsync -avz -e -O --delete --rsh="ssh -o BatchMode=yes -p 22" ./build/ circleci@getkap.co:/var/www/getkap.co/html/

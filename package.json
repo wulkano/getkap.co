@@ -1,0 +1,41 @@
+{
+  "name": "kap-website",
+  "version": "1.0.0",
+  "description": "The code for getkap.co",
+  "main": " ",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wulkano/kap-website.git"
+  },
+  "author": "github.com/Wulkano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wulkano/kap-website/issues"
+  },
+  "homepage": "https://getkap.co",
+  "devDependencies": {
+    "autoprefixer": "^6.5.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.16.0",
+    "babel-register": "^6.16.3",
+    "cssnano": "^3.7.6",
+    "del": "^2.2.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-svgo": "^1.0.3",
+    "postcss-import": "^8.1.2",
+    "postcss-simple-vars": "^3.0.0"
+  },
+  "babel": {
+    "plugins": [
+      "transform-es2015-modules-commonjs"
+    ]
+  },
+  "dependencies": {
+    "clear.css": "^1.0.0"
+  }
+}

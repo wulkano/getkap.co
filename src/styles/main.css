@@ -3,6 +3,9 @@
   ----------------
 */
 
+/* Import Reset */
+@import "clear.css/dist/clear.min.css";
+
 /* Clear Sans Font */
 @font-face {
     font-family: 'Clear Sans';
@@ -24,20 +27,28 @@
 Base styling
 ************/
 
+/* Colour vars */
+$grey-dark:    #222222;
+$grey:         #AAAAAA;
+$grey-light:   #B8B8B8;
+$grey-lighter: #CCCCCC;
+$neon-mint:    #00F7BF;
+$purple:       #8F08FD;
+
 body {
-  color: #222222;
+  color: $grey-dark;
   font-size: 1.2rem;
   font-family: 'Clear Sans';
   letter-spacing: -0.12px;
 }
 
 ::-moz-selection {
-  background: #00F7BF;
-  color: #222222;
+  background: $neon-mint;
+  color: $grey-dark;
 }
 ::selection {
-  background: #00F7BF;
-  color: #222222;
+  background: $neon-mint;
+  color: $grey-dark;
 }
 
 img, svg {
@@ -63,7 +74,7 @@ h1 {
   font-size: 3.6rem;
 }
 
-h4 {
+h2 {
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 24px;
@@ -72,18 +83,18 @@ h4 {
 }
 
 a {
-  color: #CCCCCC;
+  color: $grey-lighter;
   text-decoration: none;
   transition: color 0.12s ease-in-out, text-decoration 0.12s ease-in-out;
 }
 
-a:hover { color: #00F7BF; }
-a.link--light { color: #00F7BF; }
+a:hover { color: $neon-mint; }
+a.link--light { color: $neon-mint; }
 a.link--light:hover { text-decoration: underline; }
 
 a.button {
   border-radius: 8px;
-  background: #8F08FD;
+  background: $purple;
   height: 48px;
   height: 4.8rem;
   padding: 0 17px;
@@ -92,7 +103,7 @@ a.button {
   align-items: center;
   text-transform: uppercase;
   font-weight: 700;
-  color: #FFF;
+  color: white;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -147,9 +158,8 @@ a.button svg, a.button img {
 
 /* FOOTER */
 .footer {
-  background: #222222;
-  color: #FFFFFF;
-  /* allow pushed content to be clicked over footer */
+  background: $grey-dark;
+  color: white;
 }
 
 .footer__marketing {
@@ -162,7 +172,7 @@ a.button svg, a.button img {
   z-index: 1;
 }
 
-.footer__marketing h4 {
+.footer__marketing h2 {
   max-width: 500px;
   max-width: 50rem;
   padding-bottom: 38px;
@@ -178,7 +188,7 @@ a.button svg, a.button img {
 }
 
 .footer__marketing-details span {
-  color: #AAAAAA;
+  color: $grey;
 }
 
 .footer__brand {
@@ -195,7 +205,7 @@ a.button svg, a.button img {
   margin-right: 1.7rem;
 }
 .footer__brand a { line-height: 0; }
-.footer__brand p { color: #B8B8B8; }
+.footer__brand p { color: $grey-light; }
 
 
 
@@ -210,21 +220,27 @@ a.button svg, a.button img {
   padding-right: 350px;
 }
 
-.hero h4 {
+.hero h2 {
   margin-bottom: 34px;
   margin-bottom: 3.4rem;
-  color: #AAAAAA;
+  color: $grey;
 }
 
 .hero__button {
   position: relative;
   z-index: 2;
+  transition: transform 0.12s ease-in-out, color 0.12s ease-in-out;
+}
+
+.hero__button:hover {
+  transform: scale(1.1);
+  background: #9411FF;
 }
 
 .hero__image {
   position: absolute;
   right: 15px;
-  bottom: -149px;
+  bottom: -148px;
   border-radius: 5px;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
 }
@@ -283,7 +299,7 @@ a.button svg, a.button img {
     padding-top: 3.6rem;
   }
 
-  .footer__marketing h4 {
+  .footer__marketing h2 {
     margin-right: 0;
     padding-bottom: 32px;
     padding-bottom: 3.2rem;
