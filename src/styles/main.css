@@ -237,6 +237,9 @@ a.button svg, a.button img {
   transition: transform 0.12s ease-in-out, color 0.12s ease-in-out;
 }
 
+/* Explicitly state height for firefox */
+.hero__button img { height: 17px }
+
 .hero__button:hover {
   transform: scale(1.1);
   background: #9411FF;
