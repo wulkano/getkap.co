@@ -20,6 +20,6 @@ If you want to make multiple changes and have the files rebuilt on every
 change that you do, use `gulp dev`.
 
 
-[kap]: getkap.co
-[node.js]: nodejs.org
+[kap]: https://getkap.co
+[node.js]: https://nodejs.org
 [Fork]: https://help.github.com/articles/fork-a-repo/
