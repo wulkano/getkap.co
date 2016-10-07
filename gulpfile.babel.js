@@ -53,7 +53,7 @@ function watchSrc() {
   watch(IMG_GLOB, images);
 };
 
-export const mainTasks = parallel(styles, images, misc);
+const mainTasks = parallel(styles, images, misc);
 export const build = series(clean, mainTasks);
 export const dev = series(clean, mainTasks, watchSrc);
 
