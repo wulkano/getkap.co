@@ -48,7 +48,7 @@ export function misc() {
     .pipe(dest(BUILD_DIR));
 }
 
-export function watchSrc() {
+function watchSrc() {
   watch(CSS_GLOB, styles);
   watch(IMG_GLOB, images);
 };
