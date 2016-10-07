@@ -8,12 +8,14 @@ import simpleVars from 'postcss-simple-vars';
 import rename from 'gulp-rename';
 import svgo from 'gulp-svgo';
 import imagemin from 'gulp-imagemin';
+import pixrem from 'pixrem';
 
 // Sources
 const SRC_DIR = 'src';
 const BUILD_DIR = 'build';
 const CSS_GLOB = `${SRC_DIR}/**/*.css`;
 const IMG_GLOB = `${SRC_DIR}/images/**/*`;
+const MISC_GLOB = [`${SRC_DIR}/**/*`, `!${CSS_GLOB}`, `!${IMG_GLOB}`];
 
 // Clean task
 export function clean() {
@@ -24,7 +26,8 @@ export function clean() {
 const processors = [
   atImport,
   simpleVars,
-  autoprefixer({browsers: ['last 2 versions']})
+  autoprefixer({browsers: ['last 2 versions']}),
+  pixrem({rootValue: 10})
 ];
 export function styles() {
   return src(CSS_GLOB)
@@ -44,13 +47,14 @@ export function images() {
 
 // Pipe other files
 export function misc() {
-  return src([`${SRC_DIR}/**/*`, `!${CSS_GLOB}`, `!${IMG_GLOB}`])
+  return src(MISC_GLOB)
     .pipe(dest(BUILD_DIR));
 }
 
 function watchSrc() {
   watch(CSS_GLOB, styles);
   watch(IMG_GLOB, images);
+  watch(MISC_GLOB, misc);
 };
 
 const mainTasks = parallel(styles, images, misc);
