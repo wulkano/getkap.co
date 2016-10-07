@@ -37,6 +37,7 @@ $purple:       #8F08FD;
 
 body {
   color: $grey-dark;
+  background: white;
   font-size: 1.2rem;
   font-family: 'Clear Sans';
   letter-spacing: -0.12px;
