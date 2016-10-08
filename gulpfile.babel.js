@@ -64,7 +64,7 @@ function watchSrc() {
   watch(CSS_GLOB, styles);
   watch(IMG_GLOB, images);
   watch(MISC_GLOB, misc);
-  watch(['**/rev-manifest.json', '**/*.html'], revAssets);
+  watch(['**/rev-manifest.json'], revAssets);
 };
 
 const mainTasks = parallel(styles, images, misc);
