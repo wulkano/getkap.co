@@ -144,9 +144,10 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 .site-header {
   display: flex;
   align-items: center;
+  height: 96px;
 }
 
-.logo { padding: 3rem 0; }
+.logo { line-height: 0; }
 
 .status {
   margin-left: auto;
@@ -281,6 +282,8 @@ a.button svg, a.button img { padding-right: 1.8rem; }
     padding-top: 175px;
     height: 59.4rem;
   }
+
+  .site-header { width: 100%; }
 
   .hero {
     margin-bottom: 0;
