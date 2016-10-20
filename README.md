@@ -1,6 +1,6 @@
 # kap-website
 
-This is the repository for the [kap] website!
+Repository for the [Kap] website
 
 ## Development
 
@@ -23,3 +23,10 @@ change that you do, use `gulp dev`.
 [kap]: https://getkap.co
 [node.js]: https://nodejs.org
 [Fork]: https://help.github.com/articles/fork-a-repo/
+
+## Related Repositories
+- [App](https://github.com/wulkano/kap)
+- [Aperture](https://github.com/wulkano/aperture)
+
+## Newsletter
+Subscribe [here](http://eepurl.com/ch90_1).
