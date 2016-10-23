@@ -4,7 +4,7 @@
 */
 
 /* Import Reset */
-@import "clear.css/dist/clear.min.css";
+@import "eightpoint/dist/eight.min.css";
 
 /* Clear Sans Font */
 @font-face {
@@ -40,7 +40,7 @@ body {
   background: white;
   font-size: 1.2rem;
   font-family: 'Clear Sans';
-  letter-spacing: -.012rem;
+  letter-spacing: -.010em;
 }
 
 ::-moz-selection {
@@ -61,21 +61,24 @@ img, svg {
   user-select: none;
 }
 
-h1 {
-  font-size: 3.6rem;
-  line-height: 6.4rem;
-  letter-spacing: -.036rem;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  letter-spacing: -0.010em;
 }
 
-/* temporary fix for reset */
-:-webkit-any(article,aside,nav,section) :-webkit-any(article,aside,nav,section) h1, :-webkit-any(article,aside,nav,section) h1 {
-  font-size: 3.6rem;
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.5em;
 }
 
 h2 {
-  font-size: 1.8rem;
-  line-height: 2.4rem;
-  letter-spacing: -.018rem;
+  font-size: 2.4rem;
+  line-height: 1.333em;
+}
+
+h3 {
+  font-size: 1.6rem;
+  line-height: 1.5em;
 }
 
 a {
@@ -187,7 +190,7 @@ a.button svg, a.button img { padding-right: 1.8rem; }
   z-index: 1;
 }
 
-.footer__marketing h2 {
+.footer__marketing h3 {
   max-width: 50rem;
   padding-bottom: 3.8rem;
   margin-right: 350px;

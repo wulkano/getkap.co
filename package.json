@@ -39,6 +39,6 @@
     ]
   },
   "dependencies": {
-    "clear.css": "^1.0.0"
+    "Eightpoint": "wulkano/eightpoint"
   }
 }

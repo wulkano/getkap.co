@@ -63,7 +63,7 @@ export function revAssets() {
 function watchSrc() {
   watch(CSS_GLOB, styles);
   watch(IMG_GLOB, images);
-  watch(MISC_GLOB, misc);
+  watch(MISC_GLOB, series(misc, revAssets));
   watch(['**/rev-manifest.json'], revAssets);
 };
 
