@@ -278,7 +278,7 @@ a.button svg, a.button img { padding-right: 1.8rem; }
     text-align: center;
     width: auto;
   }
-  .header, .footer { min-height: 50rem; }
+  .header, .footer { min-height: 55rem; }
 
   .header { justify-content: flex-start; }
   .footer {
@@ -337,8 +337,4 @@ a.button svg, a.button img { padding-right: 1.8rem; }
     margin-left: 0;
     margin-top: 20px;
   }
-}
-
-@media screen and (max-width: 369px) {
-  .header { min-height: 55rem; }
 }
