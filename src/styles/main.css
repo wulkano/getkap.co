@@ -147,21 +147,36 @@ a.button svg, a.button img { padding-right: 1.8rem; }
   justify-content: space-between;
 }
 
-.header {
-  background: linear-gradient(135deg, $neon-mint, $purple, $blue);
-  background-size: 200% 200%;
-  animation: headerAnimation 60s ease infinite;
+.header-animation {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  display: block;
+  z-index: -1;
 }
 
-@keyframes headerAnimation {
+.header-animation::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(farthest-corner at -10% 10% , #00CCA3 5%, #8F08FD 100%);
+  animation: bg 6s ease-in infinite alternate;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+@keyframes bg {
   0% {
-    background-position: 0% 50%
-  }
-  50% {
-    background-position: 100% 50%
+    transform: scale(1);
   }
   100% {
-    background-position: 0% 50%
+    transform: scale(2);
   }
 }
 
@@ -177,7 +192,6 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 .status {
   margin-left: auto;
   border-radius: 4px;
-  border: 1px solid $grey-lighter;
   height: 3.2rem;
   display: flex;
   align-items: center;
@@ -229,9 +243,10 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 .footer__marketing-features {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   padding-bottom: 3.5rem;
+  max-width: 350px;
 }
 
 .footer__marketing-features li {
@@ -241,7 +256,6 @@ a.button svg, a.button img { padding-right: 1.8rem; }
   border-radius: 50%;
   line-height: 74px;
   text-align: center;
-  margin: 0 20px 20px;
 }
 
 .footer__marketing-features li:nth-child(2) svg {
@@ -309,11 +323,11 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 .hero__image::before {
   content: "";
   position: absolute;
-  top: -5px;
+  bottom: 5px;
   left: 0;
   display: block;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 5px);
   border-radius: 5px;
   box-shadow: 0 24px 64px rgba(0, 0, 0, .4);
 }
@@ -341,7 +355,7 @@ a.button svg, a.button img { padding-right: 1.8rem; }
   .header { justify-content: flex-start; }
   .footer {
     padding-top: 280px;
-    height: 80rem;
+    height: 75rem;
   }
 
   .site-header { width: 100%; }
@@ -395,22 +409,5 @@ a.button svg, a.button img { padding-right: 1.8rem; }
   .footer__brand > a:last-child {
     margin-left: 0;
     margin-top: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  .footer__marketing-features {
-    max-width: 50%;
-    justify-content: space-between;
-  }
-
-  .footer__marketing-features li {
-    margin: 0;
-  }
-}
-
-@media (min-width: 900px) {
-  .footer__marketing-features {
-    max-width: 450px;
   }
 }
