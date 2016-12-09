@@ -201,7 +201,6 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 /* FOOTER */
 .footer {
   background: white;
-  /*color: white;*/
 }
 
 .footer__marketing {
@@ -245,7 +244,7 @@ a.button svg, a.button img { padding-right: 1.8rem; }
   margin: 0 20px 20px;
 }
 
-.footer__marketing-features li:nth-child(2) img {
+.footer__marketing-features li:nth-child(2) svg {
   transform: scale(1.5);
 }
 
@@ -379,6 +378,7 @@ a.button svg, a.button img { padding-right: 1.8rem; }
     flex-direction: column;
     justify-content: center;
   }
+
   .footer__marketing-details a {
     margin-right: 0;
     margin-bottom: 2.4rem;
