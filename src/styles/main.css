@@ -236,7 +236,10 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 
 .footer__marketing-details { display: flex; }
 
-.footer__marketing-details a { margin-right: 3.2rem; }
+.footer__marketing-details a {
+  margin-right: 3.2rem;
+  margin-bottom: 8px;
+}
 
 .footer__marketing-details span {
   color: $grey;
@@ -275,7 +278,7 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 .footer__brand a {
   line-height: 0;
   font-weight: 600;
-  color: #919191
+  color: #919191;
 }
 .footer__brand a:hover { color: $neon-mint; }
 .footer__brand p { color: #919191; }
@@ -383,7 +386,7 @@ a.button svg, a.button img { padding-right: 1.8rem; }
   .header { justify-content: flex-start; }
   .footer {
     padding-top: 280px;
-    height: 75rem;
+    height: 78rem;
   }
 
   .site-header { width: 100%; }
@@ -423,7 +426,7 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 
   .footer__marketing-details a {
     margin-right: 0;
-    margin-bottom: 2.4rem;
+    /*margin-bottom: 2.4rem;*/
     line-height: normal;
   }
 
@@ -436,6 +439,6 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 
   .footer__brand > a:last-child {
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 16px;
   }
 }
