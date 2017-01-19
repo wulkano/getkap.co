@@ -22,7 +22,7 @@
     "autoprefixer": "6.5.0",
     "babel-plugin-transform-es2015-modules-commonjs": "6.16.0",
     "babel-register": "6.16.3",
-    "cssnano": "3.7.6",
+    "cssnano": "3.8.2",
     "del": "2.2.2",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-fontmin": "0.7.4",
