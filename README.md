@@ -1,4 +1,4 @@
-# kap-website
+# getkap.co
 
 Repository for the [Kap] website
 

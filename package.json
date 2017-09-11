@@ -1,7 +1,7 @@
 {
-  "name": "kap-website",
+  "name": "getkap.co",
   "version": "1.0.0",
-  "description": "The code for getkap.co",
+  "description": "The source for getkap.co",
   "main": " ",
   "scripts": {
     "dev": "gulp dev",
@@ -10,12 +10,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wulkano/kap-website.git"
+    "url": "git+https://github.com/wulkano/getkap.co.git"
   },
   "author": "github.com/Wulkano",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/wulkano/kap-website/issues"
+    "url": "https://github.com/wulkano/getkap.co/issues"
   },
   "homepage": "https://getkap.co",
   "devDependencies": {
@@ -42,6 +42,6 @@
     ]
   },
   "dependencies": {
-    "Eightpoint": "wulkano/eightpoint"
+    "eightpoint": "wulkano/eightpoint"
   }
 }
