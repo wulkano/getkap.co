@@ -226,6 +226,7 @@ a.button svg, a.button img { padding-right: 1.8rem; }
   padding-top: 6.2rem;
   position: relative;
   z-index: 1;
+  flex: 0 0 auto;
 }
 
 .footer__marketing h3 {
