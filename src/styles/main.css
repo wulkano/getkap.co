@@ -6,21 +6,26 @@
 /* Import Reset */
 @import "eightpoint/dist/eight.min";
 
-/* Clear Sans Font */
+/* Inter UI Font */
 @font-face {
-    font-family: 'Clear Sans';
-    src: url('./fonts/clearsans/EOT/ClearSans-Regular.eot') format('embedded-opentype'),
-        url('./fonts/clearsans/WOFF/ClearSans-Regular.woff') format('woff'),
-        url('./fonts/clearsans/TTF/ClearSans-Regular.ttf')  format('truetype'),
-        url('./fonts/clearsans/SVG/ClearSans-Regular.svg#ClearSans-Regular') format('svg');
+    font-family: 'Inter UI';
+    font-weight: 400;
+    src: url('./fonts/interui/Inter-UI-Regular.woff2') format('woff2')
+         url('./fonts/interui/Inter-UI-Regular.woff') format('woff');
 }
+
 @font-face {
-    font-family: 'Clear Sans';
+    font-family: 'Inter UI';
+    font-weight: 600;
+    src: url('./fonts/interui/Inter-UI-Medium.woff2') format('woff2')
+         url('./fonts/interui/Inter-UI-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Inter UI';
     font-weight: 700;
-    src: url('./fonts/clearsans/EOT/ClearSans-Bold.eot') format('embedded-opentype'),
-        url('./fonts/clearsans/WOFF/ClearSans-Bold.woff') format('woff'),
-        url('./fonts/clearsans/TTF/ClearSans-Bold.ttf')  format('truetype'),
-        url('./fonts/clearsans/SVG/ClearSans-Bold.svg#ClearSans-Bold') format('svg');
+    src: url('./fonts/interui/Inter-UI-Bold.woff2') format('woff2')
+         url('./fonts/interui/Inter-UI-Bold.woff') format('woff');
 }
 
 /***********
@@ -43,17 +48,17 @@ body {
   color: $grey-darker;
   background: white;
   font-size: 1.2rem;
-  font-family: 'Clear Sans';
+  font-family: 'Inter UI';
   letter-spacing: -.010em;
 }
 
 ::-moz-selection {
-  background: $neon-mint;
-  color: $grey-darker;
+  background: $neon-purple;
+  color: white;
 }
 ::selection {
-  background: $neon-mint;
-  color: $grey-darker;
+  background: $neon-purple;
+  color: white;
 }
 
 img, svg {
@@ -278,7 +283,7 @@ a.button--small {
   font-weight: 600;
   color: #919191;
 }
-.footer__brand a:hover { color: $neon-mint; }
+.footer__brand a:hover { color: $neon-purple; }
 .footer__brand p { color: #919191; }
 
 .footer__brand > a:last-child { margin-left: 25px; }
