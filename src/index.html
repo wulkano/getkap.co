@@ -49,73 +49,52 @@
         <link rel="stylesheet" href="styles/main.css">
     </head>
     <body>
-
+      <div class="wrapper">
         <!-- Kap Site Header -->
         <header class="header">
-          <div class="header-animation"></div>
           <div class="site-header container">
             <a href="./" class="logo">
               <img src="./images/logo.svg" alt="Kap" draggable="false">
             </a>
 
-            <a href="https://github.com/wulkano/kap/releases/latest" target="_blank" class="status">
-              <span class="status__tag">NEW</span>
-              <span>View changelog</span>
-            </a>
+            <div class="nav-links">
+              <a href="#">Changelog</a>
+              <a href="#" class="button button--small">Download</a>
+            </div>
           </div>
 
-          <section class="hero container">
+        </header>
+        <section class="hero container">
+          <section class="col-50 hero__content">
             <h1>Capture your screen</h1>
             <h2>An open-source screen recorder built with web technology</h2>
             <a href="https://getkap.co/download" class="button hero__button">
               <img src="./images/download.svg" draggable="false" alt="Download Kap">
               Get App
             </a>
-
-            <picture class="hero__image">
-              <img src="./images/kap-app.png" alt="Kap Application" srcset="./images/kap-app.png 1x, ./images/kap-app@2x.png 2x, ./images/kap-app@3x.png 3x" draggable="false">
-            </picture>
-          </section>
-        </header>
-
-        <footer class="footer">
-          <section class="footer__marketing container">
-            <h3>The ease of use and speed you've been looking for - the functionality and extensibility you didn't know you needed.</h3>
-              <ul class="footer__marketing-features">
-                <li>
-                  <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 12h-2v3h-3v2h5v-5zM7 9h3V7H5v5h2V9zm14-6H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16.01H3V4.99h18v14.02z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                </li>
-                <li>
-                  <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path  d="M11.5 9H13v6h-1.5zM9 9H6c-.6 0-1 .5-1 1v4c0 .5.4 1 1 1h3c.6 0 1-.5 1-1v-2H8.5v1.5h-2v-3H10V10c0-.5-.4-1-1-1zm10 1.5V9h-4.5v6H16v-2h2v-1.5h-2v-1z"/></svg>
-                </li>
-                <li>
-                  <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 14c1.66 0 2.99-1.34 2.99-3L15 5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm5.3-3c0 3-2.54 5.1-5.3 5.1S6.7 14 6.7 11H5c0 3.41 2.72 6.23 6 6.72V21h2v-3.28c3.28-.48 6-3.3 6-6.72h-1.7z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
-                </li>
-                <li>
-                  <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg>
-                </li>
-              </ul>
             <div class="footer__marketing-details">
               <a href="https://github.com/wulkano/kap" class="footer__marketing-download link--light is-bold">View and contribute on GitHub</a>
-              <span> macOS 10.10 or above required</span>
+              <span> macOS 10.12 or above required</span>
             </div>
           </section>
 
+          <section class="col-50 hero__image">
+            <picture>
+              <img src="./images/kap-app.png" alt="Kap Application" srcset="./images/kap-app.png 1x, ./images/kap-app@2x.png 2x, ./images/kap-app@3x.png 3x" draggable="false">
+            </picture>
+          </section>
+        </section>
+
+        <footer class="footer">
           <section class="footer__brand container">
             <a href="https://wulkano.com" class="footer__brand-logo"><img src="./images/wulkano.svg" draggable="false" alt="Made by Wulkano and friends"></a>
             <p>
-              <a href="https://twitter.com/matheusfrndes">@matheusfrndes</a>,
-              <a href="https://twitter.com/codetheory">@codetheory</a>,
-              <a href="https://twitter.com/skllcrn">@skllcrn</a>,
-              <a href="https://twitter.com/doot0">@doot0</a>,
-              <a href="https://twitter.com/sindresorhus">@sindresorhus</a>,
-              <a href="https://twitter.com/charliehield">@charliehield</a>,
               &amp; friends.
             </p>
-            <a href="http://eepurl.com/ch90_1">Sign up for early updates.</a>
+            <a href="http://eepurl.com/ch90_1">Sign up for updates.</a>
           </section>
         </footer>
-
+      </div>
         <script>
           window.productHuntUpcoming = {
             appId: 240,

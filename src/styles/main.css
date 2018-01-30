@@ -37,6 +37,7 @@ $grey-lighter: #CCCCCC;
 $neon-mint:    #00CCA3;
 $blue:         #3F69C2;
 $purple:       #8F08FD;
+$neon-purple:  #7146FE;
 
 body {
   color: $grey-darker;
@@ -72,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3.2rem;
   line-height: 1.5em;
-  color: white;
+  margin-bottom: 0.5em;
 }
 
 h2 {
@@ -91,13 +92,13 @@ a {
   transition: color .12s ease-in-out, text-decoration .12s ease-in-out;
 }
 
-a:hover { color: $neon-mint; }
-a.link--light { color: $neon-mint; }
+a:hover { color: $neon-purple; }
+a.link--light { color: $neon-purple; }
 a.link--light:hover { text-decoration: underline; }
 
 a.button {
   border-radius: .8rem;
-  background: $neon-mint;
+  background: $neon-purple;
   height: 4.8rem;
   padding: 0 1.7rem;
   display: flex;
@@ -116,6 +117,11 @@ a.button {
 a.button svg, a.button img { padding-right: 1.8rem; }
 .is-bold { font-weight: 700; }
 
+a.button--small {
+  padding: 0 1rem;
+  height: 3rem;
+}
+
 /*
   Grid
 
@@ -133,53 +139,26 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 }
 
 .col { flex: 1; }
+.col-50 { width: 50%; }
 
 
-
-
-/* Header/Footer */
-.header, .footer {
-  height: 50vh;
-  height: 50vh;
-  min-height: 27rem;
+.wrapper {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.header { position: relative; }
-
-.header-animation {
-  position: absolute;
-  overflow: hidden;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  z-index: -1;
+/* Header/Footer */
+.header, .footer {
+  flex: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.header-animation::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(farthest-corner at -10% 10% , #00CCA3 5%, #8F08FD 100%);
-  animation: bg 6s ease-in infinite alternate;
-  will-change: transform;
-  transform-style: preserve-3d;
-}
-
-@keyframes bg {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(2);
-  }
+.header {
+  position: relative;
 }
 
 /* HEADER */
@@ -190,6 +169,21 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 }
 
 .logo { line-height: 0; }
+
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a:first-child {
+  color: $neon-purple;
+  font-weight: 600;
+}
+
+.nav-links .button {
+  margin-left: 2rem;
+}
 
 .status {
   margin-left: auto;
@@ -235,10 +229,13 @@ a.button svg, a.button img { padding-right: 1.8rem; }
   margin-right: 350px;
 }
 
-.footer__marketing-details { display: flex; }
+.footer__marketing-details {
+  display: flex;
+  margin-top: 2rem;
+}
 
 .footer__marketing-details a {
-  margin-right: 3.2rem;
+  margin-right: 2.5rem;
   margin-bottom: 8px;
 }
 
@@ -291,23 +288,25 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 
 /* Hero */
 .hero {
+
+}
+
+.hero__content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: -2.4rem;
-  padding-right: 350px;
+  justify-content: center;
 }
 
 .hero h2 {
   margin-bottom: 3.4rem;
-  color: rgba(255, 255, 255, 0.65);
 }
 
 .hero__button {
   position: relative;
   z-index: 2;
   transition: transform .12s ease-in-out, color .12s ease-in-out;
-  background: $neon-mint;
+  background: $neon-purple;
 }
 
 /* Explicitly state height for firefox */
@@ -315,30 +314,60 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 
 .hero__button:hover {
   transform: scale(1.1);
-  background: #03BE98;
+  background: $neon-purple;
 }
 
 .hero__image {
+  position: relative;
+}
+
+.hero__image picture {
+  width: 384px;
+  height: 252px;
   position: absolute;
-  right: 15px;
-  bottom: -236px;
-  border-radius: 5px;
-  max-width: 320px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.hero__image img {
+  position: relative;
+}
+
+.hero__image picture::before,
+.hero__image::after,
+.hero__image::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hero__image picture::before {
+  width: 32px;
+  height: 32px;
+  background-color: #FFD500;
+  top: -32px;
+  left: 50%;
+  margin-left: -16px;
 }
 
 .hero__image::before {
-  content: "";
-  position: absolute;
-  bottom: 5px;
+  width: 160px;
+  height: 160px;
+  background-color: $neon-purple;
   left: 0;
-  display: block;
-  width: 100%;
-  height: calc(100% - 5px);
-  border-radius: 5px;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, .4);
+  bottom: 0;
 }
 
-
+.hero__image::after {
+  width: 96px;
+  height: 96px;
+  background-color: #00FFBE;
+  right: 0;
+  top: 0;
+}
 
 /* Responsive */
 
