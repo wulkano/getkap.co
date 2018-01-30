@@ -8,24 +8,24 @@
 
 /* Inter UI Font */
 @font-face {
-    font-family: 'Inter UI';
-    font-weight: 400;
-    src: url('./fonts/interui/Inter-UI-Regular.woff2') format('woff2')
-         url('./fonts/interui/Inter-UI-Regular.woff') format('woff');
+  font-family: 'InterUI';
+  font-weight: 400;
+  src: url('./fonts/interui/Inter-UI-Regular.woff2') format('woff2'),
+        url('./fonts/interui/Inter-UI-Regular.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'Inter UI';
-    font-weight: 600;
-    src: url('./fonts/interui/Inter-UI-Medium.woff2') format('woff2')
-         url('./fonts/interui/Inter-UI-Medium.woff') format('woff');
+  font-family: 'InterUI';
+  font-weight: 600;
+  src: url('./fonts/interui/Inter-UI-Medium.woff2') format('woff2'),
+        url('./fonts/interui/Inter-UI-Medium.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'Inter UI';
-    font-weight: 700;
-    src: url('./fonts/interui/Inter-UI-Bold.woff2') format('woff2')
-         url('./fonts/interui/Inter-UI-Bold.woff') format('woff');
+  font-family: 'InterUI';
+  font-weight: 700;
+  src: url('./fonts/interui/Inter-UI-Bold.woff2') format('woff2'),
+        url('./fonts/interui/Inter-UI-Bold.woff') format('woff');
 }
 
 /***********
@@ -48,7 +48,7 @@ body {
   color: $grey-darker;
   background: white;
   font-size: 1.2rem;
-  font-family: 'Inter UI';
+  font-family: 'InterUI';
   letter-spacing: -.010em;
 }
 
@@ -78,7 +78,8 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3.2rem;
   line-height: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1.6rem;
+  font-weight: bold;
 }
 
 h2 {
@@ -102,7 +103,7 @@ a.link--light { color: $neon-purple; }
 a.link--light:hover { text-decoration: underline; }
 
 a.button {
-  border-radius: .8rem;
+  border-radius: .4rem;
   background: $neon-purple;
   height: 4.8rem;
   padding: 0 1.7rem;
@@ -124,7 +125,8 @@ a.button svg, a.button img { padding-right: 1.8rem; }
 
 a.button--small {
   padding: 0 1rem;
-  height: 3rem;
+  height: 3.2rem;
+  text-transform: none;
 }
 
 /*
@@ -156,7 +158,6 @@ a.button--small {
 
 /* Header/Footer */
 .header, .footer {
-  flex: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -236,7 +237,7 @@ a.button--small {
 
 .footer__marketing-details {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 3.2rem;
 }
 
 .footer__marketing-details a {
@@ -301,10 +302,12 @@ a.button--small {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  padding-right: 50px;
 }
 
 .hero h2 {
-  margin-bottom: 3.4rem;
+  margin-bottom: 3.2rem;
+  font-weight: 600;
 }
 
 .hero__button {
@@ -408,7 +411,7 @@ a.button--small {
     font-size: 2.4rem;
   }
   .wrapper {
-    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -429,7 +432,7 @@ a.button--small {
   .site-header { width: 100%; }
 
   .hero {
-    flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 5rem;
   }
 
@@ -445,6 +448,7 @@ a.button--small {
 
   .hero__content {
     align-items: center;
+    padding-right: 0;
   }
 
   .footer__marketing {
