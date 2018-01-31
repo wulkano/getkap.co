@@ -18,7 +18,7 @@ const BUILD_DIR = 'build';
 const CSS_GLOB = `${SRC_DIR}/**/*.css`;
 const IMG_GLOB = `${SRC_DIR}/images/**/*`;
 const HTML_GLOB = `${SRC_DIR}/**/*.html`;
-const FONT_GLOB = [`${SRC_DIR}/**/fonts/**/*.eot`, `${SRC_DIR}/**/fonts/**/*.svg`, `${SRC_DIR}/**/fonts/**/*.ttf`, `${SRC_DIR}/**/fonts/**/*.woff`, ];
+const FONT_GLOB = [`${SRC_DIR}/**/fonts/**/*.eot`, `${SRC_DIR}/**/fonts/**/*.svg`, `${SRC_DIR}/**/fonts/**/*.ttf`, `${SRC_DIR}/**/fonts/**/*.woff`, `${SRC_DIR}/**/fonts/**/*.woff2`];
 const MISC_GLOB = [`${SRC_DIR}/**/*`, `!${CSS_GLOB}`, `!${IMG_GLOB}`];
 // Clean task
 export function clean() {
