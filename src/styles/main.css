@@ -176,21 +176,6 @@ a.button--small {
 
 .logo { line-height: 0; }
 
-.nav-links {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-.nav-links a:first-child {
-  color: $neon-purple;
-  font-weight: 600;
-}
-
-.nav-links .button {
-  margin-left: 2rem;
-}
-
 .status {
   margin-left: auto;
   border-radius: 4px;
