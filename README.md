@@ -1,6 +1,6 @@
 # getkap.co
 
-Repository for the new [Kap] website
+Repository for the [Kap] website, built with [next.js](https://github.com/zeit/next.js)
 
 ## Development
 
@@ -11,6 +11,8 @@ Repository for the new [Kap] website
 3.  `npm install` to install the relevant node packages
 
 ### Making changes
+
+The main page is in `./pages/index.js`
 
 Run `npm run dev` to start the website in dev mode.
 
