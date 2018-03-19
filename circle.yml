@@ -33,7 +33,7 @@ jobs:
 
     steps:
       - checkout
-      - run: npm install -g now
+      - run: sudo npm install -g now
       - run: now -t ${NOW_TOKEN}
       - run: now -t ${NOW_TOKEN} alias
           
