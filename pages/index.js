@@ -23,7 +23,7 @@ const Sections = ({ children }) => (
 export default () => (
   <div>
     <Head>
-      <title>Kap</title>
+      <title>Kap - Capture your screen.</title>
     </Head>
     <Sections>
       <Hero />
