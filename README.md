@@ -2,6 +2,8 @@
 
 Repository for the [Kap] website, built with [next.js](https://github.com/zeit/next.js)
 
+Preview at http://getkap-next.now.sh/
+
 ## Development
 
 ### Requirements
