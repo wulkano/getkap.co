@@ -4,3 +4,4 @@ npm-debug.log*
 .npm
 build
 node_modules
+.next

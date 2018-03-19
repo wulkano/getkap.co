@@ -4,8 +4,9 @@
   "description": "The source for getkap.co",
   "main": " ",
   "scripts": {
-    "dev": "gulp dev",
-    "build": "gulp build",
+    "dev": "next",
+    "build": "next build",
+    "start": "NODE_ENV=production next start",
     "test": "echo \"No test specified\" && exit 0"
   },
   "repository": {
@@ -18,30 +19,9 @@
     "url": "https://github.com/wulkano/getkap.co/issues"
   },
   "homepage": "https://getkap.co",
-  "devDependencies": {
-    "autoprefixer": "6.5.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "6.16.0",
-    "babel-register": "6.16.3",
-    "cssnano": "3.7.6",
-    "del": "2.2.2",
-    "gulp": "github:gulpjs/gulp#4.0",
-    "gulp-fontmin": "0.7.4",
-    "gulp-imagemin": "3.1.0",
-    "gulp-postcss": "6.2.0",
-    "gulp-rename": "1.2.2",
-    "gulp-rev": "7.1.2",
-    "gulp-rev-replace": "0.4.3",
-    "gulp-svgo": "1.0.3",
-    "pixrem": "3.0.2",
-    "postcss-import": "8.1.2",
-    "postcss-simple-vars": "3.0.0"
-  },
-  "babel": {
-    "plugins": [
-      "transform-es2015-modules-commonjs"
-    ]
-  },
   "dependencies": {
-    "eightpoint": "wulkano/eightpoint"
+    "next": "^5.0.1-canary.16",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   }
 }
