@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "NODE_ENV=production next start",
     "test": "echo \"No test specified\" && exit 0",
-    "deploy": "now --public && now alias"
+    "deploy": "now --public --token $NOW_TOKEN && now alias --token $NOW_TOKEN"
   },
   "repository": {
     "type": "git",

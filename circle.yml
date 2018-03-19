@@ -35,7 +35,7 @@ jobs:
       - checkout
       - run: yarn install
       - run: yarn deploy
-          
+
 workflows:
   version: 2
   build-deploy:
