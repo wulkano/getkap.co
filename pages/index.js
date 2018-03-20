@@ -67,6 +67,7 @@ export default () => (
         font-size: 1.2rem;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
       }
 
       ::selection {

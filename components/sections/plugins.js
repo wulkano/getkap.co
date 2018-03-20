@@ -1,2 +1,2 @@
 import Section from '../section'
-export default () => <Section>The power of open-source</Section>
+export default () => <Section fill>The power of open-source</Section>
