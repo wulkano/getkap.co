@@ -1,6 +1,7 @@
 import Head from 'next/head'
 
 import 'eightpoint/dist/eight.min.css'
+import 'eightpoint/dist/eight.type.min.css'
 
 import Hero from '../components/sections/hero'
 import Video from '../components/sections/video'
@@ -64,6 +65,8 @@ export default () => (
       body {
         font-family: 'InterUI', sans-serif !important; // TODO: how to override eightpoint?
         font-size: 1.2rem;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
 
       ::selection {
