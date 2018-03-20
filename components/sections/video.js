@@ -57,8 +57,8 @@ export default () => (
         width: 100%;
       }
       a img {
-        animation: ease infinite alternate;
-        animation-duration: 0.7s;
+        animation: ease-out alternate;
+        animation-duration: 0.2s;
         transition: all 1000ms ease;
         transform: translateX(0px);
         animation-fill-mode: forwards;
