@@ -28,7 +28,7 @@ const Info = () => (
   </div>
 )
 export default () => (
-  <Section>
+  <Section height="640px">
     <div className="gradient">
       <div className="header">
         <div>Kap</div>
@@ -39,6 +39,7 @@ export default () => (
         <h2>An open-source screen recorder built with web technology.</h2>
         <Info />
       </div>
+      <div className="curve" />
     </div>
     <style jsx>{`
       .gradient {
@@ -50,6 +51,22 @@ export default () => (
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+      }
+      .curve {
+        // FIXME: this was hard
+        background: url(/static/images/curve-mobile.svg) no-repeat;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        height: 200px;
+        transform-origin: bottom;
+        background-size: cover;
+        transform: scaleY(0.6);
+        background-repeat: no-repeat;
+        background-position: center bottom;
       }
       .center {
         flex: 1;
