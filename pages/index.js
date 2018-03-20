@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import 'modern-normalize/modern-normalize.css'
+import 'eightpoint/dist/eight.min.css'
 
 import Hero from '../components/sections/hero'
 import Video from '../components/sections/video'

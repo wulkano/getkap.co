@@ -1683,6 +1683,10 @@ ee-first@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
 
+eightpoint@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/eightpoint/-/eightpoint-0.0.1.tgz#a5065e470b2bb143e993f5bbcb8518eb62b8e470"
+
 electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.30:
   version "1.3.39"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.39.tgz#d7a4696409ca0995e2750156da612c221afad84d"
@@ -3110,10 +3114,6 @@ mkdirp-then@1.2.0:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
   dependencies:
     minimist "0.0.8"
-
-modern-normalize@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/modern-normalize/-/modern-normalize-0.4.0.tgz#1ccbc52861e1bce258144d28e890dc709b120ed2"
 
 moment@^2.11.2:
   version "2.21.0"
