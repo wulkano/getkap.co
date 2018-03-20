@@ -68,11 +68,15 @@ const DownloadButton = () => (
   </a>
 )
 
+const Logo = () => <img src="/static/images/kap.svg" title="Kap" />
+
 export default () => (
   <Section height="640px">
     <div className="gradient">
       <div className="header">
-        <div>Kap</div>
+        <div>
+          <Logo />
+        </div>
         <div>
           <DownloadButton />
         </div>
@@ -90,7 +94,7 @@ export default () => (
         background-color: #7247ff;
         flex: 1;
         height: 100%;
-        background: linear-gradient(30deg, #7247ff, #00ffbe);
+        background: linear-gradient(45deg, #7247ff, #00ffbe);
         color: white;
         display: flex;
         flex-direction: column;
