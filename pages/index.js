@@ -32,5 +32,44 @@ export default () => (
       <Community />
       <Footer />
     </Sections>
+    <style jsx global>{`
+      @font-face {
+        font-family: 'Inter UI';
+        font-style: normal;
+        font-weight: 400;
+        src: url('Inter-UI-Regular.woff2') format('woff2'), url('Inter-UI-Regular.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'Inter UI';
+        font-style: normal;
+        font-weight: 500;
+        src: url('Inter-UI-Medium.woff2') format('woff2'), url('Inter-UI-Medium.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'Inter UI';
+        font-style: normal;
+        font-weight: 700;
+        src: url('Inter-UI-Bold.woff2') format('woff2'), url('Inter-UI-Bold.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'Inter UI';
+        font-style: normal;
+        font-weight: 900;
+        src: url('Inter-UI-Black.woff2') format('woff2'), url('Inter-UI-Black.woff') format('woff');
+      }
+
+      body {
+        font-family: 'InterUI', sans-serif !important; // TODO: how to override eightpoint?
+        font-size: 1.2rem;
+      }
+
+      ::selection {
+        background: $neon-purple;
+        color: white;
+      }
+    `}</style>
   </div>
 )
