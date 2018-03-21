@@ -3,7 +3,12 @@ import Section from '../section'
 export default () => (
   <Section>
     <div className="split">
-      <div className="video" />
+      <div className="video">
+        <div className="overlay">
+          <img src="/static/images/play.svg" className="play-icon" />
+        </div>
+        <img src="/static/images/video/screenshot-2017-09-14-07-17-50.jpg" />
+      </div>
       <div className="text">
         <h3>More quality, less noise</h3>
         <p>
@@ -22,6 +27,32 @@ export default () => (
         flex: 1;
         display: flex;
         overflow: hidden;
+        margin-top: 228px;
+        margin-bottom: -100px;
+      }
+      .video {
+        width: 50%;
+        z-index: 100;
+        position: relative;
+      }
+      .video > img {
+        float: right;
+      }
+      .overlay {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        right: 0;
+        width: 100%;
+        max-width: 704px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .play-icon {
+        width: 48px;
+        height: 48px;
       }
       .text {
         display: flex;
@@ -47,11 +78,7 @@ export default () => (
         font-size: 16px;
         font-weight: normal;
       }
-      .video {
-        height: 500px;
-        background: #333;
-        width: 50%;
-      }
+
       a {
         color: #7146fe;
         display: flex;
