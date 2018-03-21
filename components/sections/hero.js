@@ -102,24 +102,23 @@ export default () => (
         align-items: center;
         position: relative;
       }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: 1200px) {
         .curve {
-          // width: 100%;
-          background: red;
+          width: 100vw !important;
         }
       }
       .curve {
-        // FIXME: this was hard
         background: url(/static/images/curve-mobile.svg) no-repeat;
-        width: 100vw;
+        width: 200vw;
         position: absolute;
-        bottom: 0;
-        left: 0;
+
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
         display: block;
         height: 200px;
         transform-origin: bottom;
         background-size: cover;
-
         background-repeat: no-repeat;
         background-position: center bottom;
       }
