@@ -1,11 +1,43 @@
 import Section from '../section'
 import Grid, { Column } from '../grid'
 const Input = () => (
-  <div>
-    <input />
+  <div className="container">
+    <input placeholder="Email address" />
+    <button>
+      <img src="/static/images/arrow-right-white.svg" />
+    </button>
     <style jsx>{`
-      input {
+      .container {
         width: 100%;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      input {
+        flex: 1;
+        padding: 0 0 0 16px;
+        border: none;
+        height: 100%;
+        background: transparent;
+        font-size: 14px;
+        color: #808080;
+
+        border-radius: 4px 0px 0 4px;
+        background-color: #ffffff;
+        border: solid 2px #cccccc;
+        border-right: none;
+      }
+      input:focus {
+        color: #000;
+        border-color: #7146fe;
+      }
+      button {
+        width: 48px;
+        height: 48px;
+        background-color: #7146fe;
+        border: none;
+        border-radius: 0px 4px 4px 0px;
       }
     `}</style>
   </div>
@@ -74,11 +106,19 @@ const WulkanoAndFriends = () => (
 const EmailForm = () => (
   <form onSubmit={() => alert('not implemented yet')}>
     <p>Sign up for updates</p>
-    <Input />
+    <div>
+      <Input />
+    </div>
     <style jsx>{`
       p {
         font-size: 1.6rem;
         font-weight: normal;
+        margin-bottom: 24px;
+      }
+      button {
+        width: 48px;
+        height: 48px;
+        background-color: #7146fe;
       }
     `}</style>
   </form>
