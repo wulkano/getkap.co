@@ -2,7 +2,7 @@ import Section from '../section'
 import Grid, { Column } from '../grid'
 const Input = () => (
   <div className="container">
-    <input placeholder="Email address" />
+    <input type="email" name="EMAIL" placeholder="Email address" />
     <button>
       <img src="/static/images/arrow-right-white.svg" />
     </button>
@@ -38,6 +38,9 @@ const Input = () => (
         background-color: #7146fe;
         border: none;
         border-radius: 0px 4px 4px 0px;
+      }
+      button:hover {
+        cursor: pointer;
       }
     `}</style>
   </div>
@@ -104,10 +107,25 @@ const WulkanoAndFriends = () => (
 )
 
 const EmailForm = () => (
-  <form onSubmit={() => alert('not implemented yet')}>
+  <form
+    action="https://getkap.us14.list-manage.com/subscribe/post?u=318c21d4f80a3b46f22ad6ddd&amp;id=f219da06bd"
+    method="post"
+    id="mc-embedded-subscribe-form"
+    name="mc-embedded-subscribe-form"
+    class="validate"
+    target="_blank"
+    novalidate
+  >
     <p>Sign up for updates</p>
     <div>
       <Input />
+      <input
+        style={{ position: 'absolute', left: '-59999px' }}
+        type="text"
+        name="b_318c21d4f80a3b46f22ad6ddd_f219da06bd"
+        tabindex="-1"
+        value=""
+      />
     </div>
     <style jsx>{`
       p {
