@@ -1,5 +1,5 @@
-export default ({ children, height, fill }) => (
-  <div className={`section ${fill ? 'fill' : ''}`} style={{ height }}>
+export default ({ children, height, fill, style }) => (
+  <div className={`section ${fill ? 'fill' : ''}`} style={{ height, ...style }}>
     {children}
 
     <style jsx>{`
