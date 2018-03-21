@@ -34,7 +34,7 @@ export default () => (
         margin-bottom: 16px;
         font-size: 32px;
         line-height: 1.5;
-        font-weight: bold;
+        font-weight: 500;
       }
       h4 {
         font-size: 20px;
