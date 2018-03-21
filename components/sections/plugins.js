@@ -28,7 +28,7 @@ const Plugin = ({ title, description, color, href }) => (
         transition: 100ms ease;
       }
       .plugin:hover {
-        transform: scale(1.2);
+        transform: scale(1.05);
       }
     `}</style>
   </a>
@@ -43,14 +43,14 @@ export default () => (
             title="giphy"
             color="#ffd500"
             description="Share GIFs on Giphy"
-            href='https://github.com/wulkano/kap-giphy'
-            />
+            href="https://github.com/wulkano/kap-giphy"
+          />
           <Plugin
             title="now"
             color="#FFF"
             description="Share on ▲ZEIT now"
             href="https://github.com/lucaperret/kap-now"
-            />
+          />
           <Plugin
             title="draggable"
             color="#00ffbe"
