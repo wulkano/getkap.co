@@ -19,11 +19,32 @@ export default () => (
   <Section>
     <div className="text">
       <h3>Loved by the community</h3>
+      <h4>Designers, developers, project managers. They all use Kap. </h4>
       <Logos />
     </div>
     <style jsx>{`
       .text {
-        margin-top: 128px;
+        margin: 128px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h3 {
+        margin-bottom: 16px;
+        font-size: 32px;
+        line-height: 1.5;
+        font-weight: bold;
+      }
+      h4 {
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.6;
+        text-align: center;
+        max-width: 368px;
+        margin-bottom: 64px;
       }
     `}</style>
   </Section>

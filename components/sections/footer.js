@@ -1,6 +1,15 @@
 import Section from '../section'
 import Grid, { Column } from '../grid'
-const Input = () => <input />
+const Input = () => (
+  <div>
+    <input />
+    <style jsx>{`
+      input {
+        width: 100%;
+      }
+    `}</style>
+  </div>
+)
 export default () => (
   <Section>
     <Grid>
