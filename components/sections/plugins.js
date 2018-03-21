@@ -24,6 +24,10 @@ const Plugin = ({ title, description, color, href }) => (
         margin-right: 16px;
         margin-bottom: 16px;
         display: inline-block;
+        transition: 100ms ease;
+      }
+      .plugin:hover {
+        transform: scale(1.2);
       }
     `}</style>
   </a>
