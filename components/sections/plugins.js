@@ -43,16 +43,19 @@ export default () => (
             title="giphy"
             color="#ffd500"
             description="Share GIFs on Giphy"
-          />
+            href='https://github.com/wulkano/kap-giphy'
+            />
+          <Plugin
+            title="now"
+            color="#FFF"
+            description="Share on ▲ZEIT now"
+            href="https://github.com/lucaperret/kap-now"
+            />
           <Plugin
             title="draggable"
-            color="#FFF"
-            description="Share recordings with drag and drop"
-          />
-          <Plugin
-            title="clipboard"
             color="#00ffbe"
-            description="Copy GIFs to clipboard"
+            description="Share recordings with drag and drop"
+            href="https://github.com/albinekb/kap-draggable"
           />
         </div>
       </div>
