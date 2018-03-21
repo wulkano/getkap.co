@@ -75,7 +75,7 @@ export default () => (
       }
 
       ::selection {
-        background: $neon-purple;
+        background: #7146fe;
         color: white;
       }
     `}</style>

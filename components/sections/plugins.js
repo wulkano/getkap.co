@@ -36,7 +36,15 @@ const Plugin = ({ title, description, color, href }) => (
 export default () => (
   <Section height="600px">
     <div className="plugins">
-      <div className="plugins__text">The power of open-source</div>
+      <div className="plugins__text">
+        <div className="power">
+          <h3>The power of open-source</h3>
+          <p>
+            The ease of use and speed you’ve been looking for – the
+            functionality and extensibility you didn’t know you needed.{' '}
+          </p>
+        </div>
+      </div>
       <div className="plugins__display">
         <div className="list">
           <Plugin
@@ -61,6 +69,10 @@ export default () => (
       </div>
     </div>
     <style jsx>{`
+      .power {
+        max-width: 368px;
+        float: right;
+      }
       .plugins {
         background: black;
         color: white;
@@ -68,12 +80,23 @@ export default () => (
         height: 100%;
         display: flex;
       }
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 16px;
+        line-height: 1.33;
+      }
+      p {
+        font-size: 16px;
+        font-weight: normal;
+      }
       .plugins__text {
         width: 50%;
         height: 100%;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
+        padding-right: 100px;
       }
       .plugins__display {
         width: 50%;

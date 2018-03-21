@@ -111,7 +111,6 @@ export default () => (
         background: url(/static/images/curve-mobile.svg) no-repeat;
         width: 200vw;
         position: absolute;
-
         bottom: -1px;
         left: 50%;
         transform: translateX(-50%);
