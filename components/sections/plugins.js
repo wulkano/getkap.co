@@ -18,7 +18,8 @@ const Plugin = ({ title, description, color, href }) => (
         color: #000;
         padding: 32px;
         border-radius: 4px;
-        box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1),
+          0 1px 2px 0 rgba(0, 0, 0, 0.1);
         width: 208px;
         height: 160px;
         margin-right: 16px;
@@ -38,9 +39,21 @@ export default () => (
       <div className="plugins__text">The power of open-source</div>
       <div className="plugins__display">
         <div className="list">
-          <Plugin title="giphy" color="#ffd500" description="Share GIFs on Giphy" />
-          <Plugin title="draggable" color="#FFF" description="Share recordings with drag and drop" />
-          <Plugin title="clipboard" color="#00ffbe" description="Copy GIFs to clipboard" />
+          <Plugin
+            title="giphy"
+            color="#ffd500"
+            description="Share GIFs on Giphy"
+          />
+          <Plugin
+            title="draggable"
+            color="#FFF"
+            description="Share recordings with drag and drop"
+          />
+          <Plugin
+            title="clipboard"
+            color="#00ffbe"
+            description="Copy GIFs to clipboard"
+          />
         </div>
       </div>
     </div>

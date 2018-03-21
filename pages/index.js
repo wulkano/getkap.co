@@ -38,28 +38,32 @@ export default () => (
         font-family: 'Inter UI';
         font-style: normal;
         font-weight: 400;
-        src: url('Inter-UI-Regular.woff2') format('woff2'), url('Inter-UI-Regular.woff') format('woff');
+        src: url('Inter-UI-Regular.woff2') format('woff2'),
+          url('Inter-UI-Regular.woff') format('woff');
       }
 
       @font-face {
         font-family: 'Inter UI';
         font-style: normal;
         font-weight: 500;
-        src: url('Inter-UI-Medium.woff2') format('woff2'), url('Inter-UI-Medium.woff') format('woff');
+        src: url('Inter-UI-Medium.woff2') format('woff2'),
+          url('Inter-UI-Medium.woff') format('woff');
       }
 
       @font-face {
         font-family: 'Inter UI';
         font-style: normal;
         font-weight: 700;
-        src: url('Inter-UI-Bold.woff2') format('woff2'), url('Inter-UI-Bold.woff') format('woff');
+        src: url('Inter-UI-Bold.woff2') format('woff2'),
+          url('Inter-UI-Bold.woff') format('woff');
       }
 
       @font-face {
         font-family: 'Inter UI';
         font-style: normal;
         font-weight: 900;
-        src: url('Inter-UI-Black.woff2') format('woff2'), url('Inter-UI-Black.woff') format('woff');
+        src: url('Inter-UI-Black.woff2') format('woff2'),
+          url('Inter-UI-Black.woff') format('woff');
       }
 
       body {

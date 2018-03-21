@@ -8,7 +8,14 @@
     "build": "next build",
     "start": "NODE_ENV=production next start",
     "test": "echo \"No test specified\" && exit 0",
-    "deploy": "now --team kap --public --token $NOW_TOKEN && now alias --team kap --token $NOW_TOKEN"
+    "deploy": "now --team kap --public --token $NOW_TOKEN && now alias --team kap --token $NOW_TOKEN",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --no-semi --write",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -32,6 +39,9 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "now": "^10.2.1"
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "now": "^10.2.1",
+    "prettier": "^1.11.1"
   }
 }

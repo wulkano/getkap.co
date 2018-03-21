@@ -1,11 +1,15 @@
 import Section from '../section'
+
 export default () => (
   <Section>
     <div className="split">
       <div className="video" />
       <div className="text">
         <h3>More quality, less noise</h3>
-        <p>Export as GIF, MP4, WebM or APNG with optional audio, highlight clicks and trimming.</p>
+        <p>
+          Export as GIF, MP4, WebM or APNG with optional audio, highlight clicks
+          and trimming.
+        </p>
         <div className="line" />
         <a href="#">
           <span>How Kap was built</span>

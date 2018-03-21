@@ -1,4 +1,5 @@
 import Section from '../section'
+
 const Info = () => (
   <div>
     <a href="https://github.com/wulkano/kap">View and contribute on GitHub</a>

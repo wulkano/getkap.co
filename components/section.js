@@ -1,6 +1,7 @@
 export default ({ children, height, fill }) => (
   <div className={`section ${fill ? 'fill' : ''}`} style={{ height }}>
     {children}
+
     <style jsx>{`
       .fill {
         width: 100vw;
