@@ -114,9 +114,8 @@ const EmailForm = () => (
     method="post"
     id="mc-embedded-subscribe-form"
     name="mc-embedded-subscribe-form"
-    class="validate"
     target="_blank"
-    novalidate
+    noValidate
   >
     <p>Sign up for updates</p>
     <div>
@@ -125,7 +124,7 @@ const EmailForm = () => (
         style={{ position: 'absolute', left: '-59999px' }}
         type="text"
         name="b_318c21d4f80a3b46f22ad6ddd_f219da06bd"
-        tabindex="-1"
+        tabIndex="-1"
         value=""
       />
     </div>
