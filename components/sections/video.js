@@ -7,7 +7,7 @@ export default () => (
         <div className="overlay">
           <img src="/static/images/play.svg" className="play-icon" />
         </div>
-        <img src="/static/images/video/screenshot-2017-09-14-07-17-50.jpg" />
+        <img src="/static/images/video/Media.png" width="1024px" />
       </div>
       <div className="text">
         <h3>More quality, less noise</h3>
@@ -41,11 +41,11 @@ export default () => (
       .overlay {
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
+
         position: absolute;
         right: 0;
         width: 100%;
-        max-width: 704px;
+        max-width: 1024px;
         display: flex;
         align-items: center;
         justify-content: center;
