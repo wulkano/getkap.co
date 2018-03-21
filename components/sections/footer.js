@@ -49,13 +49,15 @@ const Input = () => (
 const Links = () => (
   <ul>
     <li>
-      <a href="#">Download</a>
+      <a href="https://github.com/wulkano/kap/releases/download/v2.0.0/Kap-2.0.0.dmg">
+        Download
+      </a>
     </li>
     <li>
-      <a href="#">Issues</a>
+      <a href="https://github.com/wulkano/kap/issues">Issues</a>
     </li>
     <li>
-      <a href="#">License</a>
+      <a href="https://github.com/wulkano/kap/blob/master/LICENSE">License</a>
     </li>
     <style jsx>{`
       a {
