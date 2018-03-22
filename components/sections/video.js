@@ -11,7 +11,7 @@ export default () => (
           />
         </div>
         <img
-          src={require('../../static/images/video/preview.jpg')}
+          src="/static/images/video/preview.jpg"
           width="1024px"
           height="576px"
         />

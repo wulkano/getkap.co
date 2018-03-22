@@ -10,15 +10,4 @@ const nextConfig = {
   }
 }
 
-module.exports = withPlugins(
-  [
-    [withCSS, {}],
-    [
-      optimizedImages,
-      {
-        optimizeImagesInDev: true
-      }
-    ]
-  ],
-  nextConfig
-)
+module.exports = withPlugins([[withCSS, {}], [optimizedImages]], nextConfig)
