@@ -34,6 +34,7 @@ jobs:
     steps:
       - checkout
       - run: yarn install
+      - run: yarn deploy:remove-inactive
       - run: yarn deploy
 
 workflows:
