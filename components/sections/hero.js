@@ -51,7 +51,7 @@ const KapWindow = () => (
 
 const DownloadButton = () => (
   <a href="https://github.com/wulkano/kap/releases/download/v2.0.0/Kap-2.0.0.dmg">
-    <img src="/static/images/download.svg" />
+    <img src={require('../../static/images/download.svg')} />
     <span>Get kap</span>
     <style jsx>{`
       a {
@@ -72,7 +72,9 @@ const DownloadButton = () => (
   </a>
 )
 
-const Logo = () => <img src="/static/images/kap.svg" title="Kap" />
+const Logo = () => (
+  <img src={require('../../static/images/kap.svg')} title="Kap" />
+)
 
 export default () => (
   <Section height="640px">
