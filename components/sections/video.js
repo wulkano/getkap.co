@@ -119,7 +119,7 @@ export default () => (
         animation-name: arrow;
       }
       img.preview {
-        border-radius: 0px 0px 4px 4px;
+        border-radius: 4px 4px 4px 4px;
         overflow: hidden;
       }
       @keyframes arrow {
