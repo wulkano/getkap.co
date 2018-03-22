@@ -1,5 +1,4 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-
 export default class MyDocument extends Document {
   render() {
     return (
@@ -24,7 +23,7 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="https://getkap.co/" />
           <meta
             property="og:image"
-            content="https://getkap.co/static/images/ogp/kap-ogp-v2-large.png"
+            content="/static/images/ogp/kap-ogp-v2-large.png"
           />
           <meta
             property="og:description"
@@ -42,7 +41,7 @@ export default class MyDocument extends Document {
           />
           <meta
             name="twitter:image"
-            content="https://getkap.co/static/images/ogp/kap-ogp-v2-twitter.png"
+            content="/static/images/ogp/kap-ogp-v2-twitter.png"
           />
 
           <link rel="shortcut icon" href="/static/favicon/kap.ico" />

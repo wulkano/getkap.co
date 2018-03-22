@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import ReactGA from 'react-ga'
+ReactGA.initialize('UA-84705099-3')
 
 import 'eightpoint/dist/eight.min.css'
 
