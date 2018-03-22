@@ -9,12 +9,14 @@
     "start": "NODE_ENV=production next start",
     "test": "echo \"No test specified\" && exit 0",
     "deploy:remove-inactive": "now --token $NOW_TOKEN --team kap rm getkap.co --safe --yes",
-    "deploy":
-      "next build && next export && now ./out --name getkap.co --team kap --public --token $NOW_TOKEN && now alias --team kap --token $NOW_TOKEN",
+    "deploy": "next build && next export && now ./out --name getkap.co --team kap --public --token $NOW_TOKEN && now alias --team kap --token $NOW_TOKEN",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.js": ["prettier --single-quote --no-semi --write", "git add"]
+    "*.js": [
+      "prettier --single-quote --no-semi --write",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -35,7 +37,8 @@
     "eightpoint": "^0.0.1",
     "next": "^5.0.1-canary.16",
     "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "react-dom": "^16.2.0",
+    "react-mason": "^1.1.2"
   },
   "devDependencies": {
     "husky": "^0.14.3",
