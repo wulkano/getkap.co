@@ -5,9 +5,16 @@ export default () => (
     <div className="split">
       <div className="video">
         <div className="overlay">
-          <img src="/static/images/play.svg" className="play-icon" />
+          <img
+            src={require('../../static/images/play.svg')}
+            className="play-icon"
+          />
         </div>
-        <img src="/static/images/video/Media.png" width="1024px" />
+        <img
+          src={require('../../static/images/video/Media.jpg')}
+          width="1024px"
+          height="576px"
+        />
       </div>
       <div className="text">
         <h3>More quality, less noise</h3>
@@ -18,7 +25,7 @@ export default () => (
         <div className="line" />
         <a href="#">
           <span>How Kap was built</span>
-          <img src="/static/images/arrow-right.svg" />
+          <img src={require('../../static/images/arrow-right.svg')} />
         </a>
       </div>
     </div>
