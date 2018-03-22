@@ -70,6 +70,9 @@ const DownloadButton = () => (
         padding: 16px;
         border-radius: 4px;
       }
+      a:hover {
+        text-decoration: underline;
+      }
       span {
         margin-left: 0.8em;
         font-size: 12px;
