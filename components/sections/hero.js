@@ -6,11 +6,9 @@ const Info = () => (
     <span> macOS 10.12 or later required</span>
     <style jsx>{`
       div {
-        width: 390px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+        max-width: 390px;
+        width: 100%;
+        margin: 0 32px;
         margin-top: 32px;
       }
       a {
@@ -18,6 +16,7 @@ const Info = () => (
         font-weight: bold;
         font-style: normal;
         color: #ffffff;
+        float: left;
       }
       a:hover {
         text-decoration: underline;
@@ -26,7 +25,15 @@ const Info = () => (
         opacity: 0.8;
         font-size: 12px;
         font-weight: normal;
-        line-height: 1.33;
+        float: right;
+        clearfix: both;
+      }
+      @media only screen and (max-width: 460px) {
+        div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
       }
     `}</style>
   </div>
@@ -120,6 +127,8 @@ export default () => (
         align-items: center;
         position: relative;
         display: flex;
+        padding: 0 32px;
+        width: 100vw;
       }
 
       .header-animation {
@@ -197,13 +206,33 @@ export default () => (
         line-height: 64px;
         font-weight: 500;
         margin-bottom: 16px;
+        text-align: center;
       }
       .header {
-        width: 1200px;
+        max-width: 1200px;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-top: 64px;
+      }
+      @media only screen and (max-width: 1200px) {
+        .header {
+          margin-top: 32px;
+        }
+      }
+      @media only screen and (max-width: 460px) {
+        h2 {
+          max-width: 288px;
+          line-height: 1.2;
+          font-size: 2rem;
+        }
+        .gradient {
+          padding: 0 16px;
+        }
+        .header {
+          margin-top: 16px;
+        }
       }
     `}</style>
   </Section>

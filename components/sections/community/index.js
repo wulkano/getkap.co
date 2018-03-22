@@ -41,6 +41,7 @@ export default () => (
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 512px;
       }
       h3 {
         margin-bottom: 16px;

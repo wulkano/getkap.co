@@ -1,25 +1,3 @@
-function resizeGridItem(item) {
-  let grid = document.getElementsByClassName('grid')[0]
-  let rowHeight = parseInt(
-    window.getComputedStyle(grid).getPropertyValue('grid-auto-rows')
-  )
-  let rowGap = parseInt(
-    window.getComputedStyle(grid).getPropertyValue('grid-row-gap')
-  )
-  let rowSpan = Math.ceil(
-    (item.querySelector('.card').getBoundingClientRect().height + rowGap) /
-      (rowHeight + rowGap)
-  )
-  item.style.gridRowEnd = 'span ' + rowSpan
-}
-
-function resizeAllGridItems() {
-  let allItems = document.getElementsByClassName('item')
-
-  for (var x = 0; x < allItems.length; x++) {
-    resizeGridItem(allItems[x])
-  }
-}
 const Quote = ({ handle, name, text }) => (
   <div className="item">
     <div className="card">
@@ -75,10 +53,6 @@ const Quote = ({ handle, name, text }) => (
   </div>
 )
 export default class Quotes extends React.Component {
-  componentDidMount() {
-    window.addEventListener('resize', resizeAllGridItems)
-    resizeAllGridItems()
-  }
   render() {
     return (
       <div className="grid">

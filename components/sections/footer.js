@@ -154,7 +154,7 @@ const EmailForm = () => (
   </form>
 )
 export default () => (
-  <Section style={{ marginBottom: '128px' }}>
+  <Section>
     <Grid>
       <Column>
         <WulkanoAndFriends />

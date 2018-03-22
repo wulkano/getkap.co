@@ -1,7 +1,6 @@
 import Head from 'next/head'
 
 import 'eightpoint/dist/eight.min.css'
-import 'eightpoint/dist/eight.type.min.css'
 
 import Hero from '../components/sections/hero'
 import Video from '../components/sections/video'
