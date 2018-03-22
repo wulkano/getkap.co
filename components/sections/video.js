@@ -14,6 +14,7 @@ export default () => (
           src="/static/images/video/preview.jpg"
           width="1024px"
           height="576px"
+          className="preview"
         />
       </div>
       <div className="text">
@@ -63,6 +64,7 @@ export default () => (
         align-items: center;
         justify-content: center;
         transition: background 150ms ease;
+        border-radius: 4px 4px 4px 4px;
       }
       .play-icon {
         width: 48px;
@@ -114,6 +116,10 @@ export default () => (
       }
       a:hover img {
         animation-name: arrow;
+      }
+      img.preview {
+        border-radius: 0px 0px 4px 4px;
+        overflow: hidden;
       }
       @keyframes arrow {
         from {
