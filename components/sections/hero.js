@@ -169,11 +169,6 @@ export default () => (
         }
       }
 
-      @media only screen and (max-width: 1200px) {
-        .curve {
-          width: 100vw !important;
-        }
-      }
       .curve {
         width: 200vw;
         position: absolute;
@@ -220,6 +215,15 @@ export default () => (
       @media only screen and (max-width: 1200px) {
         .header {
           margin-top: 32px;
+        }
+        .curve {
+          width: 100vw;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        .curve {
+          background-size: contain;
+          width: 120vw;
         }
       }
       @media only screen and (max-width: 460px) {
