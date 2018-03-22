@@ -9,7 +9,8 @@
     "start": "NODE_ENV=production next start",
     "test": "echo \"No test specified\" && exit 0",
     "deploy:remove-inactive": "now --token $NOW_TOKEN --team kap rm getkap.co --safe",
-    "deploy": "next build && next export && now ./out --team kap --public --token $NOW_TOKEN && now alias --team kap --token $NOW_TOKEN",
+    "deploy":
+      "next build && next export && now ./out --name getkap.co --team kap --public --token $NOW_TOKEN && now alias --team kap --token $NOW_TOKEN",
     "precommit": "lint-staged"
   },
   "lint-staged": {
