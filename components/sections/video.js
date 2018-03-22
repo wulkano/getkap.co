@@ -24,7 +24,7 @@ export default () => (
           and trimming.
         </p>
         <div className="line" />
-        <a href="#">
+        <a href="https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38">
           <span>How Kap was built</span>
           <img src={require('../../static/images/arrow-right.svg')} />
         </a>
