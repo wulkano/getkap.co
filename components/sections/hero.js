@@ -39,8 +39,16 @@ const KapWindow = () => (
       img {
         width: 320px;
         height: 180px;
-        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
+        opacity: 1;
+      }
+      div {
         z-index: 100;
+
+        width: 320px;
+        height: 180px;
+        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
+        background-color: white;
+        border-radius: 4px;
         transform: translateY(50%);
         position: relative;
       }
