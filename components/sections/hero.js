@@ -74,6 +74,7 @@ const Logo = () => <img src="/static/images/kap.svg" title="Kap" />
 export default () => (
   <Section height="640px">
     <div className="gradient">
+      <div className="header-animation" />
       <div className="header">
         <div>
           <Logo />
@@ -92,16 +93,66 @@ export default () => (
     </div>
     <style jsx>{`
       .gradient {
-        background-color: #7247ff;
         flex: 1;
         height: 100%;
-        background: linear-gradient(45deg, #7247ff, #00ffbe);
         color: white;
-        display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
+        display: flex;
       }
+
+      .header-animation {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: -1;
+      }
+
+      .header-animation::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: radial-gradient(
+          farthest-corner at -10% 10%,
+          #00cca3 5%,
+          #8f08fd 100%
+        );
+        animation: bg 6s ease-in infinite alternate;
+        will-change: transform;
+        transform-style: preserve-3d;
+      }
+
+      .gradient:after {
+        background-color: #7247ff;
+        background: linear-gradient(45deg, #7247ff, #00ffbe);
+        display: flex;
+        background-image: radial-gradient(
+          farthest-corner at -10% 10%,
+          #00cca3 5%,
+          #8f08fd 100%
+        );
+        animation: bg 6s ease-in infinite alternate;
+        will-change: transform;
+        transform-style: preserve-3d;
+      }
+
+      @keyframes bg {
+        0% {
+          transform: scale(1);
+        }
+        100% {
+          transform: scale(2);
+        }
+      }
+
       @media only screen and (max-width: 1200px) {
         .curve {
           width: 100vw !important;
