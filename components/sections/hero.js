@@ -59,6 +59,13 @@ const KapWindow = () => (
         transform: translateY(50%);
         position: relative;
       }
+      @media only screen and (max-width: 420px) {
+        div,
+        img {
+          width: 288px !important;
+          height: 163px !important;
+        }
+      }
     `}</style>
   </div>
 )
@@ -231,6 +238,9 @@ export default () => (
         }
         .header {
           margin-top: 16px;
+        }
+        .curve {
+          width: 100vw;
         }
       }
     `}</style>

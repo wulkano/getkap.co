@@ -80,6 +80,7 @@ export default () => (
         flex: 1;
         height: 100%;
         display: flex;
+        overflow: hidden;
       }
       h3 {
         font-size: 24px;
