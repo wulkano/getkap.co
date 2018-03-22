@@ -34,10 +34,9 @@ const Info = () => (
 
 const KapWindow = () => (
   <div>
+    <img src={require('../../static/images/kap-window@2x.png')} />
     <style jsx>{`
-      div {
-        background: url(/static/images/kap-window@2x.png);
-        background-size: contain;
+      img {
         width: 320px;
         height: 180px;
         box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
