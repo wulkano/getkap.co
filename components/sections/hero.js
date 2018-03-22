@@ -221,10 +221,6 @@ export default () => (
         }
       }
       @media only screen and (max-width: 600px) {
-        .curve {
-          background-size: contain;
-          width: 120vw;
-        }
       }
       @media only screen and (max-width: 460px) {
         h2 {
@@ -237,9 +233,6 @@ export default () => (
         }
         .header {
           margin-top: 16px;
-        }
-        .curve {
-          width: 100vw;
         }
       }
     `}</style>
