@@ -217,10 +217,8 @@ export default () => (
           margin-top: 32px;
         }
         .curve {
-          width: 100vw;
+          width: 110vw;
         }
-      }
-      @media only screen and (max-width: 600px) {
       }
       @media only screen and (max-width: 460px) {
         h2 {
