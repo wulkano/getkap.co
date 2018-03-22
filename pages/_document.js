@@ -44,6 +44,41 @@ export default class MyDocument extends Document {
             name="twitter:image"
             content="https://getkap.co/static/images/ogp/kap-ogp-v2-twitter.png"
           />
+
+          <link rel="shortcut icon" href="/static/favicon/kap.ico" />
+          <link rel="apple-touch-icon" href="/static/favicon/icon-128.png" />
+          <link rel="icon" href="/static/favicon/icon-32.png" sizes="32x32" />
+          <link
+            rel="icon"
+            type="image/png"
+            href="/static/favicon/icon-256.png"
+            sizes="256x256"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            href="/static/favicon/icon-128.png"
+            sizes="96x96"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            href="/static/favicon/icon-32.png"
+            sizes="32x32"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            href="/static/favicon/icon-16.png"
+            sizes="16x16"
+          />
+          <link
+            rel="icon"
+            type="image/png"
+            href="/static/favicon/icon-128.png"
+            sizes="128x128"
+          />
+          <link rel="mask-icon" href="/static/favicon/kap.svg" />
         </Head>
         <body>
           <Main />

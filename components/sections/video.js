@@ -65,6 +65,7 @@ export default () => (
         justify-content: center;
         transition: background 150ms ease;
         border-radius: 4px 4px 4px 4px;
+        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
       }
       .play-icon {
         width: 48px;

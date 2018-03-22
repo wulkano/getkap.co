@@ -76,6 +76,7 @@ const DownloadButton = () => (
         background: #fff;
         padding: 16px;
         border-radius: 4px;
+        height: 48px;
       }
       a:hover {
         text-decoration: underline;
@@ -232,6 +233,9 @@ export default () => (
         }
         .header {
           margin-top: 16px;
+        }
+        .curve {
+          width: 100vw;
         }
       }
     `}</style>
