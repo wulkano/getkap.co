@@ -94,7 +94,12 @@ export default () => (
         <Info />
       </div>
       <KapWindow />
-      <div className="curve" />
+      <div
+        className="curve"
+        style={{
+          backgroundImage: `url(${require('../../static/images/curve-mobile.svg')})`
+        }}
+      />
     </div>
     <style jsx>{`
       .gradient {
@@ -150,7 +155,6 @@ export default () => (
         }
       }
       .curve {
-        background: url(/static/images/curve-mobile.svg) no-repeat;
         width: 200vw;
         position: absolute;
         bottom: -1px;
