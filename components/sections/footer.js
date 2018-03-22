@@ -71,6 +71,10 @@ const Links = () => (
         color: #7146fe;
       }
 
+      a:hover {
+        text-decoration: underline;
+      }
+
       li {
         margin-bottom: 12px;
       }
@@ -84,7 +88,9 @@ const WulkanoAndFriends = () => (
       <img src="/static/images/logos/wulkano.svg" />
     </a>
     <div className="spacer" />
-    <a href="https://github.com/wulkano/kap/contributors">& friends</a>
+    <a className="friends" href="https://github.com/wulkano/kap/contributors">
+      & friends
+    </a>
     <style jsx>{`
       .container {
         display: flex;
@@ -105,7 +111,7 @@ const WulkanoAndFriends = () => (
         font-size: 1.6rem;
         font-weight: normal;
       }
-      a:hover {
+      a.friends:hover {
         color: #7146fe;
         ${`cursor: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIxOCIgc3R5bGU9ImZvbnQtc2l6ZToxNHB4Ij48dGV4dCB5PSIxNiI+4p2k77iPPC90ZXh0Pjwvc3ZnPg==),auto!important;`};
       }

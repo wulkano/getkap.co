@@ -26,6 +26,7 @@ const Plugin = ({ title, description, color, href }) => (
         margin-bottom: 16px;
         display: inline-block;
         transition: 100ms ease;
+        will-change: transform;
       }
       .plugin:hover {
         transform: scale(1.05);
