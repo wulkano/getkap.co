@@ -34,14 +34,20 @@ export default () => (
         width: 50%;
         z-index: 100;
         position: relative;
+        cursor: pointer;
       }
       .video > img {
         float: right;
       }
+      .video:hover .play-icon {
+        transform: scale(1.2);
+      }
+      .video:hover .overlay {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
       .overlay {
         width: 100%;
         height: 100%;
-
         position: absolute;
         right: 0;
         width: 100%;
@@ -49,10 +55,12 @@ export default () => (
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: background 150ms ease;
       }
       .play-icon {
         width: 48px;
         height: 48px;
+        transition: 150ms ease;
       }
       .text {
         display: flex;
