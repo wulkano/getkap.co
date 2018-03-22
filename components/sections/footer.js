@@ -21,6 +21,9 @@ const Input = () => (
         height: 100%;
         background: transparent;
         font-size: 14px;
+        box-shadow: none;
+        appearance: none;
+        display: inline-block;
         color: #808080;
 
         border-radius: 4px 0px 0 4px;

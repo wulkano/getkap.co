@@ -31,7 +31,8 @@ export const Column = ({ children }) => (
       }
       @media only screen and (max-width: 600px) {
         .column {
-          width: 300px;
+          width: 100%;
+          padding: 0 16px;
           margin-top: 50px;
         }
       }
