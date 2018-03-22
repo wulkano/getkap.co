@@ -19,6 +19,9 @@ const Info = () => (
         font-style: normal;
         color: #ffffff;
       }
+      a:hover {
+        text-decoration: underline;
+      }
       span {
         opacity: 0.8;
         font-size: 12px;
@@ -121,23 +124,9 @@ export default () => (
         width: 100%;
         height: 100%;
         background-image: radial-gradient(
-          farthest-corner at -10% 10%,
-          #00cca3 5%,
-          #8f08fd 100%
-        );
-        animation: bg 6s ease-in infinite alternate;
-        will-change: transform;
-        transform-style: preserve-3d;
-      }
-
-      .gradient:after {
-        background-color: #7247ff;
-        background: linear-gradient(45deg, #7247ff, #00ffbe);
-        display: flex;
-        background-image: radial-gradient(
-          farthest-corner at -10% 10%,
-          #00cca3 5%,
-          #8f08fd 100%
+          farthest-corner at -0% 100%,
+          #7247ff 30%,
+          #00ffbe 95%
         );
         animation: bg 6s ease-in infinite alternate;
         will-change: transform;
