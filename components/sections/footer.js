@@ -1,13 +1,13 @@
 import Section from '../section'
 import Grid, { Column } from '../grid'
 import Confetti from 'react-dom-confetti'
-const Input = ({ sent }) => (
+const Input = ({ boom }) => (
   <div className="container">
     <input type="email" name="EMAIL" placeholder="Email address" />
     <button>
       <img src="/static/images/arrow-right-white.svg" />
       <Confetti
-        active={sent}
+        active={boom}
         config={{
           angle: 270,
           spread: 291,
@@ -133,12 +133,16 @@ const WulkanoAndFriends = () => (
 )
 
 class EmailForm extends React.Component {
-  state = { sent: false }
+  state = { sent: false, refocused: false }
+  componentDidMount() {}
   render() {
-    const { sent } = this.state
+    const { sent, refocused } = this.state
     return (
       <form
-        onSubmit={() => this.setState({ sent: true })}
+        onSubmit={() => {
+          this.setState({ sent: true })
+          window.onfocus = () => this.setState({ refocused: true })
+        }}
         action="https://getkap.us14.list-manage.com/subscribe/post?u=318c21d4f80a3b46f22ad6ddd&amp;id=f219da06bd"
         method="post"
         id="mc-embedded-subscribe-form"
@@ -148,7 +152,7 @@ class EmailForm extends React.Component {
       >
         <p>Sign up for updates</p>
         <div>
-          <Input sent={sent} />
+          <Input boom={refocused} />
           <input
             style={{ position: 'absolute', left: '-59999px' }}
             type="text"
