@@ -31,7 +31,7 @@ export default () => (
         display: flex;
         overflow: hidden;
         margin-top: 228px;
-        margin-bottom: -100px;
+        margin-bottom: -64px;
       }
 
       .video {

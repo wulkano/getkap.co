@@ -148,6 +148,7 @@ export default () => (
         display: flex;
         overflow: hidden;
         padding: 192px 0;
+        padding-bottom: 128px;
       }
 
       h3 {
@@ -178,6 +179,11 @@ export default () => (
         position: relative;
         left: 32px;
       }
+      @media only screen and (max-width: 1300px) {
+        .plugins__text {
+          margin-left: 32px;
+        }
+      }
       @media only screen and (max-width: 900px) {
         .plugins {
           flex-direction: column;
@@ -188,6 +194,7 @@ export default () => (
         .plugins__text {
           padding-right: 32px;
           margin-bottom: 64px;
+          margin-left: 0px;
           width: 100%;
           padding: 0 32px;
           justify-content: flex-start;
