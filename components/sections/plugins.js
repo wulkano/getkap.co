@@ -31,11 +31,16 @@ const Plugin = ({ title, description, color, href }) => (
       .plugin:hover {
         transform: scale(1.05);
       }
+      @media only screen and (max-width: 600px) {
+        .plugin:hover {
+          transform: scale(1);
+        }
+      }
     `}</style>
   </a>
 )
 export default () => (
-  <Section height="600px">
+  <Section>
     <div className="plugins">
       <div className="plugins__text">
         <div className="power">
@@ -81,7 +86,9 @@ export default () => (
         height: 100%;
         display: flex;
         overflow: hidden;
+        padding: 192px 0;
       }
+
       h3 {
         font-size: 24px;
         font-weight: 500;
@@ -106,6 +113,34 @@ export default () => (
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      @media only screen and (max-width: 900px) {
+        .plugins {
+          flex-direction: column;
+
+          padding-top: 128px;
+          padding-bottom: 0px;
+        }
+        .plugins__text {
+          padding-right: 32px;
+          margin-bottom: 64px;
+          width: 100%;
+          padding: 0 32px;
+          justify-content: flex-start;
+        }
+        .plugins__display {
+          flex-direction: row;
+          width: 100%;
+
+          padding-left: 32px;
+          justify-content: flex-start;
+          display: block;
+          overflow-x: scroll;
+          padding-bottom: 48px;
+        }
+        .list {
+          width: 700px;
+        }
       }
     `}</style>
   </Section>

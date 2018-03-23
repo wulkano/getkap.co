@@ -87,7 +87,7 @@ export default () => (
       }
       h3 {
         font-size: 24px;
-        font-weight: bold;
+        font-weight: 500;
         margin-bottom: 16px;
       }
       p {
@@ -138,8 +138,9 @@ export default () => (
         .split {
           flex-direction: column-reverse;
           margin-top: 128px;
-          margin-bottom: 0px;
+          margin-bottom: -64px;
           padding: 16px;
+          padding-bottom: 0;
         }
         .text {
           margin-left: 0;
