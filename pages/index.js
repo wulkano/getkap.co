@@ -25,6 +25,8 @@ const Sections = ({ children }) => (
 export default () => (
   <div>
     <Head>
+      <meta name="theme-color" content="#000" />
+
       <title>Kap - Capture your screen.</title>
     </Head>
     <Sections>
