@@ -39,6 +39,58 @@ const Plugin = ({ title, description, color, href }) => (
     `}</style>
   </a>
 )
+
+const Buttons = () => (
+  <div>
+    <a className="browse" href="https://www.npmjs.com/search?q=kap%20plugins">
+      <img src={require('../../static/images/compass.svg')} />
+
+      <span>Browse Plugins</span>
+    </a>
+    <a className="download" href="https://kap-updates.now.sh/download">
+      <img src={require('../../static/images/download-white.svg')} />
+
+      <span>Download App</span>
+    </a>
+    <style jsx>{`
+      a {
+        text-transform: uppercase;
+        color: white;
+        display: flex;
+        align-items: center;
+        background: #7247ff;
+        padding: 16px;
+        border-radius: 4px;
+        height: 48px;
+        float: left;
+      }
+      .browse {
+        margin-right: 16px;
+      }
+      .download {
+        background: transparent;
+        border: solid 2px #ffffff;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      span {
+        margin-left: 0.8em;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      div {
+        display: inline-block;
+        margin-top: 48px;
+      }
+      @media only screen and (max-width: 900px) {
+        div {
+          position: absolute;
+        }
+      }
+    `}</style>
+  </div>
+)
 export default () => (
   <Section>
     <div className="plugins">
@@ -52,26 +104,30 @@ export default () => (
         </div>
       </div>
       <div className="plugins__display">
-        <div className="list">
-          <Plugin
-            title="giphy"
-            color="#ffd500"
-            description="Share GIFs on Giphy"
-            href="https://github.com/wulkano/kap-giphy"
-          />
-          <Plugin
-            title="now"
-            color="#FFF"
-            description="Share on ▲ZEIT now"
-            href="https://github.com/lucaperret/kap-now"
-          />
-          <Plugin
-            title="draggable"
-            color="#00ffbe"
-            description="Share recordings with drag and drop"
-            href="https://github.com/albinekb/kap-draggable"
-          />
+        <div className="list-wrapper">
+          <div className="list">
+            <Plugin
+              title="giphy"
+              color="#ffd500"
+              description="Share GIFs on Giphy"
+              href="https://github.com/wulkano/kap-giphy"
+            />
+            <Plugin
+              title="now"
+              color="#FFF"
+              description="Share on ▲ZEIT now"
+              href="https://github.com/lucaperret/kap-now"
+            />
+            <Plugin
+              title="draggable"
+              color="#00ffbe"
+              description="Share recordings with drag and drop"
+              href="https://github.com/albinekb/kap-draggable"
+            />
+          </div>
         </div>
+
+        <Buttons />
       </div>
     </div>
     <style jsx>{`
@@ -108,11 +164,8 @@ export default () => (
         padding-right: 100px;
       }
       .plugins__display {
-        width: 50%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-left: 32px;
       }
       @media only screen and (max-width: 900px) {
         .plugins {
@@ -131,15 +184,21 @@ export default () => (
         .plugins__display {
           flex-direction: row;
           width: 100%;
-
+          margin-left: 0px;
           padding-left: 32px;
           justify-content: flex-start;
           display: block;
           overflow-x: scroll;
           padding-bottom: 48px;
+          padding-bottom: 164px;
         }
         .list {
           width: 700px;
+        }
+      }
+      @media only screen and (max-width: 640px) {
+        .plugins__display {
+          padding-left: 16px;
         }
       }
     `}</style>

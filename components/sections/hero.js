@@ -86,7 +86,7 @@ const KapWindow = () => (
 )
 
 const DownloadButton = () => (
-  <a href="https://github.com/wulkano/kap/releases/download/v2.0.0/Kap-2.0.0.dmg">
+  <a href="https://kap-updates.now.sh/download">
     <img src={require('../../static/images/download.svg')} />
 
     <span>Get kap</span>
