@@ -85,51 +85,33 @@ const KapWindow = () => (
   </div>
 )
 
-class DownloadButton extends React.Component {
-  state = { download: false }
-  render() {
-    const { downloaded } = this.state
-    return (
-      <a
-        onClick={() => this.setState({ downloaded: true })}
-        href="https://github.com/wulkano/kap/releases/download/v2.0.0/Kap-2.0.0.dmg"
-      >
-        <img src={require('../../static/images/download.svg')} />
-        <Confetti
-          active={downloaded}
-          config={{
-            angle: 270,
-            spread: 291,
-            startVelocity: 25,
-            elementCount: 28,
-            decay: 0.89
-          }}
-        />
-        <span>Get kap</span>
-        <style jsx>{`
-          a {
-            text-transform: uppercase;
-            color: #7247ff;
-            display: flex;
-            align-items: center;
-            background: #fff;
-            padding: 16px;
-            border-radius: 4px;
-            height: 48px;
-          }
-          a:hover {
-            text-decoration: underline;
-          }
-          span {
-            margin-left: 0.8em;
-            font-size: 12px;
-            font-weight: bold;
-          }
-        `}</style>
-      </a>
-    )
-  }
-}
+const DownloadButton = () => (
+  <a href="https://github.com/wulkano/kap/releases/download/v2.0.0/Kap-2.0.0.dmg">
+    <img src={require('../../static/images/download.svg')} />
+
+    <span>Get kap</span>
+    <style jsx>{`
+      a {
+        text-transform: uppercase;
+        color: #7247ff;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        padding: 16px;
+        border-radius: 4px;
+        height: 48px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      span {
+        margin-left: 0.8em;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    `}</style>
+  </a>
+)
 
 const Logo = () => (
   <img src={require('../../static/images/kap.svg')} title="Kap" />

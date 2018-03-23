@@ -1,10 +1,21 @@
 import Section from '../section'
 import Grid, { Column } from '../grid'
-const Input = () => (
+import Confetti from 'react-dom-confetti'
+const Input = ({ sent }) => (
   <div className="container">
     <input type="email" name="EMAIL" placeholder="Email address" />
     <button>
       <img src="/static/images/arrow-right-white.svg" />
+      <Confetti
+        active={sent}
+        config={{
+          angle: 270,
+          spread: 291,
+          startVelocity: 25,
+          elementCount: 28,
+          decay: 0.89
+        }}
+      />
     </button>
     <style jsx>{`
       .container {
@@ -12,7 +23,6 @@ const Input = () => (
         height: 48px;
         display: flex;
         align-items: center;
-        overflow: hidden;
       }
       input {
         flex: 1;
@@ -122,40 +132,47 @@ const WulkanoAndFriends = () => (
   </div>
 )
 
-const EmailForm = () => (
-  <form
-    action="https://getkap.us14.list-manage.com/subscribe/post?u=318c21d4f80a3b46f22ad6ddd&amp;id=f219da06bd"
-    method="post"
-    id="mc-embedded-subscribe-form"
-    name="mc-embedded-subscribe-form"
-    target="_blank"
-    noValidate
-  >
-    <p>Sign up for updates</p>
-    <div>
-      <Input />
-      <input
-        style={{ position: 'absolute', left: '-59999px' }}
-        type="text"
-        name="b_318c21d4f80a3b46f22ad6ddd_f219da06bd"
-        tabIndex="-1"
-        value=""
-      />
-    </div>
-    <style jsx>{`
-      p {
-        font-size: 1.6rem;
-        font-weight: normal;
-        margin-bottom: 24px;
-      }
-      button {
-        width: 48px;
-        height: 48px;
-        background-color: #7146fe;
-      }
-    `}</style>
-  </form>
-)
+class EmailForm extends React.Component {
+  state = { sent: false }
+  render() {
+    const { sent } = this.state
+    return (
+      <form
+        onSubmit={() => this.setState({ sent: true })}
+        action="https://getkap.us14.list-manage.com/subscribe/post?u=318c21d4f80a3b46f22ad6ddd&amp;id=f219da06bd"
+        method="post"
+        id="mc-embedded-subscribe-form"
+        name="mc-embedded-subscribe-form"
+        target="_blank"
+        noValidate
+      >
+        <p>Sign up for updates</p>
+        <div>
+          <Input sent={sent} />
+          <input
+            style={{ position: 'absolute', left: '-59999px' }}
+            type="text"
+            name="b_318c21d4f80a3b46f22ad6ddd_f219da06bd"
+            tabIndex="-1"
+            value=""
+          />
+        </div>
+        <style jsx>{`
+          p {
+            font-size: 1.6rem;
+            font-weight: normal;
+            margin-bottom: 24px;
+          }
+          button {
+            width: 48px;
+            height: 48px;
+            background-color: #7146fe;
+          }
+        `}</style>
+      </form>
+    )
+  }
+}
 export default () => (
   <Section>
     <Grid>
