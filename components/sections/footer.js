@@ -9,11 +9,11 @@ const Input = ({ boom }) => (
       <Confetti
         active={boom}
         config={{
-          angle: 270,
-          spread: 291,
-          startVelocity: 25,
-          elementCount: 28,
-          decay: 0.89
+          angle: 90,
+          spread: 53,
+          startVelocity: 51,
+          elementCount: 69,
+          decay: 0.91
         }}
       />
     </button>
@@ -140,8 +140,12 @@ class EmailForm extends React.Component {
     return (
       <form
         onSubmit={() => {
-          this.setState({ sent: true })
-          window.onfocus = () => this.setState({ refocused: true })
+          if (!this.state.sent) {
+            this.setState({ sent: true })
+            if (window.chrome) {
+              window.onfocus = () => this.setState({ refocused: true })
+            }
+          }
         }}
         action="https://getkap.us14.list-manage.com/subscribe/post?u=318c21d4f80a3b46f22ad6ddd&amp;id=f219da06bd"
         method="post"
