@@ -30,9 +30,18 @@ const Info = () => (
       }
       @media only screen and (max-width: 460px) {
         div {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          display: block;
+          margin: 0 16px;
+          width: 100vw;
+          margin-top: 32px;
+        }
+        span {
+          padding-top: 8px;
+        }
+        a,
+        span {
+          display: block;
+          float: none;
         }
       }
     `}</style>
@@ -40,33 +49,39 @@ const Info = () => (
 )
 
 const KapWindow = () => (
-  <div>
-    <img src={require('../../static/images/kap-window@2x.png')} />
-    <style jsx>{`
-      img {
-        width: 320px;
-        height: 180px;
-        opacity: 1;
-      }
-      div {
-        z-index: 100;
-
-        width: 320px;
-        height: 180px;
-        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
-        background-color: white;
-        border-radius: 4px;
-        transform: translateY(50%);
-        position: relative;
-      }
-      @media only screen and (max-width: 420px) {
-        div,
+  <div className="root">
+    <div className="window">
+      <img src={require('../../static/images/kap-window@2x.png')} />
+      <style jsx>{`
         img {
-          width: 288px !important;
-          height: 163px !important;
+          width: 320px;
+          height: 180px;
+          opacity: 1;
         }
-      }
-    `}</style>
+        .window {
+          z-index: 100;
+
+          width: 320px;
+          height: 180px;
+          box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
+          background-color: white;
+          border-radius: 4px;
+          transform: translateY(50%);
+          position: relative;
+        }
+        @media only screen and (max-width: 420px) {
+          .window,
+          img {
+            width: 288px !important;
+            height: 163px !important;
+          }
+        }
+        .window {
+          margin-bottom: -20%;
+          transform: translateY(20%);
+        }
+      `}</style>
+    </div>
   </div>
 )
 
@@ -102,7 +117,7 @@ const Logo = () => (
 )
 
 export default () => (
-  <Section height="640px">
+  <Section>
     <div className="gradient">
       <div className="header-animation" />
       <div className="header">
@@ -203,6 +218,7 @@ export default () => (
         line-height: 1.33;
         max-width: 448px;
         text-align: center;
+        display: inline-block;
       }
       h1 {
         font-size: 1em;
@@ -226,8 +242,24 @@ export default () => (
         .curve {
           width: 110vw;
         }
+        .center {
+          display: block;
+          text-align: center;
+        }
+      }
+      @media only screen and (min-width: 640px) {
+        h1 {
+          margin-top: 112px;
+        }
       }
       @media only screen and (max-width: 460px) {
+        h1 {
+          font-size: 32px;
+          max-width: 200px;
+          line-height: 1.25;
+          display: inline-block;
+          margin-top: 32px;
+        }
         h2 {
           max-width: 288px;
           line-height: 1.2;
@@ -241,6 +273,7 @@ export default () => (
         }
         .curve {
           width: 100vw;
+          height: 120px;
         }
       }
     `}</style>
