@@ -211,6 +211,7 @@ export default () => (
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        z-index: 100;
         font-size: 48px;
       }
       h2 {
