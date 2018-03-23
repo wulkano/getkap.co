@@ -131,6 +131,9 @@ export default () => (
           <Buttons />
         </div>
       </div>
+      <div className="buttons-mobile">
+        <Buttons />
+      </div>
     </div>
     <style jsx>{`
       .power {
@@ -169,6 +172,12 @@ export default () => (
         height: 100%;
         margin-left: 32px;
       }
+      .buttons-mobile {
+        display: none;
+        top: -164px;
+        position: relative;
+        left: 32px;
+      }
       @media only screen and (max-width: 900px) {
         .plugins {
           flex-direction: column;
@@ -199,7 +208,14 @@ export default () => (
         .list {
           width: 700px;
         }
+        .buttons-desktop {
+          display: none;
+        }
+        .buttons-mobile {
+          display: block;
+        }
       }
+
       @media only screen and (max-width: 640px) {
         .plugins__display {
           padding-left: 16px;
@@ -209,6 +225,9 @@ export default () => (
         }
         .power {
           max-width: none;
+        }
+        .buttons-mobile {
+          left: 16px;
         }
       }
     `}</style>
