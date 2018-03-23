@@ -17,6 +17,7 @@ const Sections = ({ children }) => (
       .sections {
         display: flex;
         flex-direction: column;
+        overflow-x: hidden;
       }
     `}</style>
   </div>
