@@ -249,12 +249,17 @@ export default () => (
           text-align: center;
         }
       }
-      @media only screen and (min-width: 640px) {
+      @media only screen and (min-width: 600px) {
         h1 {
           margin-top: 112px;
         }
       }
-      @media only screen and (max-width: 460px) {
+      @media only screen and (max-width: 600px) {
+        h1 {
+          margin-top: 64px;
+        }
+      }
+      @media only screen and (max-width: 500px) {
         h1 {
           font-size: 32px;
           max-width: 200px;

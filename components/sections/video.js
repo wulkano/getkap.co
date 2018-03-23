@@ -10,12 +10,7 @@ export default () => (
             className="play-icon"
           />
         </div>
-        <img
-          src="/static/images/video/preview.jpg"
-          width="1024px"
-          height="576px"
-          className="preview"
-        />
+        <img src="/static/images/video/preview.jpg" className="preview" />
       </div>
       <div className="text">
         <h3>More quality, less noise</h3>
@@ -38,6 +33,7 @@ export default () => (
         margin-top: 228px;
         margin-bottom: -100px;
       }
+
       .video {
         width: 50%;
         z-index: 100;
@@ -46,6 +42,8 @@ export default () => (
       }
       .video > img {
         float: right;
+        width: 1024px;
+        height: 576px;
       }
       .video:hover .play-icon {
         transform: scale(1.2);
@@ -128,6 +126,42 @@ export default () => (
         }
         to {
           transform: translateX(-10px);
+        }
+      }
+      @media only screen and (max-width: 1300px) {
+        .text {
+          margin-left: 32px;
+          margin-right: 32px;
+        }
+      }
+      @media only screen and (max-width: 640px) {
+        .split {
+          flex-direction: column-reverse;
+          margin-top: 128px;
+          margin-bottom: 0px;
+          padding: 16px;
+        }
+        .text {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        .video {
+          width: 100%;
+          z-index: 100;
+          position: relative;
+          cursor: pointer;
+          margin-top: 32px;
+
+          overflow: hidden;
+        }
+        .video > img {
+          width: 100%;
+          float: none;
+          height: auto;
+        }
+        .overlay:hover {
+          background-color: transparent;
         }
       }
     `}</style>
