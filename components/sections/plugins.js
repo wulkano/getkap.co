@@ -127,7 +127,9 @@ export default () => (
           </div>
         </div>
 
-        <Buttons />
+        <div className="buttons-desktop">
+          <Buttons />
+        </div>
       </div>
     </div>
     <style jsx>{`
@@ -189,6 +191,8 @@ export default () => (
           justify-content: flex-start;
           display: block;
           overflow-x: scroll;
+          -webkit-overflow-scrolling: touch;
+
           padding-bottom: 48px;
           padding-bottom: 164px;
         }
@@ -199,6 +203,12 @@ export default () => (
       @media only screen and (max-width: 640px) {
         .plugins__display {
           padding-left: 16px;
+        }
+        .plugin__text {
+          padding: 0 16px !important;
+        }
+        .power {
+          max-width: none;
         }
       }
     `}</style>

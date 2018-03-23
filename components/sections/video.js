@@ -145,6 +145,7 @@ export default () => (
         .text {
           margin-left: 0;
           margin-right: 0;
+          max-width: none;
         }
 
         .video {
