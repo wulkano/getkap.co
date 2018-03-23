@@ -20,16 +20,23 @@ const Plugin = ({ title, description, color, href }) => (
         border-radius: 4px;
         box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1),
           0 1px 2px 0 rgba(0, 0, 0, 0.1);
-        width: 208px;
-        height: 160px;
+
         margin-right: 16px;
         margin-bottom: 16px;
         display: inline-block;
         transition: 100ms ease;
         will-change: transform;
+        width: 30%;
+        height: 160px;
       }
       .plugin:hover {
         transform: scale(1.05);
+      }
+      @media only screen and (max-width: 900px) {
+        .plugin {
+          width: 208px;
+          height: 160px;
+        }
       }
       @media only screen and (max-width: 600px) {
         .plugin:hover {
@@ -88,6 +95,11 @@ const Buttons = () => (
           position: absolute;
         }
       }
+      @media only screen and (max-width: 370px) {
+        a {
+          margin-bottom: 16px;
+        }
+      }
     `}</style>
   </div>
 )
@@ -115,13 +127,13 @@ export default () => (
             <Plugin
               title="now"
               color="#FFF"
-              description="Share on ▲ZEIT now"
+              description="Share on ZEIT now&nbsp;&nbsp;&nbsp;"
               href="https://github.com/lucaperret/kap-now"
             />
             <Plugin
               title="draggable"
               color="#00ffbe"
-              description="Share recordings with drag and drop"
+              description="Share with drag and drop"
               href="https://github.com/albinekb/kap-draggable"
             />
           </div>
@@ -198,6 +210,7 @@ export default () => (
           width: 100%;
           padding: 0 32px;
           justify-content: flex-start;
+          padding-right: 0px;
         }
         .plugins__display {
           flex-direction: row;
@@ -227,14 +240,22 @@ export default () => (
         .plugins__display {
           padding-left: 16px;
         }
-        .plugin__text {
-          padding: 0 16px !important;
+        .plugins__text {
+          padding: 0 16px;
         }
         .power {
           max-width: none;
         }
         .buttons-mobile {
           left: 16px;
+        }
+      }
+      @media only screen and (max-width: 370px) {
+        .plugins__display {
+          padding-bottom: 220px;
+        }
+        .buttons-mobile {
+          top: -220px;
         }
       }
     `}</style>
