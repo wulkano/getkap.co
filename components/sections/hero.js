@@ -95,8 +95,17 @@ class DownloadButton extends React.Component {
         href="https://github.com/wulkano/kap/releases/download/v2.0.0/Kap-2.0.0.dmg"
       >
         <img src={require('../../static/images/download.svg')} />
+        <Confetti
+          active={downloaded}
+          config={{
+            angle: 270,
+            spread: 291,
+            startVelocity: 25,
+            elementCount: 28,
+            decay: 0.89
+          }}
+        />
         <span>Get kap</span>
-        <Confetti active={downloaded} config={{ angle: 270 }} />
         <style jsx>{`
           a {
             text-transform: uppercase;
