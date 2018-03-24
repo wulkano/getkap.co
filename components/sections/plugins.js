@@ -26,7 +26,8 @@ const Plugin = ({ title, description, color, href }) => (
         display: inline-block;
         transition: 100ms ease;
         will-change: transform;
-        width: 30%;
+
+        width: 208px;
         height: 160px;
       }
       .plugin:hover {
@@ -34,8 +35,6 @@ const Plugin = ({ title, description, color, href }) => (
       }
       @media only screen and (max-width: 900px) {
         .plugin {
-          width: 208px;
-          height: 160px;
         }
       }
       @media only screen and (max-width: 600px) {
@@ -90,11 +89,11 @@ const Buttons = () => (
         display: inline-block;
         margin-top: 48px;
       }
-      @media only screen and (max-width: 900px) {
-        div {
-          position: absolute;
-        }
-      }
+      // @media only screen and (max-width: 900px) {
+      //   div {
+      //     position: absolute;
+      //   }
+      // }
       @media only screen and (max-width: 370px) {
         a {
           margin-bottom: 16px;
@@ -196,12 +195,21 @@ export default () => (
           margin-left: 32px;
         }
       }
-      @media only screen and (max-width: 900px) {
-        .plugins {
+      @media only screen and (min-width: 712px) {
+        .plugins: {
           flex-direction: column;
 
-          padding-top: 128px;
-          padding-bottom: 0px;
+          jusify-content: center;
+          align-items: center;
+        }
+      }
+      @media only screen and (max-width: 1410px) {
+        .plugins {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-top: 192px;
+          padding-bottom: 6px;
         }
         .plugins__text {
           padding-right: 32px;
@@ -209,45 +217,74 @@ export default () => (
           margin-left: 0px;
           width: 100%;
           padding: 0 32px;
-          justify-content: flex-start;
+          justify-content: center;
           padding-right: 0px;
+          text-align: center;
         }
         .plugins__display {
           flex-direction: row;
           width: 100%;
           margin-left: 0px;
           padding-left: 32px;
-          justify-content: flex-start;
+          justify-content: center;
+          align-items: center;
           display: block;
           overflow-x: scroll;
           -webkit-overflow-scrolling: touch;
 
           padding-bottom: 48px;
-          padding-bottom: 164px;
+          padding-bottom: 128px;
         }
         .list {
-          width: 700px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
         }
         .buttons-desktop {
           display: none;
         }
         .buttons-mobile {
           display: block;
+          left: 16px;
+          margin-bottom: -64px4;
+          padding-top: 32px;
+          // position: relative;
+          // left: 0;
+          // width: 100%;
+          // text-align: center;
         }
       }
 
       @media only screen and (max-width: 640px) {
+        .plugins {
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding-bottom: 0px;
+        }
         .plugins__display {
+          margin-bottom: -100px;
+
           padding-left: 16px;
+        }
+        .list {
+          width: 700px;
+          display: block;
         }
         .plugins__text {
           padding: 0 16px;
+          text-align: left;
+          justify-content: flex-start;
         }
         .power {
           max-width: none;
         }
         .buttons-mobile {
           left: 16px;
+
+          position: relative;
+          text-align: left;
+          margin-bottom: 0px;
+          top: -64px;
         }
       }
       @media only screen and (max-width: 370px) {
@@ -255,7 +292,7 @@ export default () => (
           padding-bottom: 220px;
         }
         .buttons-mobile {
-          top: -220px;
+          top: -128px;
         }
       }
     `}</style>
