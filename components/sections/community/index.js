@@ -2,7 +2,7 @@ import Section from '../../section'
 import Quotes from './quotes'
 
 const Logo = ({ href, name }) => (
-  <a href={href} title={name} className="logo">
+  <a href={href} title={name}>
     <img key={name} src={`/static/images/logos/${name}.png`} />
   </a>
 )
