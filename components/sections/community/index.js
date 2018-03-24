@@ -2,18 +2,49 @@ import Section from '../../section'
 import Quotes from './quotes'
 
 const Logo = ({ href, name }) => (
-  <a href={href} title={name}>
+  <a href={href} title={name} className="logo">
     <img key={name} src={`/static/images/logos/${name}.png`} />
   </a>
 )
 const Logos = () => (
   <div>
-    <Logo name="zeit" href="https://zeit.co/" />
-    <Logo name="circle-ci" href="https://circleci.com/" />
-    <Logo name="sentry" href="https://getsentry.io/" />
-    <Logo name="git-hub" href="https://github.com/" />
-    <Logo name="google" href="https://google.com/" />
-    <Logo name="facebook" href="https://facebook.com/" />
+    <div className="logo-row">
+      <Logo name="zeit" href="https://zeit.co/" />
+      <Logo name="circle-ci" href="https://circleci.com/" />
+    </div>
+
+    <div className="logo-row">
+      <Logo name="sentry" href="https://getsentry.io/" />
+      <Logo name="git-hub" href="https://github.com/" />
+      <Logo name="google" href="https://google.com/" />
+    </div>
+
+    <div className="logo-row">
+      <Logo name="facebook" href="https://facebook.com/" />
+    </div>
+
+    {/*
+      Setting rules for .logo-row's initial state without media query
+      doesn't apply because of styled-jsx bug
+    */}
+    <style jsx>{`
+      @media (min-width: 486px) {
+        .logo-row {
+          display: inline-block;
+        }
+      }
+    `}</style>
+
+    <style jsx>
+      {`
+        @media (max-width: 486px) {
+          .logo-row {
+            display: flex;
+            justify-content: center;
+          }
+        }
+      `}
+    </style>
   </div>
 )
 
