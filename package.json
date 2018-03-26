@@ -43,6 +43,7 @@
     "react-mason": "^1.1.2"
   },
   "devDependencies": {
+    "babel-plugin-inline-react-svg": "^0.5.2",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.0",
     "next-compose-plugins": "^1.0.3",

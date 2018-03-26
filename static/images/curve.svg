@@ -5,6 +5,10 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M1440,1.13686838e-13 L1440,24 L0,24 L0,1.13686838e-13 C240,16 480,24 720,24 C960,24 1200,16 1440,1.13686838e-13 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+        <g id="Landing-(003)-" transform="translate(0.000000, -616.000000)" fill="#FFFFFF">
+            <g id="Header" transform="translate(0.000000, 224.000000)">
+                <path d="M0,392 C240,408 480,416 720,416 C960,416 1200,408 1440,392 L1440,416 L0,416 L0,392 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
     </g>
 </svg>

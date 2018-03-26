@@ -1,5 +1,8 @@
-import Section from '../section'
+import Button from '../Button'
 import Confetti from 'react-dom-confetti'
+import Logo from '../../static/images/kap.svg'
+import KapWindowImage from '../../static/images/kap-window@2x.png'
+
 const Info = () => (
   <div>
     <a href="https://github.com/wulkano/kap">View and contribute on GitHub</a>
@@ -49,194 +52,120 @@ const Info = () => (
 )
 
 const KapWindow = () => (
-  <div className="root">
-    <div className="window">
-      <img src={require('../../static/images/kap-window@2x.png')} />
-      <style jsx>{`
-        img {
-          width: 320px;
-          height: 180px;
-          opacity: 1;
-        }
-        .window {
-          z-index: 100;
+  <div className="window">
+    <img src={KapWindowImage} alt="The Kap Window" />
+    <style jsx>{`
+      img {
+        width: 320px;
+        height: 180px;
+        opacity: 1;
+      }
+      .window {
+        z-index: 100;
+        width: 320px;
+        height: 180px;
+        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
+        background-color: white;
+        border-radius: 4px;
+        position: relative;
+        margin-bottom: -88px;
+      }
 
-          width: 320px;
-          height: 180px;
-          box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
-          background-color: white;
-          border-radius: 4px;
-          transform: translateY(50%);
-          position: relative;
+      @media only screen and (max-width: 420px) {
+        .window,
+        img {
+          width: 288px !important;
+          height: 163px !important;
         }
-        @media only screen and (max-width: 420px) {
-          .window,
-          img {
-            width: 288px !important;
-            height: 163px !important;
-          }
-        }
-        .window {
-          margin-bottom: -20%;
-          transform: translateY(20%);
-        }
-      `}</style>
-    </div>
+      }
+    `}</style>
   </div>
 )
 
-const DownloadButton = () => (
-  <a href="https://kap-updates.now.sh/download">
-    <img src={require('../../static/images/download.svg')} />
-
-    <span>Get kap</span>
-    <style jsx>{`
-      a {
-        text-transform: uppercase;
-        color: #7247ff;
-        display: flex;
-        align-items: center;
-        background: #fff;
-        padding: 16px;
-        border-radius: 4px;
-        height: 48px;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      span {
-        margin-left: 0.8em;
-        font-size: 12px;
-        font-weight: bold;
-      }
-    `}</style>
-  </a>
-)
-
-const Logo = () => (
-  <img src={require('../../static/images/kap.svg')} title="Kap" />
-)
-
 export default () => (
-  <Section>
-    <div className="gradient">
-      <div className="header-animation" />
-      <div className="header">
-        <div>
-          <Logo />
-        </div>
-        <div>
-          <DownloadButton />
-        </div>
-      </div>
-      <div className="center">
-        <h1>Capture your screen</h1>
-        <h2>An open-source screen recorder built with web technology.</h2>
-        <Info />
-      </div>
-      <KapWindow />
-      <div
-        className="curve"
-        style={{
-          backgroundImage: `url(${require('../../static/images/curve-mobile.svg')})`
-        }}
-      />
+  <section className="hero">
+    <header className="header grid">
+      <Logo />
+      {/* Download Button */}
+      <Button theme="light" href="https://kap-updates.now.sh/download">
+        <img src={require('../../static/images/download.svg')} />
+        <span>Get kap</span>
+      </Button>
+    </header>
+    <div className="hero__content">
+      <h1>Capture your screen</h1>
+      <h3>An open-source screen recorder built with web technology.</h3>
+      <Info />
     </div>
+    <KapWindow />
     <style jsx>{`
-      .gradient {
+      @keyframes bg {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .hero {
         flex: 1;
-        height: 100%;
+        min-height: calc(100vh - 320px);
         color: white;
+        display: flex;
         flex-direction: column;
         align-items: center;
         position: relative;
-        display: flex;
         padding: 0 32px;
-        width: 100vw;
-      }
-
-      .header-animation {
-        position: absolute;
-        overflow: hidden;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: block;
-        z-index: -1;
-      }
-
-      .header-animation::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
         background-image: radial-gradient(
           farthest-corner at -0% 100%,
           #7247ff 30%,
           #00ffbe 95%
         );
-        animation: bg 6s ease-in infinite alternate;
+        background-size: 150% 150%;
+        animation: bg 12s ease-in infinite alternate;
         will-change: transform;
         transform-style: preserve-3d;
       }
 
-      @keyframes bg {
-        0% {
-          transform: scale(1);
-        }
-        100% {
-          transform: scale(2);
-        }
+      .hero::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 110vw;
+        padding-bottom: 2.6%;
+        background: url('../../static/images/curve.svg') center bottom/cover
+          no-repeat;
+        margin-bottom: -1px;
       }
 
-      .curve {
-        width: 200vw;
-        position: absolute;
-        bottom: -1px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: block;
-        height: 200px;
-        transform-origin: bottom;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center bottom;
-      }
-      .center {
+      .hero__content {
         flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         z-index: 100;
-        font-size: 48px;
-      }
-      h2 {
-        font-size: 24px;
-        font-weight: 500;
-        line-height: 1.33;
-        max-width: 448px;
+        padding-top: 128px;
+        padding-bottom: 128px;
         text-align: center;
-        display: inline-block;
+        width: 48rem;
+        max-width: 100%;
       }
-      h1 {
-        font-size: 1em;
-        line-height: 64px;
-        font-weight: 500;
-        margin-bottom: 16px;
-        text-align: center;
-      }
+
       .header {
-        max-width: 1200px;
-        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-top: 64px;
       }
+
       @media only screen and (max-width: 1200px) {
         .header {
           margin-top: 32px;
@@ -250,17 +179,17 @@ export default () => (
         }
       }
       @media only screen and (min-width: 600px) {
-        h1 {
+        .header__content {
           margin-top: 112px;
         }
       }
       @media only screen and (max-width: 600px) {
-        h1 {
+        .header__content {
           margin-top: 64px;
         }
       }
       @media only screen and (max-width: 500px) {
-        h1 {
+        .header__content {
           font-size: 32px;
           max-width: 200px;
           line-height: 1.25;
@@ -284,5 +213,5 @@ export default () => (
         }
       }
     `}</style>
-  </Section>
+  </section>
 )
