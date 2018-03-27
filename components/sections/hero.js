@@ -116,6 +116,7 @@ export default () => (
       .hero {
         flex: 1;
         min-height: calc(100vh - 320px);
+        max-height: 96rem;
         color: white;
         display: flex;
         flex-direction: column;

@@ -1,7 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
 import ReactGA from 'react-ga'
-import EightpointReset from 'eightpoint/dist/eight.reset.min.css'
 
 // Google Analytics
 ReactGA.initialize('UA-84705099-3')
@@ -95,6 +94,23 @@ export default ({ children }) => (
       h4 {
         font-size: 2rem;
         line-height: 1.5em;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 1.5em;
+      }
+
+      p.paragraph--medium {
+        font-weight: 500;
+      }
+
+      /* Links */
+      a {
+        cursor: pointer;
+        font-size: 1.6rem;
+        line-height: 1.5em;
+        color: #7146fe;
       }
     `}</style>
   </React.Fragment>
