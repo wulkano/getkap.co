@@ -15,104 +15,6 @@ export default ({ children }) => (
     {children}
 
     <style jsx global>{`
-      @font-face {
-        font-family: 'InterUI';
-        font-style: normal;
-        font-weight: 400;
-        font-display: block; /* or block, swap, fallback, optional */
-        src: url('/static/fonts/interui/Inter-UI-Regular.woff2') format('woff2'),
-          url('/static/fonts/interui/Inter-UI-Regular.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'InterUI';
-        font-style: normal;
-        font-weight: 500;
-        font-display: block; /* or block, swap, fallback, optional */
-        src: url('/static/fonts/interui/Inter-UI-Medium.woff2') format('woff2'),
-          url('/static/fonts/interui/Inter-UI-Medium.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'InterUI';
-        font-style: normal;
-        font-weight: 700;
-        font-display: block; /* or block, swap, fallback, optional */
-        src: url('/static/fonts/interui/Inter-UI-Bold.woff2') format('woff2'),
-          url('/static/fonts/interui/Inter-UI-Bold.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'InterUI';
-        font-style: normal;
-        font-weight: 900;
-        font-display: block; /* or block, swap, fallback, optional */
-        src: url('/static/fonts/interui/Inter-UI-Black.woff2') format('woff2'),
-          url('/static/fonts/interui/Inter-UI-Black.woff') format('woff');
-      }
-
-      body {
-        font-family: 'InterUI', sans-serif !important; // TODO: how to override eightpoint?
-        font-size: 1.2rem;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        overflow-x: hidden;
-      }
-
-      ::selection {
-        background: #7146fe;
-        color: white;
-      }
-
-      .grid {
-        max-width: 100%;
-        width: 1200px;
-      }
-
-      /**
-       * Typography
-      **/
-      h1 {
-        font-size: 4.8rem;
-        line-height: 1.333em;
-        font-weight: 500;
-        margin-bottom: 1.6rem;
-      }
-
-      h2 {
-        font-size: 3.2rem;
-        line-height: 1.5em;
-        font-weight: 500;
-      }
-
-      h3 {
-        font-size: 2.4rem;
-        line-height: 1.333em;
-        font-weight: 500;
-      }
-
-      h4 {
-        font-size: 2rem;
-        line-height: 1.5em;
-      }
-
-      p {
-        font-size: 1.6rem;
-        line-height: 1.5em;
-      }
-
-      p.paragraph--medium {
-        font-weight: 500;
-      }
-
-      /* Links */
-      a {
-        cursor: pointer;
-        font-size: 1.6rem;
-        line-height: 1.5em;
-        color: #7146fe;
-      }
-
       /* Eightpoint reset */
       html,
       body,
@@ -239,6 +141,104 @@ export default ({ children }) => (
       tt {
         font-family: 'Courier New', Courier, monospace;
         font-size: 1em;
+      }
+
+      @font-face {
+        font-family: 'InterUI';
+        font-style: normal;
+        font-weight: 400;
+        font-display: block; /* or block, swap, fallback, optional */
+        src: url('/static/fonts/interui/Inter-UI-Regular.woff2') format('woff2'),
+          url('/static/fonts/interui/Inter-UI-Regular.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'InterUI';
+        font-style: normal;
+        font-weight: 500;
+        font-display: block; /* or block, swap, fallback, optional */
+        src: url('/static/fonts/interui/Inter-UI-Medium.woff2') format('woff2'),
+          url('/static/fonts/interui/Inter-UI-Medium.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'InterUI';
+        font-style: normal;
+        font-weight: 700;
+        font-display: block; /* or block, swap, fallback, optional */
+        src: url('/static/fonts/interui/Inter-UI-Bold.woff2') format('woff2'),
+          url('/static/fonts/interui/Inter-UI-Bold.woff') format('woff');
+      }
+
+      @font-face {
+        font-family: 'InterUI';
+        font-style: normal;
+        font-weight: 900;
+        font-display: block; /* or block, swap, fallback, optional */
+        src: url('/static/fonts/interui/Inter-UI-Black.woff2') format('woff2'),
+          url('/static/fonts/interui/Inter-UI-Black.woff') format('woff');
+      }
+
+      body {
+        font-family: 'InterUI', sans-serif !important; // TODO: how to override eightpoint?
+        font-size: 1.2rem;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overflow-x: hidden;
+      }
+
+      ::selection {
+        background: #7146fe;
+        color: white;
+      }
+
+      .grid {
+        max-width: 100%;
+        width: 1200px;
+      }
+
+      /**
+       * Typography
+      **/
+      h1 {
+        font-size: 4.8rem;
+        line-height: 1.333em;
+        font-weight: 500;
+        margin-bottom: 1.6rem;
+      }
+
+      h2 {
+        font-size: 3.2rem;
+        line-height: 1.5em;
+        font-weight: 500;
+      }
+
+      h3 {
+        font-size: 2.4rem;
+        line-height: 1.333em;
+        font-weight: 500;
+      }
+
+      h4 {
+        font-size: 2rem;
+        line-height: 1.5em;
+      }
+
+      p {
+        font-size: 1.6rem;
+        line-height: 1.5em;
+      }
+
+      p.paragraph--medium {
+        font-weight: 500;
+      }
+
+      /* Links */
+      a {
+        cursor: pointer;
+        font-size: 1.6rem;
+        line-height: 1.5em;
+        color: #7146fe;
       }
     `}</style>
   </React.Fragment>
