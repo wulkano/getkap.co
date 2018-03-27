@@ -115,8 +115,8 @@ export default () => (
 
       .hero {
         flex: 1;
-        min-height: calc(100vh - 320px);
-        max-height: 96rem;
+        max-height: calc(100vh - 320px);
+        min-height: 64rem;
         color: white;
         display: flex;
         flex-direction: column;
@@ -138,12 +138,14 @@ export default () => (
         content: '';
         position: absolute;
         bottom: 0;
-        left: 0;
-        width: 110vw;
-        padding-bottom: 2.6%;
-        background: url('../../static/images/curve.svg') center bottom/cover
-          no-repeat;
-        margin-bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 190vw;
+        padding-bottom: 4%;
+        background: url('../../static/images/curve-mobile.svg') center bottom;
+        background-size: cover;
+        margin-bottom: -3px;
       }
 
       .hero__content {
@@ -182,6 +184,10 @@ export default () => (
       @media only screen and (min-width: 600px) {
         .header__content {
           margin-top: 112px;
+          padding-top: 64px;
+        }
+        .hero {
+          min-height: 56rem;
         }
       }
       @media only screen and (max-width: 600px) {
