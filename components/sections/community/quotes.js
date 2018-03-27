@@ -8,51 +8,63 @@ const Quote = ({ handle, name, text }) => (
           {handle}
         </a>
       </div>
+    </div>
 
-      <style jsx>{`
-        .card {
-          width: 320px;
+    <style jsx>{`
+      .card {
+        width: 320px;
 
-          // min-width:
-          border-radius: 4px;
-          background-color: #f9f9f9;
-          padding: 32px;
-          border-radius: 4px;
-          margin-bottom: 32px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+        // min-width:
+        border-radius: 4px;
+        background-color: #f9f9f9;
+        padding: 32px;
+        border-radius: 4px;
+        margin-bottom: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      @media only screen and (max-width: 750px) {
+        .item {
+          width: 100%;
+          flex: 1;
+          padding: 0 16px;
         }
-        p {
-          color: #000000;
-          line-height: 1.43;
-          font-size: 14px;
-          font-weight: normal;
+        .card {
+          width: 100%;
+          flex: 1;
           margin-bottom: 16px;
         }
-        a:hover {
-          text-decoration: underline;
-        }
-        .quote-info {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-        }
-        .name {
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 1.43;
-          color: #000000;
-        }
-        .handle {
-          font-size: 14px;
-          font-weight: normal;
-          line-height: 1.43;
-          color: #808080;
-        }
-      `}</style>
-    </div>
+      }
+      p {
+        color: #000000;
+        line-height: 1.43;
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom: 16px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .quote-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .name {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.43;
+        color: #000000;
+      }
+      .handle {
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.43;
+        color: #808080;
+      }
+    `}</style>
   </div>
 )
 
@@ -212,6 +224,11 @@ export default class Quotes extends React.Component {
   state = { columns: 4 }
   renderColums = () => {
     const { columns } = this.state
+    if (columns === 1) {
+      return QUOTES.map((quote, index) => (
+        <Quote key={quote.handle + index} {...quote} />
+      ))
+    }
     return <Columns quotes={QUOTES} columns={columns} />
   }
   componentDidMount() {
@@ -253,6 +270,7 @@ export default class Quotes extends React.Component {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
           }
         `}</style>
       </div>
