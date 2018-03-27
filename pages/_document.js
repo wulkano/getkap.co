@@ -82,7 +82,7 @@ export default class MyDocument extends Document {
           <NextScript />
         </body>
 
-        <style jsx global>{`
+        <style>{`
           /* Eightpoint reset */
           html,
           body,
