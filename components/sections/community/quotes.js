@@ -13,8 +13,6 @@ const Quote = ({ handle, name, text }) => (
     <style jsx>{`
       .card {
         width: 320px;
-
-        // min-width:
         border-radius: 4px;
         background-color: #f9f9f9;
         padding: 32px;
@@ -24,7 +22,20 @@ const Quote = ({ handle, name, text }) => (
         flex-direction: column;
         justify-content: space-between;
       }
-      @media only screen and (max-width: 750px) {
+      @media only screen and (max-width: 1020px) {
+        .item {
+          width: 100%;
+          flex: 1;
+          padding: 0 8px;
+        }
+
+        .card {
+          width: 100%;
+          flex: 1;
+          margin-bottom: 16px;
+        }
+      }
+      @media only screen and (max-width: 640px) {
         .item {
           width: 100%;
           flex: 1;
@@ -208,14 +219,29 @@ const split = (quotes, columns) => {
 const Columns = ({ columns, quotes }) => {
   const quoteColumns = split(quotes, columns)
   return (
-    <div style={{ display: 'flex' }}>
+    <div style={{ display: 'flex' }} className="columns">
       {quoteColumns.map((column, index) => (
-        <div key={index} style={{ margin: '16px' }}>
+        <div className="column" key={index}>
           {column.map((quote, index) => (
             <Quote key={quote.handle + index} {...quote} />
           ))}
         </div>
       ))}
+      <style jsx>{`
+        @media only screen and (min-width: 1020px) {
+          .column {
+            margin: 0 16px;
+          }
+        }
+        @media only screen and (max-width: 1020px) {
+          .column {
+            margin: 0 0px;
+          }
+          .columns {
+            margin: 0 8px;
+          }
+        }
+      `}</style>
     </div>
   )
 }
@@ -235,7 +261,7 @@ export default class Quotes extends React.Component {
   componentDidMount() {
     const four = window.matchMedia(`(min-width: 1400px)`)
     const three = window.matchMedia(`(min-width: 1020px)`)
-    const two = window.matchMedia(`(min-width: 750px)`)
+    const two = window.matchMedia(`(min-width: 640px)`)
     const one = window.matchMedia(`(min-width: 320px)`)
 
     const setColumns = () => {
