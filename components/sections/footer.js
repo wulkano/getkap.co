@@ -22,6 +22,7 @@ const Input = ({ boom }) => (
         width: 100%;
         height: 48px;
         display: flex;
+
         align-items: center;
       }
       input {
@@ -109,7 +110,7 @@ const WulkanoAndFriends = () => (
       .container {
         display: flex;
         align-items: center;
-        max-width: 152px;
+        width: 152px;
         margin-top: -1.6rem;
       }
 
