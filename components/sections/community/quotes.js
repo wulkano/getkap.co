@@ -52,52 +52,63 @@ const Quote = ({ handle, name, text }) => (
     </div>
   </div>
 )
+
+const QUOTES = [
+  {
+    handle: '@michaelschultz',
+    name: 'Michael Schultz',
+    text: 'Kap is maybe the best GIF recorder I’ve used so far.'
+  },
+  {
+    handle: '@ThrivingKings',
+    name: 'Daniel Raftery',
+    text:
+      "I can't recommend Kap enough. Sprinkle your bugs/PRs with animated GIF screen captures. It's seriously awesome."
+  },
+  {
+    handle: '@boogah',
+    name: 'Jason Cosper',
+    text:
+      'Been looking for a nice, easy to use screen recorder. Kap seems to fit the bill. Bonus: it’s open source.'
+  },
+  {
+    handle: '@boogah',
+    name: 'Max Stoiber',
+    text:
+      'Extremely impressed with the Kap 1.0 release; this is the best screen recorder ever, built with web technologies! 💯'
+  },
+
+  {
+    handle: '@jeffreydgroot',
+    name: 'Jeffrey de Groot',
+    text:
+      'Kap makes it really easy to record and export screen captures. And it looks nice :)'
+  },
+  {
+    handle: '@ThrivingKings',
+    name: 'Daniel Raftery',
+    text:
+      "I can't recommend Kap enough. Sprinkle your bugs/PRs with animated GIF screen captures. It's seriously awesome."
+  },
+  {
+    handle: '@boogah',
+    name: 'Jason Cosper',
+    text:
+      'Been looking for a nice, easy to use screen recorder. Kap seems to fit the bill. Bonus: it’s open source.'
+  },
+  {
+    handle: '@boogah',
+    name: 'Max Stoiber',
+    text:
+      'Extremely impressed with the Kap 1.0 release; this is the best screen recorder ever, built with web technologies! 💯'
+  }
+]
+
 export default class Quotes extends React.Component {
   render() {
     return (
       <div className="grid">
-        <Quote
-          handle="@michaelschultz"
-          name="Michael Schultz"
-          text="Kap is maybe the best GIF recorder I’ve used so far."
-        />
-        <Quote
-          handle="@ThrivingKings"
-          name="Daniel Raftery"
-          text="I can't recommend Kap enough. Sprinkle your bugs/PRs with animated GIF screen captures. It's seriously awesome."
-        />
-        <Quote
-          handle="@boogah"
-          name="Jason Cosper"
-          text="Been looking for a nice, easy to use screen recorder. Kap seems to fit the bill. Bonus: it’s open source."
-        />
-        <Quote
-          handle="@boogah"
-          name="Max Stoiber"
-          text="Extremely impressed with the Kap 1.0 release; this is the best screen recorder ever, built with web technologies! 💯"
-        />
-
-        <Quote
-          handle="@jeffreydgroot"
-          name="Jeffrey de Groot"
-          text="Kap makes it really easy to record and export screen captures. And it looks nice :)"
-        />
-        <Quote
-          handle="@ThrivingKings"
-          name="Daniel Raftery"
-          text="I can't recommend Kap enough. Sprinkle your bugs/PRs with animated GIF screen captures. It's seriously awesome."
-        />
-        <Quote
-          handle="@boogah"
-          name="Jason Cosper"
-          text="Been looking for a nice, easy to use screen recorder. Kap seems to fit the bill. Bonus: it’s open source."
-        />
-        <Quote
-          handle="@boogah"
-          name="Max Stoiber"
-          text="Extremely impressed with the Kap 1.0 release; this is the best screen recorder ever, built with web technologies! 💯"
-        />
-
+        {QUOTES.map(quote => <Quote key={quote.handle} {...quote} />)}
         <style jsx>{`
           // div {
           //   max-width: 1800px;
