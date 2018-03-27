@@ -185,7 +185,7 @@ const QUOTES = [
     text:
       'I spent so much time looking something like getkap.co. The simplest way to record your screen. And easy to export. 😍'
   }
-]
+].sort(() => 0.5 - Math.random())
 
 // TODO do this nicer
 const split = (quotes, columns) => {
@@ -221,9 +221,10 @@ const Columns = ({ columns, quotes }) => {
 }
 
 export default class Quotes extends React.Component {
-  state = { columns: 4 }
+  state = { columns: null }
   renderColums = () => {
     const { columns } = this.state
+    if (!columns) return null
     if (columns === 1) {
       return QUOTES.map((quote, index) => (
         <Quote key={quote.handle + index} {...quote} />
