@@ -196,7 +196,7 @@ const QUOTES = [
     text:
       'I spent so much time looking something like getkap.co. The simplest way to record your screen. And easy to export. 😍'
   }
-].sort(() => 0.5 - Math.random())
+]
 
 // TODO do this nicer
 const split = (quotes, columns) => {
@@ -246,15 +246,55 @@ const Columns = ({ columns, quotes }) => {
   )
 }
 
+const ShowAll = ({ onClick }) => (
+  <div>
+    <a onClick={onClick} title="Show all quotes">
+      Show all
+    </a>
+    <style jsx>{`
+      div {
+        margin: 16px;
+      }
+      a {
+        text-transform: uppercase;
+        color: white;
+        width: 100%;
+
+        margin: 16px 0;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #7247ff;
+        padding: 16px;
+        border: solid 2px #f1f1f1;
+        font-size: 12px;
+        font-weight: bold;
+
+        border-radius: 4px;
+        height: 48px;
+      }
+    `}</style>
+  </div>
+)
+
 export default class Quotes extends React.Component {
-  state = { columns: null }
+  state = { columns: null, showAllMobile: null }
   renderColums = () => {
-    const { columns } = this.state
+    const { columns, showAllMobile } = this.state
     if (!columns) return null
     if (columns === 1) {
-      return QUOTES.map((quote, index) => (
-        <Quote key={quote.handle + index} {...quote} />
-      ))
+      const quotes = showAllMobile ? QUOTES : QUOTES.slice(0, 5)
+      return (
+        <div>
+          {quotes.map((quote, index) => (
+            <Quote key={quote.handle + index} {...quote} />
+          ))}
+          {!showAllMobile && (
+            <ShowAll onClick={() => this.setState({ showAllMobile: true })} />
+          )}
+        </div>
+      )
     }
     return <Columns quotes={QUOTES} columns={columns} />
   }
@@ -282,16 +322,6 @@ export default class Quotes extends React.Component {
       <div className="grid">
         {this.renderColums()}
         <style jsx>{`
-          // div {
-          //   max-width: 1800px;
-          //   width: 100%;
-
-          //   display: grid;
-          //   grid-auto-rows: 32px;
-
-          //   grid-gap: 32px;
-          //   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-          // }
           .grid {
             width: 100%;
             display: flex;
