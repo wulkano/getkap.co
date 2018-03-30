@@ -20,7 +20,7 @@ const Logos = () => (
     </div>
 
     <div className="logo-row">
-      <Logo name="facebook" href="https://facebook.com/" />
+      <Logo name="abstract" href="https://www.goabstract.com/" />
     </div>
 
     {/*
