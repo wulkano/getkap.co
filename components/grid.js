@@ -21,6 +21,7 @@ export default ({ children }) => (
           align-items: center;
           margin-bottom: 64px;
           margin-top: 128px;
+          overflow: hidden;
         }
       }
     `}</style>
