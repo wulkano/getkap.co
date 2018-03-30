@@ -84,6 +84,9 @@ const KapWindow = () => (
 
 export default () => (
   <section className="hero">
+    <div className="curve-container">
+      <div className="curve" />
+    </div>
     <header className="header grid">
       <Logo />
       {/* Download Button */}
@@ -133,9 +136,15 @@ export default () => (
         will-change: transform;
         transform-style: preserve-3d;
       }
-
-      .hero::after {
-        content: '';
+      .curve-container {
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+      }
+      .curve {
         position: absolute;
         bottom: 0;
         left: 50%;
@@ -172,9 +181,6 @@ export default () => (
       @media only screen and (max-width: 1200px) {
         .header {
           margin-top: 32px;
-        }
-        .curve {
-          width: 110vw;
         }
         .center {
           display: block;
@@ -213,10 +219,6 @@ export default () => (
         }
         .header {
           margin-top: 16px;
-        }
-        .curve {
-          width: 100vw;
-          height: 120px;
         }
       }
     `}</style>
