@@ -117,6 +117,12 @@ export default () => (
       a:hover img {
         animation-name: arrow;
       }
+      h3 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 16px;
+        line-height: 1.33;
+      }
 
       img.preview {
         border-radius: 4px 4px 4px 4px;

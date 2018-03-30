@@ -1,4 +1,5 @@
 import React from 'react'
+import colors from '../lib/colors'
 
 export default class Button extends React.Component {
   render() {
@@ -32,7 +33,7 @@ export default class Button extends React.Component {
 
           .button.light {
             background: #fff;
-            color: #7247ff;
+            color: ${colors.purple};
           }
         `}</style>
       </a>

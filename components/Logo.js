@@ -1,3 +1,4 @@
+import colors from '../lib/colors'
 export default () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -7,8 +8,8 @@ export default () => (
   >
     <defs>
       <linearGradient id="b" x1="0%" y1="100%" y2="0%">
-        <stop offset="0%" stop-color="#7247FF" />
-        <stop offset="100%" stop-color="#00FFBE" />
+        <stop offset="0%" stop-color={colors.purple} />
+        <stop offset="100%" stop-color={colors.teal} />
       </linearGradient>
       <path
         id="a"

@@ -2,6 +2,7 @@ import Button from '../Button'
 import Confetti from 'react-dom-confetti'
 import Logo from '../../static/images/kap.svg'
 import KapWindowImage from '../../static/images/kap-window@2x.png'
+import colors from '../../lib/colors'
 
 const Info = () => (
   <div>
@@ -128,8 +129,8 @@ export default () => (
         padding: 0 32px;
         background-image: radial-gradient(
           farthest-corner at -0% 100%,
-          #7247ff 30%,
-          #00ffbe 95%
+          ${colors.purple} 30%,
+          ${colors.teal} 95%
         );
         background-size: 150% 150%;
         animation: bg 12s ease-in infinite alternate;

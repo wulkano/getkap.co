@@ -1,6 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import ReactGA from 'react-ga'
+import colors from '../lib/colors'
 
 // Google Analytics
 ReactGA.initialize('UA-84705099-3')
@@ -188,7 +189,7 @@ export default ({ children }) => (
       }
 
       ::selection {
-        background: #7146fe;
+        background: ${colors.purple};
         color: white;
       }
 
@@ -238,7 +239,7 @@ export default ({ children }) => (
         cursor: pointer;
         font-size: 1.6rem;
         line-height: 1.5em;
-        color: #7146fe;
+        color: ${colors.purple};
       }
     `}</style>
   </React.Fragment>

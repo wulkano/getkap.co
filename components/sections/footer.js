@@ -1,6 +1,7 @@
 import Section from '../section'
 import Grid, { Column } from '../grid'
 import Confetti from 'react-dom-confetti'
+import colors from '../../lib/colors'
 const Input = ({ boom }) => (
   <div className="container">
     <input type="email" name="EMAIL" placeholder="Email address" />
@@ -45,12 +46,12 @@ const Input = ({ boom }) => (
       }
       input:focus {
         color: #000;
-        border-color: #7146fe;
+        border-color: ${colors.purple};
       }
       button {
         width: 48px;
         height: 48px;
-        background-color: #7146fe;
+        background-color: ${colors.purple};
         border: none;
         border-radius: 0px 4px 4px 0px;
       }
@@ -83,7 +84,7 @@ const Links = () => (
         line-height: 1.5;
         letter-spacing: normal;
         text-align: left;
-        color: #7146fe;
+        color: ${colors.purple};
       }
 
       a:hover {
@@ -127,7 +128,7 @@ const WulkanoAndFriends = () => (
         font-weight: normal;
       }
       a.friends:hover {
-        color: #7146fe;
+        color: ${colors.purple};
         ${`cursor: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIxOCIgc3R5bGU9ImZvbnQtc2l6ZToxNHB4Ij48dGV4dCB5PSIxNiI+4p2k77iPPC90ZXh0Pjwvc3ZnPg==),auto!important;`};
       }
     `}</style>
@@ -176,7 +177,7 @@ class EmailForm extends React.Component {
           button {
             width: 48px;
             height: 48px;
-            background-color: #7146fe;
+            background-color: ${colors.purple};
           }
         `}</style>
       </form>

@@ -1,3 +1,5 @@
+import colors from '../../../lib/colors'
+
 const Quote = ({ handle, name, text }) => (
   <div className="item">
     <div className="card">
@@ -265,7 +267,7 @@ const ShowAll = ({ onClick }) => (
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #7247ff;
+        color: ${colors.purple};
         padding: 16px;
         border: solid 2px #f1f1f1;
         font-size: 12px;
