@@ -19,7 +19,7 @@ const Logos = () => (
 
     <div className="logo-row">
       <Logo name="sentry" href="https://getsentry.io/" />
-      <Logo name="git-hub" href="https://github.com/" />
+      <Logo name="github" href="https://github.com/" />
       <Logo name="google" href="https://google.com/" />
     </div>
 
