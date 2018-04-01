@@ -1,108 +1,9 @@
-import Section from '../section'
+// Move under sections directory
+import Section from '../../section'
+import Plugin from './plugin'
+import Buttons from './buttons'
 
-const Plugin = ({ title, description, color, href }) => (
-  <a href={href || '#'} className="plugin" style={{ backgroundColor: color }}>
-    <span>{title}</span>
-    <p>{description}</p>
-    <style jsx>{`
-      span {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 16px;
-        display: block;
-      }
-      p {
-        font-weight: normal;
-      }
-      .plugin {
-        color: #000;
-        padding: 32px;
-        border-radius: 4px;
-        box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1),
-          0 1px 2px 0 rgba(0, 0, 0, 0.1);
-
-        margin-right: 16px;
-        margin-bottom: 16px;
-        display: inline-block;
-        transition: 100ms ease;
-        will-change: transform;
-
-        width: 208px;
-        height: 160px;
-      }
-      .plugin:hover {
-        transform: scale(1.05);
-      }
-      @media only screen and (max-width: 900px) {
-        .plugin {
-        }
-      }
-      @media only screen and (max-width: 600px) {
-        .plugin:hover {
-          transform: scale(1);
-        }
-      }
-    `}</style>
-  </a>
-)
-
-const Buttons = () => (
-  <div>
-    <a className="browse" href="https://www.npmjs.com/search?q=kap%20plugins">
-      <img src={require('../../static/images/compass.svg')} />
-
-      <span>Browse Plugins</span>
-    </a>
-    <a className="download" href="https://kap-updates.now.sh/download">
-      <img src={require('../../static/images/download-white.svg')} />
-
-      <span>Download App</span>
-    </a>
-    <style jsx>{`
-      a {
-        text-transform: uppercase;
-        color: white;
-        display: flex;
-        align-items: center;
-        background: #7247ff;
-        padding: 16px;
-        border-radius: 4px;
-        height: 48px;
-        float: left;
-      }
-      .browse {
-        margin-right: 16px;
-      }
-      .download {
-        background: transparent;
-        border: solid 2px #ffffff;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      span {
-        margin-left: 0.8em;
-        font-size: 12px;
-        font-weight: bold;
-      }
-      div {
-        display: inline-block;
-        margin-top: 48px;
-      }
-      // @media only screen and (max-width: 900px) {
-      //   div {
-      //     position: absolute;
-      //   }
-      // }
-      @media only screen and (max-width: 370px) {
-        a {
-          margin-bottom: 16px;
-        }
-      }
-    `}</style>
-  </div>
-)
-export default () => (
+const Plugins = () => (
   <Section>
     <div className="plugins">
       <div className="plugins__text">
@@ -137,7 +38,6 @@ export default () => (
             />
           </div>
         </div>
-
         <div className="buttons-desktop">
           <Buttons />
         </div>
@@ -213,7 +113,7 @@ export default () => (
         }
         .plugins__text {
           padding-right: 32px;
-          margin-bottom: 64px;
+          margin-bottom: 54px;
           margin-left: 0px;
           width: 100%;
           padding: 0 32px;
@@ -231,8 +131,7 @@ export default () => (
           display: block;
           overflow-x: scroll;
           -webkit-overflow-scrolling: touch;
-
-          padding-bottom: 48px;
+          padding-top: 10px;
           padding-bottom: 128px;
         }
         .list {
@@ -248,10 +147,6 @@ export default () => (
           left: 16px;
           margin-bottom: -64px4;
           padding-top: 32px;
-          // position: relative;
-          // left: 0;
-          // width: 100%;
-          // text-align: center;
         }
       }
 
@@ -298,3 +193,5 @@ export default () => (
     `}</style>
   </Section>
 )
+
+export default Plugins
