@@ -33,11 +33,11 @@
   },
   "homepage": "https://getkap.co",
   "dependencies": {
-    "@zeit/next-css": "^0.1.4",
+    "@zeit/next-css": "^0.1.5",
     "eightpoint": "^0.0.1",
-    "next": "^5.0.1-canary.16",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
+    "next": "^5.1.0",
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
     "react-dom-confetti": "^0.0.8",
     "react-ga": "^2.4.1",
     "react-mason": "^1.1.2"
@@ -45,10 +45,10 @@
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^0.5.2",
     "husky": "^0.14.3",
-    "lint-staged": "^7.0.0",
+    "lint-staged": "^7.0.2",
     "next-compose-plugins": "^1.0.3",
-    "next-optimized-images": "^1.2.1",
-    "now": "^10.2.1",
+    "next-optimized-images": "^1.2.2",
+    "now": "^10.2.2",
     "prettier": "^1.11.1"
   }
 }
