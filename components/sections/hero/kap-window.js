@@ -6,6 +6,8 @@ const KapWindow = () => (
         width: 320px;
         height: 180px;
         opacity: 1;
+        user-select: none;
+        user-drag: none;
       }
       .window {
         z-index: 100;
