@@ -31,11 +31,6 @@ const Plugin = ({ title, description, color, href = '#' }) => (
       .plugin:hover {
         transform: scale(1.05);
       }
-      @media only screen and (max-width: 900px) {
-        .plugin {
-          // Is this needed?
-        }
-      }
       @media only screen and (max-width: 600px) {
         .plugin:hover {
           transform: scale(1);

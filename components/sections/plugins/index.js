@@ -113,7 +113,7 @@ const Plugins = () => (
         }
         .plugins__text {
           padding-right: 32px;
-          margin-bottom: 54px;
+          margin-bottom: 48px;
           margin-left: 0px;
           width: 100%;
           padding: 0 32px;
@@ -131,7 +131,7 @@ const Plugins = () => (
           display: block;
           overflow-x: scroll;
           -webkit-overflow-scrolling: touch;
-          padding-top: 10px;
+          padding-top: 16px;
           padding-bottom: 128px;
         }
         .list {
