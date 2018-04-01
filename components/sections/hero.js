@@ -150,7 +150,6 @@ export default () => (
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
-
         width: 190vw;
         padding-bottom: 4%;
         background: url('../../static/images/curve-mobile.svg') center bottom;
@@ -192,9 +191,6 @@ export default () => (
         .header__content {
           margin-top: 112px;
           padding-top: 64px;
-        }
-        .hero {
-          min-height: 56rem;
         }
       }
       @media only screen and (max-width: 600px) {
