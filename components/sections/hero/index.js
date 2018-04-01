@@ -1,89 +1,10 @@
-import Button from '../Button'
-import Confetti from 'react-dom-confetti'
-import Logo from '../../static/images/kap.svg'
-import KapWindowImage from '../../static/images/kap-window@2x.png'
-import colors from '../../lib/colors'
+import KapWindow from './kap-window'
+import Info from './info'
+import Button from './button'
+import Logo from '../../../static/images/kap.svg'
+import colors from '../../../lib/colors'
 
-const Info = () => (
-  <div>
-    <a href="https://github.com/wulkano/kap">View and contribute on GitHub</a>
-    <span> macOS 10.12 or later required</span>
-    <style jsx>{`
-      div {
-        max-width: 390px;
-        width: 100%;
-        margin: 0 32px;
-        margin-top: 32px;
-      }
-      a {
-        font-size: 12px;
-        font-weight: bold;
-        font-style: normal;
-        color: #ffffff;
-        float: left;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      span {
-        opacity: 0.8;
-        font-size: 12px;
-        font-weight: normal;
-        float: right;
-        clearfix: both;
-      }
-      @media only screen and (max-width: 460px) {
-        div {
-          display: block;
-          margin: 0 16px;
-          width: 100vw;
-          margin-top: 32px;
-        }
-        span {
-          padding-top: 8px;
-        }
-        a,
-        span {
-          display: block;
-          float: none;
-        }
-      }
-    `}</style>
-  </div>
-)
-
-const KapWindow = () => (
-  <div className="window">
-    <img src={KapWindowImage} alt="The Kap Window" />
-    <style jsx>{`
-      img {
-        width: 320px;
-        height: 180px;
-        opacity: 1;
-      }
-      .window {
-        z-index: 100;
-        width: 320px;
-        height: 180px;
-        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
-        background-color: white;
-        border-radius: 4px;
-        position: relative;
-        margin-bottom: -88px;
-      }
-
-      @media only screen and (max-width: 420px) {
-        .window,
-        img {
-          width: 288px !important;
-          height: 163px !important;
-        }
-      }
-    `}</style>
-  </div>
-)
-
-export default () => (
+const Hero = () => (
   <section className="hero">
     <div className="curve-container">
       <div className="curve" />
@@ -92,7 +13,7 @@ export default () => (
       <Logo />
       {/* Download Button */}
       <Button theme="light" href="https://kap-updates.now.sh/download">
-        <img src={require('../../static/images/download.svg')} />
+        <img src="../../static/images/download.svg" />
         <span>Get kap</span>
       </Button>
     </header>
@@ -222,3 +143,5 @@ export default () => (
     `}</style>
   </section>
 )
+
+export default Hero

@@ -1,5 +1,5 @@
 // Move under sections directory
-import Section from '../../section'
+import Section from '../section'
 import Plugin from './plugin'
 import Buttons from './buttons'
 

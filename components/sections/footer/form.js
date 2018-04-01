@@ -1,7 +1,7 @@
-import Section from '../section'
-import Grid, { Column } from '../grid'
+import { Component } from 'react'
 import Confetti from 'react-dom-confetti'
-import colors from '../../lib/colors'
+import colors from '../../../lib/colors'
+
 const Input = ({ boom }) => (
   <div className="container">
     <input type="email" name="EMAIL" placeholder="Email address" />
@@ -62,80 +62,7 @@ const Input = ({ boom }) => (
   </div>
 )
 
-const Links = () => (
-  <ul>
-    <li>
-      <a href="https://github.com/wulkano/kap/releases/download/v2.0.0/Kap-2.0.0.dmg">
-        Download
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/wulkano/kap/issues">Issues</a>
-    </li>
-    <li>
-      <a href="https://github.com/wulkano/kap/blob/master/LICENSE">License</a>
-    </li>
-    <style jsx>{`
-      a {
-        width: 74px;
-        height: 24px;
-        font-size: 16px;
-        font-weight: normal;
-        line-height: 1.5;
-        letter-spacing: normal;
-        text-align: left;
-        color: ${colors.purple};
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      li {
-        margin-bottom: 12px;
-      }
-    `}</style>
-  </ul>
-)
-
-const WulkanoAndFriends = () => (
-  <div className="container">
-    <a href="https://wulkano.com">
-      <img src="/static/images/logos/wulkano.svg" />
-    </a>
-    <div className="spacer" />
-    <a className="friends" href="https://github.com/wulkano/kap/contributors">
-      & friends
-    </a>
-    <style jsx>{`
-      .container {
-        display: flex;
-        align-items: center;
-        width: 152px;
-        margin-top: -1.6rem;
-      }
-
-      .spacer {
-        flex: 1;
-      }
-
-      img {
-      }
-
-      a {
-        color: #000;
-        font-size: 1.6rem;
-        font-weight: normal;
-      }
-      a.friends:hover {
-        color: ${colors.purple};
-        ${`cursor: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIxOCIgc3R5bGU9ImZvbnQtc2l6ZToxNHB4Ij48dGV4dCB5PSIxNiI+4p2k77iPPC90ZXh0Pjwvc3ZnPg==),auto!important;`};
-      }
-    `}</style>
-  </div>
-)
-
-class EmailForm extends React.Component {
+class Form extends Component {
   state = { sent: false, refocused: false }
   componentDidMount() {}
   render() {
@@ -184,18 +111,5 @@ class EmailForm extends React.Component {
     )
   }
 }
-export default () => (
-  <Section>
-    <Grid>
-      <Column>
-        <WulkanoAndFriends />
-      </Column>
-      <Column>
-        <Links />
-      </Column>
-      <Column>
-        <EmailForm />
-      </Column>
-    </Grid>
-  </Section>
-)
+
+export default Form

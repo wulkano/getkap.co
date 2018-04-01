@@ -1,6 +1,6 @@
-import Section from '../section'
+import Section from './section'
 
-export default () => (
+const Video = () => (
   <Section>
     <div className="split">
       <div className="video">
@@ -25,6 +25,7 @@ export default () => (
         </a>
       </div>
     </div>
+
     <style jsx>{`
       .split {
         flex: 1;
@@ -183,3 +184,5 @@ export default () => (
     `}</style>
   </Section>
 )
+
+export default Video
