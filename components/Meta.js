@@ -6,7 +6,7 @@ import colors from '../lib/colors'
 // Google Analytics
 ReactGA.initialize('UA-84705099-3')
 
-export default ({ children }) => (
+const Meta = ({ children }) => (
   <React.Fragment>
     <Head>
       <meta name="theme-color" content="#000" />
@@ -244,3 +244,5 @@ export default ({ children }) => (
     `}</style>
   </React.Fragment>
 )
+
+export default Meta

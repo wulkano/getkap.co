@@ -1,4 +1,4 @@
-export default ({ children, height, fill, style }) => (
+const Section = ({ children, height, fill, style }) => (
   <div className={`section ${fill ? 'fill' : ''}`} style={{ height, ...style }}>
     {children}
 
@@ -15,3 +15,5 @@ export default ({ children, height, fill, style }) => (
     `}</style>
   </div>
 )
+
+export default Section
