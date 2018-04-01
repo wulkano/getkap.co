@@ -1,4 +1,3 @@
-import { Component } from 'react'
 import colors from '../../../lib/colors'
 
 const Button = ({ children, theme = '', href }) => (
@@ -19,6 +18,7 @@ const Button = ({ children, theme = '', href }) => (
         font-weight: 700;
         font-size: 1.2rem;
         transition: transform 0.12s ease-in-out;
+        z-index: 1;
       }
 
       .button :global(img:first-child) {
