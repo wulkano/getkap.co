@@ -1,4 +1,4 @@
-import Section from '../../section'
+import Section from '../section'
 import Quotes from './quotes'
 import Logos from './logos'
 
@@ -25,7 +25,7 @@ const Community = () => (
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 128px;
+        margin-bottom: 64px;
       }
       h3 {
         margin-bottom: 16px;
@@ -42,6 +42,11 @@ const Community = () => (
         text-align: center;
         max-width: 368px;
         margin-bottom: 64px;
+      }
+      @media only screen and (max-width: 500px) {
+        .root {
+          margin-bottom: 0;
+        }
       }
     `}</style>
   </Section>
