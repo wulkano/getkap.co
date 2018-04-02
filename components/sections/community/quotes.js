@@ -200,53 +200,32 @@ const QUOTES = [
   }
 ]
 
-// TODO do this nicer
-const split = (quotes, columns) => {
-  let ret = []
-  let index = 0
-
-  for (let index = 0; index < columns; index++) {
-    ret.push([])
-  }
-
-  for (const quote of quotes) {
-    if (index === columns) index = 0
-    ret[index] = [...ret[index], quote]
-    index = index + 1
-  }
-
-  return ret
-}
-
-const Columns = ({ columns, quotes }) => {
-  const quoteColumns = split(quotes, columns)
-  return (
-    <div style={{ display: 'flex' }} className="columns">
-      {quoteColumns.map((column, index) => (
-        <div className="column" key={index}>
-          {column.map((quote, index) => (
-            <Quote key={quote.handle + index} {...quote} />
-          ))}
-        </div>
-      ))}
-      <style jsx>{`
-        @media only screen and (min-width: 1020px) {
-          .column {
-            margin: 0 16px;
-          }
+const Columns = ({ columns, quotes }) => (
+  <div style={{ display: 'flex' }} className="columns">
+    {Array.apply(null, { length: columns }).map((_, index) => (
+      <div className="column" key={`column-${index}`}>
+        {quotes
+          .filter((_, i) => i % columns === index)
+          .map(quote => <Quote key={quote.handle} {...quote} />)}
+      </div>
+    ))}
+    <style jsx>{`
+      @media only screen and (min-width: 1020px) {
+        .column {
+          margin: 0 16px;
         }
-        @media only screen and (max-width: 1020px) {
-          .column {
-            margin: 0 0px;
-          }
-          .columns {
-            margin: 0 8px;
-          }
+      }
+      @media only screen and (max-width: 1020px) {
+        .column {
+          margin: 0 0px;
         }
-      `}</style>
-    </div>
-  )
-}
+        .columns {
+          margin: 0 8px;
+        }
+      }
+    `}</style>
+  </div>
+)
 
 const ShowAll = ({ onClick }) => (
   <div>
@@ -281,48 +260,36 @@ const ShowAll = ({ onClick }) => (
 )
 
 export default class Quotes extends React.Component {
-  state = { columns: null, showAllMobile: null }
-  renderColums = () => {
-    const { columns, showAllMobile } = this.state
-    if (!columns) return null
-    if (columns === 1) {
-      const quotes = showAllMobile ? QUOTES : QUOTES.slice(0, 5)
-      return (
-        <div>
-          {quotes.map((quote, index) => (
-            <Quote key={quote.handle + index} {...quote} />
-          ))}
-          {!showAllMobile && (
-            <ShowAll onClick={() => this.setState({ showAllMobile: true })} />
-          )}
-        </div>
-      )
-    }
-    return <Columns quotes={QUOTES} columns={columns} />
-  }
-  componentDidMount() {
-    const four = window.matchMedia(`(min-width: 1400px)`)
-    const three = window.matchMedia(`(min-width: 1020px)`)
-    const two = window.matchMedia(`(min-width: 640px)`)
-    const one = window.matchMedia(`(min-width: 320px)`)
+  state = { columns: 0, showAll: null }
 
-    const setColumns = () => {
-      if (four.matches) return this.setState({ columns: 4 })
-      if (three.matches) return this.setState({ columns: 3 })
-      if (two.matches) return this.setState({ columns: 2 })
-      if (one.matches) return this.setState({ columns: 1 })
-    }
+  componentDidMount() {
+    const screenSizeBreaks = ['320', '640', '1020', '1400']
+    const matchers = screenSizeBreaks.map(size =>
+      window.matchMedia(`(min-width: ${size}px)`)
+    )
+
+    const setColumns = () =>
+      this.setState({
+        columns: matchers.reduce(
+          (columns, m, i) => (columns = m.matches ? i + 1 : columns),
+          1
+        )
+      })
+
     setColumns()
-    four.addListener(setColumns)
-    three.addListener(setColumns)
-    two.addListener(setColumns)
-    one.addListener(setColumns)
+    matchers.forEach(matcher => matcher.addListener(setColumns))
   }
 
   render() {
+    const { columns, showAll } = this.state
+
+    const show = showAll // || columns !== 1;
+    const quotes = show ? QUOTES : QUOTES.slice(0, 2 * columns)
+
     return (
       <div className="grid">
-        {this.renderColums()}
+        <Columns quotes={quotes} columns={columns} />
+        {!show && <ShowAll onClick={() => this.setState({ showAll: true })} />}
         <style jsx>{`
           .grid {
             width: 100%;
