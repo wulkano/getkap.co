@@ -176,6 +176,7 @@ export default () => (
         flex-direction: row;
         justify-content: space-between;
         margin-top: 64px;
+        z-index: 100;
       }
 
       @media only screen and (max-width: 1200px) {
