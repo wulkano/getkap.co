@@ -1,4 +1,3 @@
-// Move under sections directory
 import Section from '../section'
 import Plugin from './plugin'
 import Buttons from './buttons'
@@ -145,7 +144,7 @@ const Plugins = () => (
         .buttons-mobile {
           display: block;
           left: 16px;
-          margin-bottom: -64px4;
+          margin-bottom: -64px;
           padding-top: 32px;
         }
       }

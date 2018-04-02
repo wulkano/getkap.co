@@ -40,8 +40,8 @@ const Hero = () => (
 
       .hero {
         flex: 1;
-        max-height: calc(100vh - 320px);
-        min-height: 64rem;
+        max-height: calc(100vh - 180px);
+        min-height: 64px;
         color: white;
         display: flex;
         flex-direction: column;
@@ -53,6 +53,7 @@ const Hero = () => (
           ${colors.purple} 30%,
           ${colors.teal} 95%
         );
+        user-select: none;
         background-size: 150% 150%;
         animation: bg 12s ease-in infinite alternate;
         will-change: transform;

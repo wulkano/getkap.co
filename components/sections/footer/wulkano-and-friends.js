@@ -5,7 +5,6 @@ const WulkanoAndFriends = () => (
     <a href="https://wulkano.com">
       <img src="/static/images/logos/wulkano.svg" />
     </a>
-    <div className="spacer" />
     <a className="friends" href="https://github.com/wulkano/kap/contributors">
       & friends
     </a>
@@ -17,8 +16,8 @@ const WulkanoAndFriends = () => (
         margin-top: -1.6rem;
       }
 
-      .spacer {
-        flex: 1;
+      .friends {
+        padding-left: 8px;
       }
 
       a {
