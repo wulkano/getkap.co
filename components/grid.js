@@ -47,15 +47,16 @@ const Grid = ({ children }) => (
         align-items: flex-start;
         max-width: 1200px;
         width: 100%;
-        margin-bottom: 3rem;
+        margin-bottom: 32px;
+        margin-top: 32px;
       }
       @media only screen and (max-width: 700px) {
         .grid {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-bottom: 3rem;
-          margin-top: 3rem;
+          margin-bottom: 16px;
+          margin-top: 16px;
           overflow: hidden;
         }
       }
