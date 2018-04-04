@@ -90,20 +90,7 @@ const Plugins = () => (
         position: relative;
         left: 32px;
       }
-      @media only screen and (max-width: 1300px) {
-        .plugins__text {
-          margin-left: 32px;
-        }
-      }
-      @media only screen and (min-width: 712px) {
-        .plugins: {
-          flex-direction: column;
-
-          jusify-content: center;
-          align-items: center;
-        }
-      }
-      @media only screen and (max-width: ${screenSizes.laptop}) {
+      @media only screen and (max-width: ${screenSizes.wide}) {
         .plugins {
           flex-direction: column;
           align-items: center;

@@ -48,6 +48,12 @@ const Community = () => (
         .root {
           margin-bottom: 32px;
         }
+
+        h3,
+        h4 {
+          margin-left: 16px;
+          margin-right: 16px;
+        }
       }
     `}</style>
   </Section>

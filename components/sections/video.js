@@ -141,7 +141,7 @@ const Video = () => (
         }
       }
 
-      @media only screen and (max-width: ${screenSizes.laptop}) {
+      @media only screen and (max-width: ${screenSizes.tablet}) {
         .split {
           flex-direction: column-reverse;
           margin-top: 128px;

@@ -1,3 +1,5 @@
+import screenSizes from '../../../lib/screen-sizes'
+
 const Plugin = ({ title, description, color, href = '#' }) => (
   <a href={href} className="plugin" style={{ backgroundColor: color }}>
     <span>{title}</span>
@@ -31,7 +33,7 @@ const Plugin = ({ title, description, color, href = '#' }) => (
       .plugin:hover {
         transform: scale(1.05);
       }
-      @media only screen and (max-width: 600px) {
+      @media only screen and (max-width: ${screenSizes.tablet}) {
         .plugin:hover {
           transform: scale(1);
         }
