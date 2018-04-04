@@ -283,7 +283,7 @@ export default class Quotes extends React.Component {
   render() {
     const { columns, showAll } = this.state
 
-    const show = showAll // || columns !== 1;
+    const show = showAll || columns > 2
     const quotes = show ? QUOTES : QUOTES.slice(0, 2 * columns)
 
     return (

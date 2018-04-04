@@ -25,7 +25,7 @@ const Community = () => (
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 32px;
+        margin-bottom: 64px;
       }
       h3 {
         margin-bottom: 16px;
@@ -45,7 +45,7 @@ const Community = () => (
       }
       @media only screen and (max-width: 500px) {
         .root {
-          margin-bottom: 16px;
+          margin-bottom: 32px;
         }
       }
     `}</style>
