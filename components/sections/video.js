@@ -13,17 +13,19 @@ const Video = () => (
         </div>
         <img src="/static/images/video/preview.jpg" className="preview" />
       </div>
-      <div className="text">
-        <h3>More quality, less noise</h3>
-        <p>
-          Export as GIF, MP4, WebM or APNG with optional audio, highlight clicks
-          and trimming.
-        </p>
-        <div className="line" />
-        <a href="https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38">
-          <span>How Kap was built</span>
-          <img src={require('../../static/images/arrow-right.svg')} />
-        </a>
+      <div className="container">
+        <div className="text">
+          <h3>More quality, less noise</h3>
+          <p>
+            Export as GIF, MP4, WebM or APNG with optional audio, highlight
+            clicks and trimming.
+          </p>
+          <div className="line" />
+          <a href="https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38">
+            <span>How Kap was built</span>
+            <img src={require('../../static/images/arrow-right.svg')} />
+          </a>
+        </div>
       </div>
     </div>
 
@@ -79,14 +81,21 @@ const Video = () => (
         transition: 150ms ease;
       }
 
+      .container {
+        width: 50%;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+      }
+
       .text {
         display: flex;
         align-items: flex-start;
         justify-content: center;
         flex-direction: column;
         max-width: 368px;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 32px;
+        margin-right: 32px;
       }
 
       .line {
@@ -154,6 +163,12 @@ const Video = () => (
           margin-left: 0;
           margin-right: 0;
           max-width: none;
+          flex: 1;
+        }
+
+        .container {
+          max-width: none;
+          width: 100%;
         }
 
         .video {

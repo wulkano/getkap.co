@@ -34,7 +34,7 @@ const Grid = ({ children }) => (
         align-items: flex-start;
         max-width: 1200px;
         width: 100%;
-        margin-bottom: 32px;
+        margin-bottom: 128px;
         margin-top: 64px;
         margin-right: 32px;
         margin-left: 32px;
@@ -44,7 +44,7 @@ const Grid = ({ children }) => (
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-bottom: 16px;
+          margin-bottom: 64px;
           margin-top: 32px;
           overflow: hidden;
           margin-right: 16px;
