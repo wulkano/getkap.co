@@ -14,7 +14,7 @@ const Quote = ({ handle, name, text }) => (
 
     <style jsx>{`
       .card {
-        width: 320px;
+        max-width: 320px;
         border-radius: 4px;
         background-color: #f9f9f9;
         padding: 32px;
@@ -32,7 +32,6 @@ const Quote = ({ handle, name, text }) => (
         }
 
         .card {
-          width: 100%;
           flex: 1;
           margin-bottom: 16px;
         }
