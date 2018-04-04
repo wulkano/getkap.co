@@ -1,3 +1,5 @@
+import screenSizes from '../../../lib/screen-sizes'
+
 const Buttons = () => (
   <div>
     <a className="browse" href="https://www.npmjs.com/search?q=kap%20plugins">
@@ -41,7 +43,7 @@ const Buttons = () => (
         display: inline-block;
         margin-top: 48px;
       }
-      @media only screen and (max-width: 370px) {
+      @media only screen and (max-width: ${screenSizes.phone}) {
         a {
           margin-bottom: 16px;
         }

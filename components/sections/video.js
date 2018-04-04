@@ -1,4 +1,5 @@
 import Section from './section'
+import screenSizes from '../../lib/screen-sizes'
 
 const Video = () => (
   <Section>
@@ -84,7 +85,8 @@ const Video = () => (
         justify-content: center;
         flex-direction: column;
         max-width: 368px;
-        margin-left: 132px;
+        margin-left: auto;
+        margin-right: auto;
       }
 
       .line {
@@ -139,14 +141,7 @@ const Video = () => (
         }
       }
 
-      @media only screen and (max-width: 1300px) {
-        .text {
-          margin-left: 32px;
-          margin-right: 32px;
-        }
-      }
-
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: ${screenSizes.laptop}) {
         .split {
           flex-direction: column-reverse;
           margin-top: 128px;

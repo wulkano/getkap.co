@@ -1,6 +1,7 @@
 import Section from '../section'
 import Quotes from './quotes'
 import Logos from './logos'
+import screenSizes from '../../../lib/screen-sizes'
 
 const Community = () => (
   <Section>
@@ -43,7 +44,7 @@ const Community = () => (
         max-width: 368px;
         margin-bottom: 64px;
       }
-      @media only screen and (max-width: 500px) {
+      @media only screen and (max-width: ${screenSizes.tablet}) {
         .root {
           margin-bottom: 32px;
         }

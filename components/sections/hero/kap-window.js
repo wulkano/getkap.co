@@ -1,3 +1,5 @@
+import screenSizes from '../../../lib/screen-sizes'
+
 const KapWindow = () => (
   <div className="window">
     <img src={'/static/images/kap-window@2x.png'} alt="The Kap Window" />
@@ -20,7 +22,7 @@ const KapWindow = () => (
         margin-bottom: -88px;
       }
 
-      @media only screen and (max-width: 420px) {
+      @media only screen and (max-width: ${screenSizes.phone}) {
         .window,
         img {
           width: 288px !important;

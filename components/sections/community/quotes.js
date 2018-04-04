@@ -1,4 +1,5 @@
 import colors from '../../../lib/colors'
+import screenSizes from '../../../lib/screen-sizes'
 
 const Quote = ({ handle, name, text }) => (
   <div className="item">

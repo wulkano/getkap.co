@@ -1,3 +1,5 @@
+import screenSizes from '../../../lib/screen-sizes'
+
 const Info = () => (
   <div>
     <a href="https://github.com/wulkano/kap">View and contribute on GitHub</a>
@@ -26,7 +28,7 @@ const Info = () => (
         float: right;
         clearfix: both;
       }
-      @media only screen and (max-width: 460px) {
+      @media only screen and (max-width: ${screenSizes.phone}) {
         div {
           display: block;
           margin: 0 16px;

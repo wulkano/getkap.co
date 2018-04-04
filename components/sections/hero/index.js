@@ -3,6 +3,7 @@ import Info from './info'
 import Button from './button'
 import Logo from '../../../static/images/kap.svg'
 import colors from '../../../lib/colors'
+import screenSizes from '../../../lib/screen-sizes'
 
 const Hero = () => (
   <section className="hero">
@@ -97,38 +98,10 @@ const Hero = () => (
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 64px;
+        margin-top: 32px;
         z-index: 100;
       }
-
-      @media only screen and (max-width: 1200px) {
-        .header {
-          margin-top: 32px;
-        }
-        .center {
-          display: block;
-          text-align: center;
-        }
-      }
-      @media only screen and (min-width: 600px) {
-        .header__content {
-          margin-top: 112px;
-          padding-top: 64px;
-        }
-      }
-      @media only screen and (max-width: 600px) {
-        .header__content {
-          margin-top: 64px;
-        }
-      }
-      @media only screen and (max-width: 500px) {
-        .header__content {
-          font-size: 32px;
-          max-width: 200px;
-          line-height: 1.25;
-          display: inline-block;
-          margin-top: 32px;
-        }
+      @media only screen and (max-width: ${screenSizes.tablet}) {
         h2 {
           max-width: 288px;
           line-height: 1.2;
@@ -136,9 +109,6 @@ const Hero = () => (
         }
         .gradient {
           padding: 0 16px;
-        }
-        .header {
-          margin-top: 16px;
         }
       }
     `}</style>

@@ -1,3 +1,5 @@
+import screenSizes from '../../../lib/screen-sizes'
+
 const Logo = ({ href, name }) => (
   <a href={href} title={name}>
     <img
@@ -25,21 +27,13 @@ const Logos = () => (
       <Logo name="abstract" href="https://www.goabstract.com/" />
     </div>
 
-    {/*
-      Setting rules for .logo-row's initial state without media query
-      doesn't apply because of styled-jsx bug
-    */}
-    <style jsx>{`
-      @media (min-width: 486px) {
+    <style jsx>
+      {`
         .logo-row {
           display: inline-block;
         }
-      }
-    `}</style>
 
-    <style jsx>
-      {`
-        @media (max-width: 486px) {
+        @media (max-width: ${screenSizes.tablet}) {
           .logo-row {
             display: flex;
             justify-content: center;

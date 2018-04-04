@@ -1,6 +1,7 @@
 import Section from '../section'
 import Plugin from './plugin'
 import Buttons from './buttons'
+import screenSizes from '../../../lib/screen-sizes'
 
 const Plugins = () => (
   <Section>
@@ -102,7 +103,7 @@ const Plugins = () => (
           align-items: center;
         }
       }
-      @media only screen and (max-width: 1410px) {
+      @media only screen and (max-width: ${screenSizes.laptop}) {
         .plugins {
           flex-direction: column;
           align-items: center;
@@ -149,7 +150,7 @@ const Plugins = () => (
         }
       }
 
-      @media only screen and (max-width: 640px) {
+      @media only screen and (max-width: ${screenSizes.tablet}) {
         .plugins {
           align-items: flex-start;
           justify-content: flex-start;
@@ -179,14 +180,6 @@ const Plugins = () => (
           text-align: left;
           margin-bottom: 0px;
           top: -64px;
-        }
-      }
-      @media only screen and (max-width: 370px) {
-        .plugins__display {
-          padding-bottom: 220px;
-        }
-        .buttons-mobile {
-          top: -128px;
         }
       }
     `}</style>
