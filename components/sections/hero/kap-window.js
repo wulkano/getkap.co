@@ -11,15 +11,16 @@ const KapWindow = () => (
         user-select: none;
         user-drag: none;
       }
+
       .window {
         z-index: 100;
         width: 320px;
         height: 180px;
-        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
         background-color: white;
         border-radius: 4px;
         position: relative;
-        margin-bottom: -88px;
+        margin-bottom: -96px;
       }
 
       @media only screen and (max-width: ${screenSizes.phone}) {

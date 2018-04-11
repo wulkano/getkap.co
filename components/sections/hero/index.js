@@ -1,29 +1,33 @@
+import Button from '../../button.js'
 import KapWindow from './kap-window'
 import Info from './info'
-import Button from './button'
-import Logo from '../../../static/images/kap.svg'
 import colors from '../../../lib/colors'
 import screenSizes from '../../../lib/screen-sizes'
+import Logo from '../../../static/images/kap.svg'
+import DownloadIcon from '../../../static/images/download.svg'
 
 const Hero = () => (
   <section className="hero">
-    <div className="curve-container">
-      <div className="curve" />
-    </div>
     <header className="header grid">
       <Logo />
       {/* Download Button */}
       <Button theme="light" href="https://kap-updates.now.sh/download">
-        <img src="../../static/images/download.svg" />
+        <DownloadIcon />
         <span>Get kap</span>
       </Button>
     </header>
+
     <div className="hero__content">
       <h1>Capture your screen</h1>
       <h3>An open-source screen recorder built with web technology.</h3>
       <Info />
     </div>
     <KapWindow />
+
+    <div className="curve-container">
+      <div className="curve" />
+    </div>
+
     <style jsx>{`
       @keyframes bg {
         0% {
@@ -41,8 +45,7 @@ const Hero = () => (
 
       .hero {
         flex: 1;
-        max-height: calc(100vh - 180px);
-        min-height: 64px;
+        min-height: 48rem;
         color: white;
         display: flex;
         flex-direction: column;
@@ -54,12 +57,12 @@ const Hero = () => (
           ${colors.purple} 30%,
           ${colors.teal} 95%
         );
-        user-select: none;
         background-size: 150% 150%;
         animation: bg 12s ease-in infinite alternate;
         will-change: transform;
         transform-style: preserve-3d;
       }
+
       .curve-container {
         overflow: hidden;
         position: absolute;
@@ -68,13 +71,14 @@ const Hero = () => (
         left: 0;
         width: 100%;
       }
+
       .curve {
         position: absolute;
         bottom: 0;
         left: 50%;
         transform: translateX(-50%);
         width: 190vw;
-        padding-bottom: 4%;
+        padding-bottom: 4.5%;
         background: url('../../static/images/curve-mobile.svg') center bottom;
         background-size: cover;
         margin-bottom: -3px;
@@ -98,17 +102,26 @@ const Hero = () => (
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-top: 32px;
+        margin-top: 64px;
         z-index: 100;
+        min-height: 48px;
       }
+
+      @media only screen and (max-width: ${screenSizes.phone}) {
+        .hero__content {
+          padding: 48px 0;
+        }
+      }
+
       @media only screen and (max-width: ${screenSizes.tablet}) {
         h2 {
           max-width: 288px;
           line-height: 1.2;
           font-size: 2rem;
         }
-        .gradient {
-          padding: 0 16px;
+
+        .header {
+          margin-top: 16px;
         }
       }
     `}</style>

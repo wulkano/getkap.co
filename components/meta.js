@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import ReactGA from 'react-ga'
 import colors from '../lib/colors'
+import screenSizes from '../lib/screen-sizes.js'
 
 // Google Analytics
 ReactGA.initialize('UA-84705099-3')
@@ -10,7 +11,7 @@ const Meta = ({ children }) => (
   <React.Fragment>
     <Head>
       <meta name="theme-color" content="#000" />
-      <title>Kap - Capture your screen.</title>
+      <title>Kap - Capture your screen</title>
     </Head>
 
     {children}
@@ -195,7 +196,7 @@ const Meta = ({ children }) => (
 
       .grid {
         max-width: 100%;
-        width: 1200px;
+        width: 1168px;
       }
 
       /**
@@ -223,6 +224,7 @@ const Meta = ({ children }) => (
       h4 {
         font-size: 2rem;
         line-height: 1.5em;
+        font-weight: 400;
       }
 
       p {
@@ -232,6 +234,13 @@ const Meta = ({ children }) => (
 
       p.paragraph--medium {
         font-weight: 500;
+      }
+
+      @media only screen and (max-width: ${screenSizes.phone}) {
+        h1 {
+          font-size: 3.2rem;
+          line-height: 1.5em;
+        }
       }
 
       /* Links */

@@ -6,7 +6,6 @@ const Quote = ({ handle, name, text }) => (
     <div className="card">
       <p>{text}</p>
       <div className="quote-info">
-        <span className="name">{name}</span>
         <a href={`https://twitter.com/${handle}`} className="handle">
           {handle}
         </a>
@@ -25,6 +24,7 @@ const Quote = ({ handle, name, text }) => (
         flex-direction: column;
         justify-content: space-between;
       }
+
       @media only screen and (max-width: 1020px) {
         .item {
           width: 100%;
@@ -37,18 +37,21 @@ const Quote = ({ handle, name, text }) => (
           margin-bottom: 16px;
         }
       }
+
       @media only screen and (max-width: 640px) {
         .item {
           width: 100%;
           flex: 1;
           padding: 0 16px;
         }
+
         .card {
           width: 100%;
           flex: 1;
           margin-bottom: 16px;
         }
       }
+
       p {
         color: #000000;
         line-height: 1.43;
@@ -56,26 +59,31 @@ const Quote = ({ handle, name, text }) => (
         font-weight: normal;
         margin-bottom: 16px;
       }
+
       a:hover {
         text-decoration: underline;
       }
+
       .quote-info {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
       }
+
       .name {
         font-size: 14px;
         font-weight: 500;
         line-height: 1.43;
         color: #000000;
       }
+
       .handle {
         font-size: 14px;
         font-weight: normal;
         line-height: 1.43;
         color: #808080;
+        margin-left: auto;
       }
     `}</style>
   </div>

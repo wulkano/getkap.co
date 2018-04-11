@@ -1,29 +1,31 @@
 import Section from './section'
 import screenSizes from '../../lib/screen-sizes'
+import PlayButton from '../../static/images/play.svg'
+import RightArrow from '../../static/images/arrow-right.svg'
 
 const Video = () => (
   <Section>
     <div className="split">
       <div className="video">
         <div className="overlay">
-          <img
-            src={require('../../static/images/play.svg')}
-            className="play-icon"
-          />
+          <PlayButton className="video__play-button" />
         </div>
-        <img src="/static/images/video/preview.jpg" className="preview" />
+        <img
+          src="/static/images/video/preview.jpg"
+          alt="Kap Video Preview"
+          className="preview"
+        />
       </div>
       <div className="container">
-        <div className="text">
+        <div className="video__description text">
           <h3>More quality, less noise</h3>
           <p>
             Export as GIF, MP4, WebM or APNG with optional audio, highlight
             clicks and trimming.
           </p>
-          <div className="line" />
           <a href="https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38">
             <span>How Kap was built</span>
-            <img src={require('../../static/images/arrow-right.svg')} />
+            <RightArrow />
           </a>
         </div>
       </div>
@@ -54,7 +56,7 @@ const Video = () => (
         height: 576px;
       }
 
-      .video:hover .play-icon {
+      .video:hover :global(.video__play-button) {
         transform: scale(1.2);
       }
 
@@ -72,13 +74,13 @@ const Video = () => (
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: background 150ms ease;
+        transition: background 0.12s ease;
       }
 
-      .play-icon {
+      :global(.video__play-button) {
         width: 48px;
         height: 48px;
-        transition: 150ms ease;
+        transition: transform 0.12s ease;
       }
 
       .container {
@@ -88,7 +90,7 @@ const Video = () => (
         justify-content: center;
       }
 
-      .text {
+      .video__description {
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -98,15 +100,13 @@ const Video = () => (
         margin-right: 32px;
       }
 
-      .line {
-        height: 1px;
-        display: block;
+      .video__description p {
         border-bottom: solid 1px #f1f1f1;
-        width: 100%;
-        margin: 32px 0;
+        padding-bottom: 32px;
+        margin-bottom: 32px;
       }
 
-      a {
+      .video__description a {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -114,7 +114,7 @@ const Video = () => (
         width: 100%;
       }
 
-      a img {
+      .video__description a :global(svg) {
         animation: ease-out alternate infinite;
         animation-duration: 300ms;
         transition: all 1000ms ease;
@@ -122,13 +122,14 @@ const Video = () => (
         animation-fill-mode: forwards;
       }
 
-      a:hover {
+      .video__description a:hover {
         text-decoration: underline;
       }
 
-      a:hover img {
+      .video__description a:hover :global(svg) {
         animation-name: arrow;
       }
+
       h3 {
         font-size: 24px;
         font-weight: 500;

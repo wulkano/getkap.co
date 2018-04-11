@@ -32,7 +32,7 @@ const Grid = ({ children }) => (
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-start;
-        max-width: 1200px;
+        max-width: 1168px;
         width: 100%;
         margin-bottom: 128px;
         margin-top: 64px;

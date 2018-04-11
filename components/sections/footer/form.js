@@ -1,12 +1,13 @@
 import { Component } from 'react'
 import Confetti from 'react-dom-confetti'
 import colors from '../../../lib/colors'
+import RightArrow from '../../../static/images/arrow-right-white.svg'
 
 const Input = ({ boom }) => (
   <div className="container">
     <input type="email" name="EMAIL" placeholder="Email address" />
     <button>
-      <img src="/static/images/arrow-right-white.svg" />
+      <RightArrow />
       <Confetti
         active={boom}
         config={{
@@ -23,9 +24,9 @@ const Input = ({ boom }) => (
         width: 100%;
         height: 48px;
         display: flex;
-
         align-items: center;
       }
+
       input {
         flex: 1;
         padding: 0 0 0 16px;
@@ -38,16 +39,17 @@ const Input = ({ boom }) => (
         display: inline-block;
         margin: 0;
         color: #808080;
-
         border-radius: 4px 0px 0 4px;
         background-color: #ffffff;
         border: solid 2px #cccccc;
         border-right: none;
       }
+
       input:focus {
         color: #000;
         border-color: ${colors.purple};
       }
+
       button {
         width: 48px;
         height: 48px;
@@ -55,6 +57,7 @@ const Input = ({ boom }) => (
         border: none;
         border-radius: 0px 4px 4px 0px;
       }
+
       button:hover {
         cursor: pointer;
       }

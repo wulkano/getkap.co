@@ -1,7 +1,7 @@
-import colors from '../../../lib/colors'
+import colors from '../lib/colors'
 
-const Button = ({ children, theme = '', href }) => (
-  <a className={`button ${theme}`} href={href}>
+const Button = ({ children, theme = '', ...props }) => (
+  <a className={`button ${theme}`} {...props}>
     {children}
 
     <style jsx>{`
@@ -21,7 +21,8 @@ const Button = ({ children, theme = '', href }) => (
         z-index: 1;
       }
 
-      .button :global(img:first-child) {
+      .button :global(img:first-child),
+      .button :global(svg:first-child) {
         margin-right: 12px;
       }
 
@@ -32,6 +33,18 @@ const Button = ({ children, theme = '', href }) => (
       .button.light {
         background: #fff;
         color: ${colors.purple};
+      }
+
+      .button.dark {
+        background: ${colors.purple};
+        color: white;
+      }
+
+      .button.outlined {
+        background: transparent;
+        border: 2px solid white;
+        border-radius: 4px;
+        color: white;
       }
     `}</style>
   </a>

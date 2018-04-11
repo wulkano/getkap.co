@@ -1,7 +1,13 @@
 import screenSizes from '../../../lib/screen-sizes'
 
 const Plugin = ({ title, description, color, href = '#' }) => (
-  <a href={href} className="plugin" style={{ backgroundColor: color }}>
+  <a
+    href={href}
+    className="plugin"
+    style={{ backgroundColor: color }}
+    target="_blank"
+    rel="noopener"
+  >
     <span>{title}</span>
     <p>{description}</p>
     <style jsx>{`
@@ -21,7 +27,6 @@ const Plugin = ({ title, description, color, href = '#' }) => (
         box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1),
           0 1px 2px 0 rgba(0, 0, 0, 0.1);
 
-        margin-right: 16px;
         margin-bottom: 16px;
         display: inline-block;
         transition: 100ms ease;
