@@ -1,7 +1,6 @@
 import Button from '../../button'
 import Section from '../section'
 import Plugin from './plugin'
-import Buttons from './buttons'
 import screenSizes from '../../../lib/screen-sizes'
 import CompassIcon from '../../../static/images/compass.svg'
 import DownloadIcon from '../../../static/images/download-white.svg'
