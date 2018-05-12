@@ -12,7 +12,9 @@ Repository for the [Kap] website
 
 ### Making changes
 
-Make your changes to the relevant files within the `src` directory. Then, to compile your changes with `npm run build`. Check out the compiled files in the Git ignored `build` directory.
+Make your changes to the relevant files within the `src` directory. 
+
+Then, to compile your changes with `npm run build`. Check out the compiled files in the Git ignored `build` directory.
 
 If you want to make multiple changes and have the files rebuilt on every change that you do, use `npm run dev`.
 
