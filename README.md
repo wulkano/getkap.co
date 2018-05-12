@@ -23,8 +23,7 @@ If you want to make multiple changes and have the files rebuilt on every change 
 - [Aperture](https://github.com/wulkano/aperture)
 
 ## Newsletter
-[Subscribe](http://eepurl.com/ch90_1).
-
+[Subscribe](http://eepurl.com/ch90_1)
 [kap]: https://getkap.co
 [node.js]: https://nodejs.org
 [Fork]: https://help.github.com/articles/fork-a-repo/
