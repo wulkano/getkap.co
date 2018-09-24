@@ -29,7 +29,7 @@
   },
   "now": {
     "type": "npm",
-    "alias": "getkap-next.now.sh"
+    "alias": "getkap.co"
   },
   "homepage": "https://getkap.co",
   "dependencies": {
