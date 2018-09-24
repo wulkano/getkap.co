@@ -3,7 +3,7 @@ import WulkanoLogo from '../../../static/images/logos/wulkano.svg'
 
 const WulkanoAndFriends = () => (
   <div className="container">
-    <a href="https://wulkano.com" target="_blank" rel="noopener">
+    <a href="https://wulkano.com" alt="Wulkano" target="_blank" rel="noopener">
       <WulkanoLogo />
     </a>
 

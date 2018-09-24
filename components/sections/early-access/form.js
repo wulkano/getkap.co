@@ -6,7 +6,7 @@ const noop = () => {}
 const Input = ({ boom }) => (
   <div className="container">
     <input type="email" name="EMAIL" placeholder="Email address" />
-    <button>
+    <button name="send">
       <RightArrow />
       <Confetti
         active={boom}
@@ -45,6 +45,10 @@ const Input = ({ boom }) => (
         color: #808080;
         border-radius: 4px 0px 0 4px;
         border-right: none;
+      }
+
+      input::placeholder {
+        color: #000;
       }
 
       input:focus {
