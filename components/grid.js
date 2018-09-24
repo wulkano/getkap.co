@@ -23,8 +23,8 @@ export const Column = ({ children }) => (
   </div>
 )
 
-const Grid = ({ children }) => (
-  <div className="grid">
+const Grid = ({ children, style }) => (
+  <div className="grid" style={style}>
     {children}
     <style jsx>{`
       .grid {

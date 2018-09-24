@@ -4,8 +4,8 @@ import WulkanoAndFriends from './wulkano-and-friends'
 import Links from './links'
 
 export default () => (
-  <Section style={{ marginTop: '128px' }}>
-    <Grid>
+  <Section style={{ marginTop: '32px' }}>
+    <Grid style={{ marginBottom: '0px' }}>
       <Column>
         <WulkanoAndFriends />
       </Column>

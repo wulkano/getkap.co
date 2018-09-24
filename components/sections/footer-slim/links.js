@@ -1,4 +1,5 @@
 import colors from '../../../lib/colors'
+import screenSizes from '../../../lib/screen-sizes'
 
 const Links = () => (
   <ul>
@@ -38,6 +39,17 @@ const Links = () => (
 
       li {
         margin-left: 32px;
+      }
+
+      @media only screen and (max-width: ${screenSizes.tablet}) {
+        ul {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 16px;
+        }
+        li {
+          padding: 8px 0;
+        }
       }
     `}</style>
   </ul>

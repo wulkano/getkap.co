@@ -41,7 +41,6 @@ const Input = ({ boom }) => (
         color: #808080;
         border-radius: 4px 0px 0 4px;
         background-color: #ffffff;
-        border: solid 2px #cccccc;
         border-right: none;
       }
 
@@ -56,6 +55,9 @@ const Input = ({ boom }) => (
         background-color: ${colors.purple};
         border: none;
         border-radius: 0px 4px 4px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       button:hover {
@@ -99,6 +101,11 @@ class Form extends Component {
           />
         </div>
         <style jsx>{`
+          form {
+            margin-top: 32px;
+            max-width: 430px;
+            width: 100%;
+          }
           p {
             font-size: 1.6rem;
             font-weight: normal;
