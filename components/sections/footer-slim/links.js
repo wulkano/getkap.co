@@ -43,12 +43,12 @@ const Links = () => (
 
       @media only screen and (max-width: ${screenSizes.tablet}) {
         ul {
-          flex-direction: column;
-          align-items: flex-start;
-          margin-bottom: 16px;
+          display: inline-block;
+          padding-bottom: 32px;
         }
         li {
           padding: 8px 0;
+          margin-left: 0px;
         }
       }
     `}</style>
