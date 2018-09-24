@@ -83,7 +83,7 @@ const Hero = () => (
         padding-bottom: 4.5%;
         background: url('../../static/images/curve-mobile.svg') center bottom;
         background-size: cover;
-        margin-bottom: -3px;
+        margin-bottom: -1px;
       }
 
       .hero__content {
