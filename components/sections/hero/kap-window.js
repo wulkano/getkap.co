@@ -18,6 +18,7 @@ const KapWindow = () => (
       .window {
         z-index: 100;
         max-width: 464px;
+        max-height: 64px;
         width: 100%;
         height: auto;
         box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
