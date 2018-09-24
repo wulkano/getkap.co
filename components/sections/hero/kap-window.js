@@ -2,11 +2,14 @@ import screenSizes from '../../../lib/screen-sizes'
 
 const KapWindow = () => (
   <div className="window">
-    <img src={'/static/images/kap-3@2x.png'} alt="The Kap Window" />
+    <img
+      src={require('../../../static/images/kap-3@2x.png?inline')}
+      alt="The Kap Window"
+    />
     <style jsx>{`
       img {
-        width: 464px;
-        height: 64px;
+        max-width: 464px;
+        height: auto;
         opacity: 1;
         user-select: none;
         user-drag: none;
@@ -14,12 +17,14 @@ const KapWindow = () => (
 
       .window {
         z-index: 100;
-        width: 464px;
-        height: 64px;
+        max-width: 464px;
+        width: 100%;
+        height: auto;
         box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
         background-color: white;
         border-radius: 4px;
         position: relative;
+        margin: 0 32px;
         margin-bottom: -32px;
       }
 

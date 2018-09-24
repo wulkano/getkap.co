@@ -2,7 +2,7 @@ import { Component } from 'react'
 import Confetti from 'react-dom-confetti'
 import colors from '../../../lib/colors'
 import RightArrow from '../../../static/images/arrow-right-white.svg'
-
+const noop = () => {}
 const Input = ({ boom }) => (
   <div className="container">
     <input type="email" name="EMAIL" placeholder="Email address" />
@@ -95,6 +95,7 @@ class Form extends Component {
             name="b_318c21d4f80a3b46f22ad6ddd_f219da06bd"
             tabIndex="-1"
             value=""
+            onChange={noop}
           />
         </div>
         <style jsx>{`

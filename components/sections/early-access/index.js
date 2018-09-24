@@ -2,10 +2,10 @@ import Form from './form'
 import screenSizes from '../../../lib/screen-sizes'
 const EarlyAccess = () => (
   <div className={`section`}>
-    <p>
+    <article>
       <h3>Get early access</h3>
       <b>A brand new Kap is launching soon, sign up for the beta.</b>
-    </p>
+    </article>
     <div className="form">
       <Form />
     </div>
@@ -19,7 +19,7 @@ const EarlyAccess = () => (
         line-height: 24px;
         margin-bottom: 16px;
       }
-      p {
+      article {
         text-align: center;
         margin-bottom: 32px;
       }
