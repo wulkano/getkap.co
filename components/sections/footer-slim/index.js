@@ -5,7 +5,7 @@ import Links from './links'
 
 export default () => (
   <Section>
-    <Grid style={{ marginBottom: '0px' }}>
+    <Grid style={{ marginBottom: 0 }}>
       <Column>
         <WulkanoAndFriends />
       </Column>

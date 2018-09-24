@@ -6,7 +6,7 @@ const noop = () => {}
 const Input = ({ boom }) => (
   <div className="container">
     <input type="email" name="EMAIL" placeholder="Email address" />
-    <button name="send">
+    <button aria-label="send">
       <RightArrow />
       <Confetti
         active={boom}
