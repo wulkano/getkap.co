@@ -25,6 +25,10 @@ const Input = ({ boom }) => (
         height: 48px;
         display: flex;
         align-items: center;
+        background-color: #ffffff;
+        border: 4px solid #fff;
+        box-sizing: content-box;
+        border-radius: 4px;
       }
 
       input {
@@ -40,7 +44,6 @@ const Input = ({ boom }) => (
         margin: 0;
         color: #808080;
         border-radius: 4px 0px 0 4px;
-        background-color: #ffffff;
         border-right: none;
       }
 
@@ -50,11 +53,12 @@ const Input = ({ boom }) => (
       }
 
       button {
+        box-sizing: border-box;
         width: 48px;
         height: 48px;
         background-color: ${colors.purple};
         border: none;
-        border-radius: 0px 4px 4px 0px;
+        border-radius: 4px;
         display: flex;
         justify-content: center;
         align-items: center;
