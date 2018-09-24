@@ -34,6 +34,7 @@ const Info = () => (
           margin: 0 16px;
           width: 100vw;
           margin-top: 32px;
+          margin-bottom: 64px;
         }
         span {
           padding-top: 8px;

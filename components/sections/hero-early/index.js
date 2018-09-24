@@ -116,6 +116,9 @@ const Hero = () => (
       }
 
       @media only screen and (max-width: ${screenSizes.tablet}) {
+        .hero {
+          min-height: 564px;
+        }
         h2 {
           max-width: 288px;
           line-height: 1.2;
