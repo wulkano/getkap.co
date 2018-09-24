@@ -14,6 +14,11 @@ const Links = () => (
     <li>
       <a href="https://github.com/wulkano/kap/blob/master/LICENSE">License</a>
     </li>
+    <li>
+      <a href="https://github.com/wulkano/kap/blob/master/PRIVACY.md">
+        Privacy
+      </a>
+    </li>
     <style jsx>{`
       a {
         width: 74px;
