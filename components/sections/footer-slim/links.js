@@ -4,9 +4,7 @@ import screenSizes from '../../../lib/screen-sizes'
 const Links = () => (
   <ul>
     <li>
-      <a href="https://github.com/wulkano/kap/releases/download/v2.0.0/Kap-2.0.0.dmg">
-        Download
-      </a>
+      <a href="https://kap-updates.now.sh/download">Download</a>
     </li>
     <li>
       <a href="https://github.com/wulkano/kap/issues">Issues</a>
