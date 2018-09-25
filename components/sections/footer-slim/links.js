@@ -1,19 +1,42 @@
 import colors from '../../../lib/colors'
 import screenSizes from '../../../lib/screen-sizes'
+import ReactGA from 'react-ga'
 
 const Links = () => (
   <ul>
     <li>
-      <a href="https://kap-updates.now.sh/download">Download</a>
+      <a
+        target="_blank"
+        onClick={() => ReactGA.pageview('/download')}
+        href="https://kap-updates.now.sh/download"
+      >
+        Download
+      </a>
     </li>
     <li>
-      <a href="https://github.com/wulkano/kap/issues">Issues</a>
+      <a
+        target="_blank"
+        onClick={() => ReactGA.pageview('/issues')}
+        href="https://github.com/wulkano/kap/issues"
+      >
+        Issues
+      </a>
     </li>
     <li>
-      <a href="https://github.com/wulkano/kap/blob/master/LICENSE">License</a>
+      <a
+        target="_blank"
+        onClick={() => ReactGA.pageview('/license')}
+        href="https://github.com/wulkano/kap/blob/master/LICENSE"
+      >
+        License
+      </a>
     </li>
     <li>
-      <a href="https://github.com/wulkano/kap/blob/master/PRIVACY.md">
+      <a
+        target="_blank"
+        onClick={() => ReactGA.pageview('/privacy')}
+        href="https://github.com/wulkano/kap/blob/master/PRIVACY.md"
+      >
         Privacy
       </a>
     </li>
