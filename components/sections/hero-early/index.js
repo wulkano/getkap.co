@@ -6,13 +6,18 @@ import screenSizes from '../../../lib/screen-sizes'
 import Logo from '../../../static/images/kap.svg'
 import DownloadIcon from '../../../static/images/download.svg'
 import Form from '../early-access/form'
+import ReactGA from 'react-ga'
 
 const Hero = () => (
   <section className="hero">
     <header className="header grid">
       <Logo />
       {/* Download Button */}
-      <Button theme="light" href="https://kap-updates.now.sh/download">
+      <Button
+        theme="light"
+        onClick={() => ReactGA.pageview('/download')}
+        href="https://kap-updates.now.sh/download"
+      >
         <DownloadIcon />
         <span>Get kap</span>
       </Button>

@@ -2,6 +2,8 @@ import { Component } from 'react'
 import Confetti from 'react-dom-confetti'
 import colors from '../../../lib/colors'
 import RightArrow from '../../../static/images/arrow-right-white.svg'
+import ReactGA from 'react-ga'
+
 const noop = () => {}
 const Input = ({ boom }) => (
   <div className="container">
@@ -83,6 +85,7 @@ class Form extends Component {
     return (
       <form
         onSubmit={() => {
+          ReactGA.pageview('/subscribe')
           if (!this.state.sent) {
             this.setState({ sent: true })
             if (window.chrome) {
