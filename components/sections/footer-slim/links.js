@@ -26,7 +26,7 @@ const Links = () => (
       <a
         target="_blank"
         onClick={() => ReactGA.pageview('/license')}
-        href="https://github.com/wulkano/kap/blob/master/LICENSE"
+        href="https://github.com/wulkano/kap/blob/master/license.md"
       >
         License
       </a>
