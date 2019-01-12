@@ -1,17 +1,34 @@
 import colors from '../../../lib/colors'
+import ReactGA from 'react-ga'
 
 const Links = () => (
   <ul>
     <li>
-      <a href="https://github.com/wulkano/kap/releases/download/v2.0.0/Kap-2.0.0.dmg">
+      <a
+        target="_blank"
+        onClick={() => ReactGA.pageview('/download')}
+        href="https://github.com/wulkano/kap/releases/download/v2.0.0/Kap-2.0.0.dmg"
+      >
         Download
       </a>
     </li>
     <li>
-      <a href="https://github.com/wulkano/kap/issues">Issues</a>
+      <a
+        target="_blank"
+        onClick={() => ReactGA.pageview('/issues')}
+        href="https://github.com/wulkano/kap/issues"
+      >
+        Issues
+      </a>
     </li>
     <li>
-      <a href="https://github.com/wulkano/kap/blob/master/LICENSE">License</a>
+      <a
+        target="_blank"
+        onClick={() => ReactGA.pageview('/license')}
+        href="https://github.com/wulkano/kap/blob/master/LICENSE"
+      >
+        License
+      </a>
     </li>
     <style jsx>{`
       a {
