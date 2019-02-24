@@ -95,7 +95,7 @@ class Form extends Component {
             type="text"
             name="b_318c21d4f80a3b46f22ad6ddd_f219da06bd"
             tabIndex="-1"
-            value=""
+            defaultValue=""
           />
         </div>
         <style jsx>{`
