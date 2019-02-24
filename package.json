@@ -8,9 +8,8 @@
     "build": "next build",
     "start": "NODE_ENV=production next start",
     "test": "echo \"No test specified\" && exit 0",
-    "deploy:remove-inactive": "now --token $NOW_TOKEN --team kap rm getkap.co --safe --yes",
-    "deploy": "next build && next export && now ./out --name getkap.co --team kap --public --token $NOW_TOKEN && now alias --team kap --token $NOW_TOKEN",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "now-build": "next build && next export -o dist"
   },
   "lint-staged": {
     "*.js": [
@@ -26,10 +25,6 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wulkano/getkap.co/issues"
-  },
-  "now": {
-    "type": "npm",
-    "alias": "getkap.co"
   },
   "homepage": "https://getkap.co",
   "dependencies": {
