@@ -3,5 +3,8 @@
   "alias": "getkap",
   "builds": [
     { "src": "package.json", "use": "@now/static-build" }
+  ],
+  "routes": [
+    { "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+", "headers": { "cache-control": "immutable" } }
   ]
 }
