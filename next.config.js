@@ -6,20 +6,19 @@ const nextConfig = {
   target: 'serverless',
   exportPathMap: function() {
     return {
-      '/': { page: '/' }
+      '/': { page: '/' },
     }
-  }
+  },
 }
-
 module.exports = withPlugins(
   [
     [withCSS, {}],
     [
       optimizedImages,
       {
-        optimizeImagesInDev: true
-      }
-    ]
+        optimizeImagesInDev: true,
+      },
+    ],
   ],
-  nextConfig
+  nextConfig,
 )
