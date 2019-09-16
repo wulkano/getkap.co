@@ -1,3 +1,5 @@
+import React from 'react'
+
 const Section = ({ children, height, fill, style }) => (
   <div className={`section ${fill ? 'fill' : ''}`} style={{ height, ...style }}>
     {children}

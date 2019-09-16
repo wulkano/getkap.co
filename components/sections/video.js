@@ -1,3 +1,4 @@
+import React from 'react'
 import Section from './section'
 import screenSizes from '../../lib/screen-sizes'
 import PlayButton from '../../static/images/play.svg'
@@ -10,19 +11,12 @@ const Video = () => (
         <div className="overlay">
           <PlayButton className="video__play-button" />
         </div>
-        <img
-          src="/static/images/video/preview.jpg"
-          alt="Kap Video Preview"
-          className="preview"
-        />
+        <img src="/static/images/video/preview.jpg" alt="Kap Video Preview" className="preview" />
       </div>
       <div className="container">
         <div className="video__description text">
           <h3>More quality, less noise</h3>
-          <p>
-            Export as GIF, MP4, WebM or APNG with optional audio, highlight
-            clicks and trimming.
-          </p>
+          <p>Export as GIF, MP4, WebM or APNG with optional audio, highlight clicks and trimming.</p>
           <a href="https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38">
             <span>How Kap was built</span>
             <RightArrow />

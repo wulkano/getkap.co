@@ -1,3 +1,4 @@
+import React from 'react'
 import Button from '../../button.js'
 import KapWindow from './kap-window'
 import Info from './info'
@@ -12,11 +13,7 @@ const Hero = () => (
     <header className="header grid">
       <Logo />
       {/* Download Button */}
-      <Button
-        theme="light"
-        onClick={() => ReactGA.pageview('/download')}
-        href="https://kap-updates.now.sh/download"
-      >
+      <Button theme="light" onClick={() => ReactGA.pageview('/download')} href="https://kap-updates.now.sh/download">
         <DownloadIcon />
         <span>Get kap</span>
       </Button>
@@ -57,11 +54,7 @@ const Hero = () => (
         align-items: center;
         position: relative;
         padding: 0 32px;
-        background-image: radial-gradient(
-          farthest-corner at -0% 100%,
-          ${colors.purple} 30%,
-          ${colors.teal} 95%
-        );
+        background-image: radial-gradient(farthest-corner at -0% 100%, ${colors.purple} 30%, ${colors.teal} 95%);
         background-size: 150% 150%;
         animation: bg 12s ease-in infinite alternate;
         will-change: transform;

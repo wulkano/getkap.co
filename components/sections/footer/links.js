@@ -1,3 +1,4 @@
+import React from 'react'
 import colors from '../../../lib/colors'
 import ReactGA from 'react-ga'
 
@@ -14,12 +15,7 @@ const Links = () => (
       </a>
     </li>
     <li>
-      <a
-        target="_blank"
-        rel="noopener"
-        onClick={() => ReactGA.pageview('/issues')}
-        href="https://github.com/wulkano/kap/issues"
-      >
+      <a target="_blank" rel="noopener" onClick={() => ReactGA.pageview('/issues')} href="https://github.com/wulkano/kap/issues">
         Issues
       </a>
     </li>

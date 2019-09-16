@@ -1,3 +1,4 @@
+import React from 'react'
 import Button from '../../button'
 import Section from '../section'
 import Plugin from './plugin'
@@ -11,22 +12,14 @@ const Plugins = () => (
       <div className="plugins__text">
         <div className="power">
           <h3>The power of open-source</h3>
-          <p>
-            The ease of use and speed you’ve been looking for – the
-            functionality and extensibility you didn’t know you needed.
-          </p>
+          <p>The ease of use and speed you’ve been looking for – the functionality and extensibility you didn’t know you needed.</p>
         </div>
       </div>
 
       <div className="plugins__display">
         <div className="list-wrapper">
           <div className="list">
-            <Plugin
-              title="giphy"
-              color="#ffd500"
-              description="Share GIFs on Giphy"
-              href="https://github.com/wulkano/kap-giphy"
-            />
+            <Plugin title="giphy" color="#ffd500" description="Share GIFs on Giphy" href="https://github.com/wulkano/kap-giphy" />
             <Plugin
               title="now"
               color="#FFF"

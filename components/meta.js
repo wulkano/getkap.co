@@ -107,9 +107,8 @@ const Meta = ({ children }) => (
       }
 
       body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-          Oxygen, Oxygen-Sans, 'Fira Sans', 'Droid Sans', Ubuntu, Cantarell,
-          'Helvetica Neue', sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Oxygen-Sans, 'Fira Sans', 'Droid Sans', Ubuntu,
+          Cantarell, 'Helvetica Neue', sans-serif;
         font-size: 16px;
         font-size: 1.6rem;
         line-height: 1.5em;

@@ -1,3 +1,4 @@
+import React from 'react'
 import Section from '../section'
 import Quotes from './quotes'
 import Logos from './logos'

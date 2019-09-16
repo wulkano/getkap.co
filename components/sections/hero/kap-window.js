@@ -1,11 +1,9 @@
+import React from 'react'
 import screenSizes from '../../../lib/screen-sizes'
 
 const KapWindow = () => (
   <div className="window">
-    <img
-      src={require('../../../static/images/kap-3@2x.png?inline')}
-      alt="The Kap Window"
-    />
+    <img src={require('../../../static/images/kap-3@2x.png?inline')} alt="The Kap Window" />
     <style jsx>{`
       img {
         max-width: 464px;
