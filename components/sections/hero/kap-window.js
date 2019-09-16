@@ -6,7 +6,7 @@ const KapWindow = () => (
     <img src={require('../../../static/images/app-light.png?inline')} alt="The Kap Window" />
     <style jsx>{`
       img {
-        max-width: 466px;
+        max-width: 464px;
         height: auto;
         opacity: 1;
         user-select: none;
@@ -15,7 +15,7 @@ const KapWindow = () => (
 
       .window {
         z-index: 100;
-        max-width: 466px;
+        max-width: 464px;
         max-height: 66px;
         width: 100%;
         height: auto;
@@ -32,6 +32,8 @@ const KapWindow = () => (
         img {
           width: 100% !important;
           height: auto;
+        }
+        .window {
           margin-bottom: -12px;
         }
       }
