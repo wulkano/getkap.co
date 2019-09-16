@@ -92,11 +92,6 @@ const Quote = ({ handle, name, text }) => (
 
 const QUOTES = [
   {
-    handle: '@michaeldick',
-    name: 'Dick',
-    text: "My life just changed; this is exactly the screen capture app I've been needing",
-  },
-  {
     handle: '@mikeal',
     name: 'Mikeal Rogers',
     text: "This is the best screen capture app right now, if you haven't already, check it out",
@@ -122,16 +117,6 @@ const QUOTES = [
     text: "Kap is maybe the best GIF recorder I've used so far.",
   },
   {
-    handle: '@ThrivingKings',
-    name: 'Daniel Raftery',
-    text: "I can't recommend Kap enough. Sprinkle your bugs/PRs with animated GIF screen captures. It's seriously awesome.",
-  },
-  {
-    handle: '@boogah',
-    name: 'Jason Cosper',
-    text: "Been looking for a nice, easy to use screen recorder. Kap seems to fit the bill. Bonus: it's open source.",
-  },
-  {
     handle: '@jeffreydgroot',
     name: 'Jeffrey de Groot',
     text: 'Kap makes it really easy to record and export screen captures. And it looks nice :)',
@@ -155,11 +140,6 @@ const QUOTES = [
     handle: '@malweene',
     name: 'Malwinei',
     text: 'Just installed getkap.co via homebew and Cask! Pretty hot combination. 🔥 Very impressed. Try it. Best screen recording! ✨',
-  },
-  {
-    handle: '@cesarzeppini',
-    name: 'Cesar Zeppini',
-    text: "Very well designed screen recording app. And it's open source! getkap.co #design #opensource",
   },
   {
     handle: '@oscrse',
