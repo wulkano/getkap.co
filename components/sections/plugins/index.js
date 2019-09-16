@@ -26,12 +26,7 @@ const Plugins = () => (
               description="Share on ZEIT now&nbsp;&nbsp;&nbsp;"
               href="https://github.com/lucaperret/kap-now"
             />
-            <Plugin
-              title="draggable"
-              color="#00ffbe"
-              description="Share with drag and drop"
-              href="https://github.com/albinekb/kap-draggable"
-            />
+            <Plugin title="streamable" color="#00ffbe" description="Share on streamable" href="https://github.com/kevva/kap-streamable" />
           </div>
         </div>
 
