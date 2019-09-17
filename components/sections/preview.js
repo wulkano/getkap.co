@@ -4,17 +4,14 @@ import screenSizes from '../../lib/screen-sizes'
 import PlayButton from '../../static/images/play.svg'
 import RightArrow from '../../static/images/arrow-right.svg'
 
-const Video = () => (
+const Preview = () => (
   <Section>
     <div className="split">
-      <div className="video">
-        <div className="overlay">
-          <PlayButton className="video__play-button" />
-        </div>
-        <img src="/static/images/preview/kap-light-mode.png" alt="Kap in light mode" className="preview" />
+      <div className="preview">
+        <img src="/static/images/preview/kap-light-mode.png" alt="Kap in light mode" className="preview-image" />
       </div>
       <div className="container">
-        <div className="video__description text">
+        <div className="preview__description text">
           <h3>More quality, less noise</h3>
           <p>Export as GIF, MP4, WebM or APNG with optional audio, highlight clicks and trimming.</p>
           <a href="https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38">
@@ -34,27 +31,26 @@ const Video = () => (
         margin-bottom: -64px;
       }
 
-      .video {
+      .preview {
         width: 50%;
         z-index: 100;
         position: relative;
-        cursor: pointer;
         border-radius: 4px 4px 4px 4px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         overflow: hidden;
       }
 
-      .video > img {
+      .preview > img {
         float: right;
-        width: 1024px;
-        height: 576px;
+        width: 960px;
+        height: 682px;
       }
 
-      .video:hover :global(.video__play-button) {
+      .preview:hover :global(.preview__play-button) {
         transform: scale(1.2);
       }
 
-      .video:hover .overlay {
+      .preview:hover .overlay {
         background-color: rgba(0, 0, 0, 0.1);
       }
 
@@ -71,12 +67,6 @@ const Video = () => (
         transition: background 0.12s ease;
       }
 
-      :global(.video__play-button) {
-        width: 48px;
-        height: 48px;
-        transition: transform 0.12s ease;
-      }
-
       .container {
         width: 50%;
         max-width: 600px;
@@ -84,7 +74,7 @@ const Video = () => (
         justify-content: center;
       }
 
-      .video__description {
+      .preview__description {
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -94,13 +84,13 @@ const Video = () => (
         margin-right: 32px;
       }
 
-      .video__description p {
+      .preview__description p {
         border-bottom: solid 1px #f1f1f1;
         padding-bottom: 32px;
         margin-bottom: 32px;
       }
 
-      .video__description a {
+      .preview__description a {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -108,7 +98,7 @@ const Video = () => (
         width: 100%;
       }
 
-      .video__description a :global(svg) {
+      .preview__description a :global(svg) {
         animation: ease-out alternate infinite;
         animation-duration: 300ms;
         transition: all 1000ms ease;
@@ -116,11 +106,11 @@ const Video = () => (
         animation-fill-mode: forwards;
       }
 
-      .video__description a:hover {
+      .preview__description a:hover {
         text-decoration: underline;
       }
 
-      .video__description a:hover :global(svg) {
+      .preview__description a:hover :global(svg) {
         animation-name: arrow;
       }
 
@@ -166,17 +156,16 @@ const Video = () => (
           width: 100%;
         }
 
-        .video {
+        .preview {
           width: 100%;
           z-index: 100;
           position: relative;
           cursor: pointer;
           margin-top: 32px;
-
           overflow: hidden;
         }
 
-        .video > img {
+        .preview > img {
           width: 100%;
           float: none;
           height: auto;
@@ -190,4 +179,4 @@ const Video = () => (
   </Section>
 )
 
-export default Video
+export default Preview
