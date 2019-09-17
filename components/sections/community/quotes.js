@@ -47,7 +47,7 @@ const Quote = ({ handle, name, text }) => (
         }
 
         .card {
-          width: 100%;
+          max-width: 100%;
           flex: 1;
           margin-bottom: 16px;
         }
