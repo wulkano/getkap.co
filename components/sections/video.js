@@ -11,7 +11,7 @@ const Video = () => (
         <div className="overlay">
           <PlayButton className="video__play-button" />
         </div>
-        <img src="/static/images/video/preview.jpg" alt="Kap Video Preview" className="preview" />
+        <img src="/static/images/preview/kap-light-mode.png" alt="Kap in light mode" className="preview" />
       </div>
       <div className="container">
         <div className="video__description text">
