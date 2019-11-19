@@ -13,7 +13,7 @@ const Hero = () => (
     <header className="header grid">
       <Logo />
       {/* Download Button */}
-      <Button theme="light" onClick={() => ReactGA.pageview('/download')} href="https://kap-updates.now.sh/download">
+      <Button theme="light" onClick={() => ReactGA.pageview('/download')} href="/download" download>
         <DownloadIcon />
         <span>Get kap</span>
       </Button>
@@ -65,7 +65,7 @@ const Hero = () => (
         overflow: hidden;
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: -1px;
         left: 0;
         width: 100%;
       }
@@ -116,10 +116,6 @@ const Hero = () => (
           max-width: 288px;
           line-height: 1.2;
           font-size: 2rem;
-        }
-
-        .header {
-          margin-top: 16px;
         }
       }
     `}</style>

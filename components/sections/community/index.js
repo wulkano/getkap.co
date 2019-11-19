@@ -32,6 +32,11 @@ const Community = () => (
         align-items: center;
       }
 
+      h2,
+      h4 {
+        text-align: center;
+      }
+
       .community__heading h2 {
         margin-bottom: 16px;
       }
@@ -43,6 +48,10 @@ const Community = () => (
       }
 
       @media only screen and (max-width: ${screenSizes.tablet}) {
+        .community__heading {
+          margin: 64px 0;
+        }
+
         .root {
           margin-bottom: 32px;
         }

@@ -104,7 +104,7 @@ const QUOTES = [
   {
     handle: '@mxstbr',
     name: 'Max Stoiber',
-    text: 'Extremely impressed with the Kap 1.0 release; this is the best screen recorder ever, built with web technologies! :100:',
+    text: 'Extremely impressed with the Kap 1.0 release; this is the best screen recorder ever, built with web technologies! 💯',
   },
   {
     handle: '@maxvoltar',
@@ -115,11 +115,6 @@ const QUOTES = [
     handle: '@michaelschultz',
     name: 'Michael Schultz',
     text: "Kap is maybe the best GIF recorder I've used so far.",
-  },
-  {
-    handle: '@jeffreydgroot',
-    name: 'Jeffrey de Groot',
-    text: 'Kap makes it really easy to record and export screen captures. And it looks nice :)',
   },
   {
     handle: '@GilliSig',
@@ -167,18 +162,17 @@ const QUOTES = [
     name: 'Slava',
     text: 'I *love* stuff like this. Solving one specific problem in a simple and compelling way getkap.co',
   },
-  {
-    handle: '@_albertogallego',
-    name: 'Alberto Gallego',
-    text: 'I spent so much time looking something like getkap.co. The simplest way to record your screen. And easy to export. 😍',
-  },
 ]
 
 const Columns = ({ columns, quotes }) => (
   <div style={{ display: 'flex' }} className="columns">
     {Array.apply(null, { length: columns }).map((_, index) => (
       <div className="column" key={`column-${index}`}>
-        {quotes.filter((_, i) => i % columns === index).map(quote => <Quote key={quote.handle} {...quote} />)}
+        {quotes
+          .filter((_, i) => i % columns === index)
+          .map(quote => (
+            <Quote key={quote.handle} {...quote} />
+          ))}
       </div>
     ))}
     <style jsx>{`

@@ -21,7 +21,6 @@ const Plugin = ({ title, description, color, href = '#' }) => (
         border-radius: 4px;
         box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
 
-        margin-bottom: 16px;
         display: inline-block;
         transition: 100ms ease;
         will-change: transform;

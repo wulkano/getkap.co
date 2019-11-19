@@ -23,22 +23,11 @@ const Plugins = () => (
             <Plugin
               title="now"
               color="#FFF"
-              description="Share on ZEIT now&nbsp;&nbsp;&nbsp;"
+              description="Deploy with ZEIT Now&nbsp;&nbsp;&nbsp;"
               href="https://github.com/lucaperret/kap-now"
             />
-            <Plugin title="streamable" color="#00ffbe" description="Share on streamable" href="https://github.com/kevva/kap-streamable" />
+            <Plugin title="streamable" color="#00ffbe" description="Upload to Streamable" href="https://github.com/kevva/kap-streamable" />
           </div>
-        </div>
-
-        <div className="plugins__buttons">
-          <Button theme="dark">
-            <CompassIcon />
-            Browse Plugins
-          </Button>
-          <Button theme="outlined">
-            <DownloadIcon />
-            Download App
-          </Button>
         </div>
       </div>
     </div>
@@ -102,7 +91,7 @@ const Plugins = () => (
 
         .plugins__text {
           padding-right: 32px;
-          margin-bottom: 48px;
+          margin-bottom: 32px;
           margin-left: 0px;
           width: 100%;
           padding: 0 32px;
@@ -124,9 +113,9 @@ const Plugins = () => (
         }
 
         .list-wrapper {
-          overflow-x: scroll;
+          overflow-x: auto;
+          padding: 16px;
           padding-left: 32px;
-          padding-top: 16px;
         }
 
         .list {
@@ -145,6 +134,7 @@ const Plugins = () => (
           align-items: flex-start;
           justify-content: flex-start;
           padding-bottom: 0px;
+          padding-top: 128px;
         }
 
         .plugins__display {

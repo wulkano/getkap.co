@@ -5,12 +5,7 @@ import ReactGA from 'react-ga'
 const Links = () => (
   <ul>
     <li>
-      <a
-        target="_blank"
-        rel="noopener"
-        onClick={() => ReactGA.pageview('/download')}
-        href="https://github.com/wulkano/kap/releases/download/v2.0.0/Kap-2.0.0.dmg"
-      >
+      <a target="_blank" rel="noopener" onClick={() => ReactGA.pageview('/download')} href="/download" download>
         Download
       </a>
     </li>

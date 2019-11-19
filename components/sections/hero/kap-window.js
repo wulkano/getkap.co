@@ -11,6 +11,7 @@ const KapWindow = () => (
         opacity: 1;
         user-select: none;
         user-drag: none;
+        width: 100%;
       }
 
       .window {

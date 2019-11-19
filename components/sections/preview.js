@@ -35,7 +35,6 @@ const Preview = () => (
         width: 50%;
         z-index: 100;
         position: relative;
-        border-radius: 4px 4px 4px 4px;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         overflow: hidden;
       }
@@ -44,6 +43,7 @@ const Preview = () => (
         float: right;
         width: 960px;
         height: 682px;
+        border-radius: 4px 4px 4px 4px;
       }
 
       .preview:hover :global(.preview__play-button) {
@@ -99,8 +99,8 @@ const Preview = () => (
       }
 
       .preview__description a :global(svg) {
-        animation: ease-out alternate infinite;
-        animation-duration: 300ms;
+        animation: ease-out alternate 1;
+        animation-duration: 460ms;
         transition: all 1000ms ease;
         transform: translateX(0px);
         animation-fill-mode: forwards;
@@ -127,18 +127,27 @@ const Preview = () => (
       }
 
       @keyframes arrow {
-        from {
+        0% {
           transform: translateX(0px);
         }
-        to {
+        40% {
           transform: translateX(-10px);
+        }
+        60% {
+          transform: translateX(3px);
+        }
+        80% {
+          transform: translateX(-2px);
+        }
+        100% {
+          transform: translateX(0px);
         }
       }
 
       @media only screen and (max-width: ${screenSizes.tablet}) {
         .split {
           flex-direction: column-reverse;
-          margin-top: 128px;
+          margin-top: 64px;
           margin-bottom: -64px;
           padding: 16px;
           padding-bottom: 0;
