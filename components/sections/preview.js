@@ -8,7 +8,7 @@ const Preview = () => (
   <Section>
     <div className="split">
       <div className="preview">
-        <img src="/static/images/preview/kap-light-mode.png" alt="Kap in light mode" className="preview-image" />
+        <img src="/static/images/preview/kap-light-mode@2x.jpg" alt="Kap in light mode" className="preview-image" />
       </div>
       <div className="container">
         <div className="preview__description text">
