@@ -182,6 +182,7 @@ const Meta = ({ children }) => (
 
       body {
         font-family: 'InterUI', sans-serif !important; // TODO: how to override eightpoint?
+        font-display: swap;
         font-size: 1.2rem;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
