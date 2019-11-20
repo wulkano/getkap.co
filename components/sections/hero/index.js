@@ -77,7 +77,7 @@ const Hero = () => (
         transform: translateX(-50%);
         width: 190vw;
         padding-bottom: 4.5%;
-        background: url('../../static/images/curve-mobile.svg') center bottom;
+        background: url(${require('../../../static/images/curve-mobile.svg?inline')}) center bottom;
         background-size: cover;
         margin-bottom: -3px;
       }
