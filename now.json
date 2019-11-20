@@ -1,10 +1,12 @@
 {
   "version": 2,
   "alias": "getkap",
+  "scope": "kap",
   "builds": [
     { "src": "package.json", "use": "@now/static-build" }
   ],
   "routes": [
-    { "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+", "headers": { "cache-control": "immutable" } }
+    { "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+", "headers": { "cache-control": "immutable" } },
+    { "src": "/download", "dest": "https://github.com/wulkano/kap/releases/download/v3.0.0/Kap-3.0.0.dmg" }
   ]
 }

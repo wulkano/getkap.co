@@ -1,3 +1,4 @@
+import React from 'react'
 import Button from '../../button'
 import Section from '../section'
 import Plugin from './plugin'
@@ -11,46 +12,22 @@ const Plugins = () => (
       <div className="plugins__text">
         <div className="power">
           <h3>The power of open-source</h3>
-          <p>
-            The ease of use and speed you’ve been looking for – the
-            functionality and extensibility you didn’t know you needed.
-          </p>
+          <p>The ease of use and speed you’ve been looking for – the functionality and extensibility you didn’t know you needed.</p>
         </div>
       </div>
 
       <div className="plugins__display">
         <div className="list-wrapper">
           <div className="list">
-            <Plugin
-              title="giphy"
-              color="#ffd500"
-              description="Share GIFs on Giphy"
-              href="https://github.com/wulkano/kap-giphy"
-            />
+            <Plugin title="giphy" color="#ffd500" description="Share GIFs on Giphy" href="https://github.com/wulkano/kap-giphy" />
             <Plugin
               title="now"
               color="#FFF"
-              description="Share on ZEIT now&nbsp;&nbsp;&nbsp;"
+              description="Deploy with ZEIT Now&nbsp;&nbsp;&nbsp;"
               href="https://github.com/lucaperret/kap-now"
             />
-            <Plugin
-              title="draggable"
-              color="#00ffbe"
-              description="Share with drag and drop"
-              href="https://github.com/albinekb/kap-draggable"
-            />
+            <Plugin title="streamable" color="#00ffbe" description="Upload to Streamable" href="https://github.com/kevva/kap-streamable" />
           </div>
-        </div>
-
-        <div className="plugins__buttons">
-          <Button theme="dark">
-            <CompassIcon />
-            Browse Plugins
-          </Button>
-          <Button theme="outlined">
-            <DownloadIcon />
-            Download App
-          </Button>
         </div>
       </div>
     </div>
@@ -114,7 +91,7 @@ const Plugins = () => (
 
         .plugins__text {
           padding-right: 32px;
-          margin-bottom: 48px;
+          margin-bottom: 32px;
           margin-left: 0px;
           width: 100%;
           padding: 0 32px;
@@ -136,9 +113,9 @@ const Plugins = () => (
         }
 
         .list-wrapper {
-          overflow-x: scroll;
+          overflow-x: auto;
+          padding: 16px;
           padding-left: 32px;
-          padding-top: 16px;
         }
 
         .list {
@@ -157,6 +134,7 @@ const Plugins = () => (
           align-items: flex-start;
           justify-content: flex-start;
           padding-bottom: 0px;
+          padding-top: 128px;
         }
 
         .plugins__display {

@@ -1,16 +1,11 @@
+import React from 'react'
 import colors from '../../../lib/colors'
 import WulkanoLogo from '../../../static/images/logos/wulkano.svg'
 import ReactGA from 'react-ga'
 
 const WulkanoAndFriends = () => (
   <div className="container">
-    <a
-      onClick={() => ReactGA.pageview('/wulkano')}
-      title="Wulkano"
-      href="https://wulkano.com"
-      target="_blank"
-      rel="noopener"
-    >
+    <a onClick={() => ReactGA.pageview('/wulkano')} title="Wulkano" href="https://wulkano.com" target="_blank" rel="noopener">
       <WulkanoLogo />
     </a>
 

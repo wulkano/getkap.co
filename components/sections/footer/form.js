@@ -1,4 +1,4 @@
-import { Component } from 'react'
+import React from 'react'
 import Confetti from 'react-dom-confetti'
 import colors from '../../../lib/colors'
 import RightArrow from '../../../static/images/arrow-right-white.svg'
@@ -15,7 +15,7 @@ const Input = ({ boom }) => (
           spread: 53,
           startVelocity: 51,
           elementCount: 69,
-          decay: 0.91
+          decay: 0.91,
         }}
       />
     </button>
@@ -65,7 +65,7 @@ const Input = ({ boom }) => (
   </div>
 )
 
-class Form extends Component {
+class Form extends React.Component {
   state = { sent: false, refocused: false }
   componentDidMount() {}
   render() {

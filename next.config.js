@@ -3,7 +3,7 @@ const optimizedImages = require('next-optimized-images')
 const withCSS = require('@zeit/next-css')
 
 const nextConfig = {
-  target: 'serverless',
+  target: 'server',
   exportPathMap: function() {
     return {
       '/': { page: '/' },

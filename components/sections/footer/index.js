@@ -1,3 +1,4 @@
+import React from 'react'
 import Section from '../section'
 import Grid, { Column } from '../../grid'
 import WulkanoAndFriends from './wulkano-and-friends'

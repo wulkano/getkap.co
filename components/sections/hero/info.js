@@ -1,3 +1,4 @@
+import React from 'react'
 import screenSizes from '../../../lib/screen-sizes'
 
 const Info = () => (

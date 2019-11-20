@@ -3,7 +3,7 @@ import Meta from '../components/meta'
 
 // Sections
 import Hero from '../components/sections/hero'
-import Video from '../components/sections/video'
+import Preview from '../components/sections/preview'
 import Plugins from '../components/sections/plugins'
 import Community from '../components/sections/community'
 import Footer from '../components/sections/footer'
@@ -11,7 +11,7 @@ import Footer from '../components/sections/footer'
 export default () => (
   <Meta>
     <Hero />
-    <Video />
+    <Preview />
     <Plugins />
     <Community />
     <Footer />
