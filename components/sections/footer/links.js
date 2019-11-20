@@ -19,7 +19,7 @@ const Links = () => (
         target="_blank"
         rel="noopener"
         onClick={() => ReactGA.pageview('/license')}
-        href="https://github.com/wulkano/kap/blob/master/LICENSE"
+        href="https://github.com/wulkano/kap/blob/master/LICENSE.md"
       >
         License
       </a>
