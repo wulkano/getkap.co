@@ -6,7 +6,7 @@ const Logo = ({ href, name }) => (
     <img
       key={name}
       src={`/static/images/logos/${name}.png`}
-      srcSet={`/static/images/logos/${name}@2x.png 2x, /static/images/logos/${name}@3x 3x`}
+      srcSet={`/static/images/logos/${name}@2x.png 2x, /static/images/logos/${name}@3x.png 3x`}
       alt={name}
     />
 
