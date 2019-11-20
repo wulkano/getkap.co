@@ -1,4 +1,4 @@
-# getkap.co
+# getkap.co <a href="https://circleci.com/gh/wulkano/getkap.co"><img src="https://circleci.com/gh/wulkano/getkap.co.svg?style=shield" alt="Build Status"></a>
 
 Repository for the [Kap] website, built with [next.js](https://github.com/zeit/next.js)
 
