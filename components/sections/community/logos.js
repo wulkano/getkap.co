@@ -30,7 +30,7 @@ const Logos = () => (
     </div>
 
     <div className="logo-row">
-      <Logo name="sentry" href="https://getsentry.io/" />
+      <Logo name="sentry" href="https://sentry.io/" />
       <Logo name="github" href="https://github.com/" />
       <Logo name="google" href="https://google.com/" />
     </div>
