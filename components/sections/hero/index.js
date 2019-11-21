@@ -15,7 +15,7 @@ const Hero = () => (
       {/* Download Button */}
       <Button theme="light" onClick={() => ReactGA.pageview('/download')} href="/download" download>
         <DownloadIcon />
-        <span>Get kap</span>
+        <span className="button-text">Get kap</span>
       </Button>
     </header>
 
@@ -103,6 +103,10 @@ const Hero = () => (
         margin-top: 64px;
         z-index: 100;
         min-height: 48px;
+      }
+      .header .button-text {
+        width: 52px; /* fixed size to prevent jumping */
+        text-align: right;
       }
 
       @media only screen and (max-width: ${screenSizes.phone}) {
