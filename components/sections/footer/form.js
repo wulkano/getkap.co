@@ -5,8 +5,8 @@ import RightArrow from '../../../static/images/arrow-right-white.svg'
 
 const Input = ({ boom }) => (
   <div className="container">
-    <input type="email" name="EMAIL" placeholder="Email address" />
-    <button>
+    <input type="email" id="EMAIL" name="EMAIL" placeholder="Email address" />
+    <button type="submit" aria-label="Submit">
       <RightArrow />
       <Confetti
         active={boom}
@@ -38,7 +38,7 @@ const Input = ({ boom }) => (
         appearance: none;
         display: inline-block;
         margin: 0;
-        color: #808080;
+        color: #666;
         border-radius: 4px 0px 0 4px;
         background-color: #ffffff;
         border: solid 2px #cccccc;
@@ -87,7 +87,7 @@ class Form extends React.Component {
         target="_blank"
         noValidate
       >
-        <p>Sign up for updates</p>
+        <label htmlFor="EMAIL">Sign up for updates</label>
         <div>
           <Input boom={refocused} />
           <input
@@ -96,13 +96,15 @@ class Form extends React.Component {
             name="b_318c21d4f80a3b46f22ad6ddd_f219da06bd"
             tabIndex="-1"
             defaultValue=""
+            aria-hidden
           />
         </div>
         <style jsx>{`
-          p {
+          label {
             font-size: 1.6rem;
             font-weight: normal;
             margin-bottom: 24px;
+            display: block;
           }
           button {
             width: 48px;

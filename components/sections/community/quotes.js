@@ -83,7 +83,7 @@ const Quote = ({ handle, name, text }) => (
         font-size: 14px;
         font-weight: normal;
         line-height: 1.43;
-        color: #808080;
+        color: #666;
         margin-left: auto;
       }
     `}</style>

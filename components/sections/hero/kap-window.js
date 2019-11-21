@@ -19,7 +19,7 @@ const KapWindow = () => (
         max-width: 464px;
         max-height: 66px;
         width: 100%;
-        height: auto;
+        height: 66px;
         box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
         background-color: white;
         border-radius: 5px;
@@ -28,6 +28,11 @@ const KapWindow = () => (
         margin-bottom: -32px;
       }
 
+      @media only screen and (max-width: ${screenSizes.tablet}) {
+        .window {
+          height: auto;
+        }
+      }
       @media only screen and (max-width: ${screenSizes.phone}) {
         .window,
         img {
@@ -36,6 +41,7 @@ const KapWindow = () => (
         }
         .window {
           margin-bottom: -12px;
+          height: auto;
         }
       }
     `}</style>

@@ -8,7 +8,7 @@ const Preview = () => (
   <Section>
     <div className="split">
       <div className="preview">
-        <img src="/static/images/preview/kap-light-mode.png" alt="Kap in light mode" className="preview-image" />
+        <img src="/static/images/preview/kap-light-mode@2x.jpg" alt="Kap in light mode" className="preview-image" />
       </div>
       <div className="container">
         <div className="preview__description text">
@@ -172,12 +172,18 @@ const Preview = () => (
           cursor: pointer;
           margin-top: 32px;
           overflow: hidden;
+
+          /* Formula is: (height / width * 100%) */
+          padding-top: calc(2048 / 2880 * 100%);
+          height: 0;
         }
 
         .preview > img {
           width: 100%;
           float: none;
           height: auto;
+          position absolute;
+          top: 0;
         }
 
         .overlay:hover {

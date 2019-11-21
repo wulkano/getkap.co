@@ -6,7 +6,7 @@ const Logo = ({ href, name }) => (
     <img
       key={name}
       src={`/static/images/logos/${name}.png`}
-      srcSet={`/static/images/logos/${name}@2x.png 2x, /static/images/logos/${name}@3x 3x`}
+      srcSet={`/static/images/logos/${name}@2x.png 2x, /static/images/logos/${name}@3x.png 3x`}
       alt={name}
     />
 
@@ -30,7 +30,7 @@ const Logos = () => (
     </div>
 
     <div className="logo-row">
-      <Logo name="sentry" href="https://getsentry.io/" />
+      <Logo name="sentry" href="https://sentry.io/" />
       <Logo name="github" href="https://github.com/" />
       <Logo name="google" href="https://google.com/" />
     </div>
