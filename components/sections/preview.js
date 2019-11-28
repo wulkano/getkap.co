@@ -9,6 +9,7 @@ const Preview = () => (
     <div className="split">
       <div className="preview">
         <img src="/static/images/preview/kap-light-mode@2x.jpg" alt="Kap in light mode" className="preview-image" />
+        <img className="preview__background" src={require('../../static/images/kap-preview-min.jpg?inline')} />
       </div>
       <div className="container">
         <div className="preview__description text">
@@ -37,6 +38,11 @@ const Preview = () => (
         position: relative;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         overflow: hidden;
+      }
+
+      .preview-image {
+        position: absolute;
+        right: 0;
       }
 
       .preview > img {
