@@ -244,6 +244,7 @@ export default class Quotes extends React.Component {
   render() {
     const { columns, showAll } = this.state
 
+    // TODO: hide "Show all" button with CSS additionally to avoid showing on first load.
     const show = showAll || columns > 2
     const quotes = show ? QUOTES : QUOTES.slice(0, 2 * columns)
 

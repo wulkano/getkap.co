@@ -18,6 +18,11 @@ const Logo = ({ href, name }) => (
         width: 64px;
         display: inline-block;
       }
+
+      .logo img {
+        height: 64px;
+        width: 64px;
+      }
     `}</style>
   </a>
 )
