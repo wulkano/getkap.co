@@ -105,7 +105,7 @@ const Hero = () => (
         min-height: 48px;
       }
       .header .button-text {
-        width: 52px; /* fixed size to prevent jumping */
+        width: 54px; /* fixed size to prevent jumping */
         text-align: right;
       }
 
