@@ -30,9 +30,9 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.2-canary.2",
     "eightpoint": "^0.0.1",
-    "next": "^9.1.4",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "next": "^9.2.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-dom-confetti": "^0.0.8",
     "react-ga": "^2.4.1",
     "react-mason": "^1.1.2"
