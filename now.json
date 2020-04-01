@@ -2,11 +2,7 @@
   "version": 2,
   "alias": "getkap",
   "scope": "kap",
-  "builds": [
-    { "src": "package.json", "use": "@now/static-build" }
-  ],
-  "routes": [
-    { "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+", "headers": { "cache-control": "immutable" } },
-    { "src": "/download", "dest": "https://kap-latest-release.now.sh/api" }
+  "redirects": [
+    { "source": "/download", "destination": "https://kap-latest-release.now.sh/api" }
   ]
 }

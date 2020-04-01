@@ -5,8 +5,8 @@ const Logo = ({ href, name }) => (
   <a className="logo" href={href} title={name}>
     <img
       key={name}
-      src={`/static/images/logos/${name}.png`}
-      srcSet={`/static/images/logos/${name}@2x.png 2x, /static/images/logos/${name}@3x.png 3x`}
+      src={require(`../../../public/static/images/logos/${name}.png`)}
+      srcSet={`${require(`../../../public/static/images/logos/${name}@2x.png`)} 2x, ${require(`../../../public/static/images/logos/${name}@3x.png`)} 3x`}
       alt={name}
     />
 

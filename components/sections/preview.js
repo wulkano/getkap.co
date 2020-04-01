@@ -1,14 +1,29 @@
 import React from 'react'
 import Section from './section'
 import screenSizes from '../../lib/screen-sizes'
-import PlayButton from '../../static/images/play.svg'
-import RightArrow from '../../static/images/arrow-right.svg'
+import PlayButton from '../../public/static/images/play.svg'
+import RightArrow from '../../public/static/images/arrow-right.svg'
 
 const Preview = () => (
   <Section>
     <div className="split">
       <div className="preview">
-        <img src="/static/images/preview/kap-light-mode@2x.jpg" alt="Kap in light mode" className="preview-image" />
+        <picture>
+          <source
+            srcSet={`${require('../../public/static/images/preview/kap-light-mode@2x.jpg?webp')} 2x, ${require('../../public/static/images/preview/kap-light-mode.jpg?webp')} 1x`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`${require('../../public/static/images/preview/kap-light-mode@2x.jpg')} 2x, ${require('../../public/static/images/preview/kap-light-mode.jpg')} 1x`}
+            type="image/jpeg"
+          />
+          <img
+            alt="Kap in light mode"
+            className="preview-image"
+            src={require('../../public/static/images/preview/kap-light-mode.jpg')}
+            srcSet={`${require('../../public/static/images/preview/kap-light-mode@2x.jpg')} 2x`}
+          />
+        </picture>
       </div>
       <div className="container">
         <div className="preview__description text">
@@ -39,7 +54,7 @@ const Preview = () => (
         overflow: hidden;
       }
 
-      .preview > img {
+      .preview img {
         float: right;
         width: 960px;
         height: 682px;

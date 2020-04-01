@@ -1,6 +1,6 @@
 import React from 'react'
 import colors from '../../../lib/colors'
-import WulkanoLogo from '../../../static/images/logos/wulkano.svg'
+import WulkanoLogo from '../../../public/static/images/logos/wulkano.svg'
 import ReactGA from 'react-ga'
 
 const WulkanoAndFriends = () => (

@@ -4,8 +4,8 @@ import KapWindow from './kap-window'
 import Info from './info'
 import colors from '../../../lib/colors'
 import screenSizes from '../../../lib/screen-sizes'
-import Logo from '../../../static/images/kap.svg'
-import DownloadIcon from '../../../static/images/download.svg'
+import Logo from '../../../public/static/images/kap.svg'
+import DownloadIcon from '../../../public/static/images/download.svg'
 import ReactGA from 'react-ga'
 
 const Hero = () => (
@@ -77,7 +77,7 @@ const Hero = () => (
         transform: translateX(-50%);
         width: 190vw;
         padding-bottom: 4.5%;
-        background: url(${require('../../../static/images/curve-mobile.svg?inline')}) center bottom;
+        background: url(${require('../../../public/static/images/curve-mobile.svg?inline')}) center bottom;
         background-size: cover;
         margin-bottom: -3px;
       }
