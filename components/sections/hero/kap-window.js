@@ -3,7 +3,14 @@ import screenSizes from '../../../lib/screen-sizes'
 
 const KapWindow = () => (
   <div className="window">
-    <img src={require('../../../public/static/images/app-light.png?inline')} alt="The Kap Window" />
+    <picture>
+      <source
+        srcSet={`${require('../../../public/static/images/Kap@2x.webp')} 2x, ${require('../../../public/static/images/Kap.webp')} 1x`}
+        type="image/webp"
+      />
+      <source srcSet={`${require('../../../public/static/images/app-light.png')} 1x`} type="image/png" />
+      <img src={require('../../../public/static/images/app-light.png')} alt="The Kap Window" />
+    </picture>
     <style jsx>{`
       img {
         max-width: 464px;

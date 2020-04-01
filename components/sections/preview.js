@@ -193,7 +193,7 @@ const Preview = () => (
           height: 0;
         }
 
-        .preview > img {
+        .preview img {
           width: 100%;
           float: none;
           height: auto;
