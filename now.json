@@ -7,6 +7,6 @@
   ],
   "routes": [
     { "src": "/_next/static/(?:[^/]+/pages|chunks|runtime)/.+", "headers": { "cache-control": "immutable" } },
-    { "src": "/download", "dest": "https://github.com/wulkano/kap/releases/download/v3.0.1/Kap-3.0.1.dmg" }
+    { "src": "/download", "dest": "https://kap-latest-release.now.sh/api" }
   ]
 }
