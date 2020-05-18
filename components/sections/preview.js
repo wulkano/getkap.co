@@ -10,25 +10,25 @@ const Preview = () => (
       <div className="preview">
         <picture>
           <source
-            srcSet={`${require('../../public/static/images/preview/kap-light-mode@2x.jpg?webp')} 2x, ${require('../../public/static/images/preview/kap-light-mode.jpg?webp')} 1x`}
+            srcSet={`${require('../../public/static/images/preview/kap-app-preview@3x.jpg?webp')} 3x, ${require('../../public/static/images/preview/kap-app-preview@2x.jpg?webp')} 2x, ${require('../../public/static/images/preview/kap-app-preview.jpg?webp')} 1x`}
             type="image/webp"
           />
           <source
-            srcSet={`${require('../../public/static/images/preview/kap-light-mode@2x.jpg')} 2x, ${require('../../public/static/images/preview/kap-light-mode.jpg')} 1x`}
+            srcSet={`${require('../../public/static/images/preview/kap-app-preview@3x.jpg')} 3x, ${require('../../public/static/images/preview/kap-app-preview@2x.jpg')} 2x, ${require('../../public/static/images/preview/kap-app-preview.jpg')} 1x`}
             type="image/jpeg"
           />
           <img
             alt="Kap in light mode"
             className="preview-image"
-            src={require('../../public/static/images/preview/kap-light-mode.jpg')}
-            srcSet={`${require('../../public/static/images/preview/kap-light-mode@2x.jpg')} 2x`}
+            src={require('../../public/static/images/preview/kap-app-preview.jpg')}
+            srcSet={`${require('../../public/static/images/preview/kap-app-preview@2x.jpg')} 2x, ${require('../../public/static/images/preview/kap-app-preview@3x.jpg')} 3x`}
           />
         </picture>
       </div>
       <div className="container">
         <div className="preview__description text">
           <h3>More quality, less noise</h3>
-          <p>Export as GIF, MP4, WebM or APNG with optional audio, highlight clicks and trimming.</p>
+          <p>Export as GIF, MP4, WebM, or APNG with optional audio, highlight clicks and trimming.</p>
           <a href="https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38">
             <span>How Kap was built</span>
             <RightArrow />
@@ -57,7 +57,7 @@ const Preview = () => (
       .preview img {
         float: right;
         width: 960px;
-        height: 682px;
+        height: 540px;
         border-radius: 4px 4px 4px 4px;
       }
 

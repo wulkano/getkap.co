@@ -1,7 +1,4 @@
 {
-  "version": 2,
-  "alias": "getkap",
-  "scope": "kap",
   "redirects": [
     { "source": "/download", "destination": "https://kap-latest-release.now.sh/api" }
   ]
