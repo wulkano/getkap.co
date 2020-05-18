@@ -30,12 +30,16 @@
   "dependencies": {
     "@zeit/next-css": "^1.0.2-canary.2",
     "eightpoint": "^0.0.1",
-    "next": "^9.2.2",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "imagemin-svgo": "^7.1.0",
+    "next": "^9.3.3",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-dom-confetti": "^0.0.8",
     "react-ga": "^2.4.1",
-    "react-mason": "^1.1.2"
+    "react-mason": "^1.1.2",
+    "webp-loader": "^0.6.0"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^1.1.0",

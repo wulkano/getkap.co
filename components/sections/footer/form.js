@@ -1,7 +1,7 @@
 import React from 'react'
 import Confetti from 'react-dom-confetti'
 import colors from '../../../lib/colors'
-import RightArrow from '../../../static/images/arrow-right-white.svg'
+import RightArrow from '../../../public/static/images/arrow-right-white.svg'
 
 const Input = ({ boom }) => (
   <div className="container">

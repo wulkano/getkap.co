@@ -33,7 +33,7 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" href="/static/favicon/icon-16.png" sizes="16x16" />
           <link rel="icon" type="image/png" href="/static/favicon/icon-128.png" sizes="128x128" />
           <link rel="mask-icon" href="/static/favicon/kap.svg" />
-          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
+          <link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet" />
         </Head>
         <body>
           <Main />
