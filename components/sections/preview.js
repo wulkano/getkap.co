@@ -1,20 +1,34 @@
 import React from 'react'
 import Section from './section'
 import screenSizes from '../../lib/screen-sizes'
-import PlayButton from '../../static/images/play.svg'
-import RightArrow from '../../static/images/arrow-right.svg'
+import PlayButton from '../../public/static/images/play.svg'
+import RightArrow from '../../public/static/images/arrow-right.svg'
 
 const Preview = () => (
   <Section>
     <div className="split">
       <div className="preview">
-        <img src="/static/images/preview/kap-light-mode@2x.jpg" alt="Kap in light mode" className="preview-image" />
-        <img className="preview__background" src={require('../../static/images/kap-preview-min.jpg?inline')} />
+        <picture>
+          <source
+            srcSet={`${require('../../public/static/images/preview/kap-app-preview@3x.jpg?webp')} 3x, ${require('../../public/static/images/preview/kap-app-preview@2x.jpg?webp')} 2x, ${require('../../public/static/images/preview/kap-app-preview.jpg?webp')} 1x`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`${require('../../public/static/images/preview/kap-app-preview@3x.jpg')} 3x, ${require('../../public/static/images/preview/kap-app-preview@2x.jpg')} 2x, ${require('../../public/static/images/preview/kap-app-preview.jpg')} 1x`}
+            type="image/jpeg"
+          />
+          <img
+            alt="Kap in light mode"
+            className="preview-image"
+            src={require('../../public/static/images/preview/kap-app-preview.jpg')}
+            srcSet={`${require('../../public/static/images/preview/kap-app-preview@2x.jpg')} 2x, ${require('../../public/static/images/preview/kap-app-preview@3x.jpg')} 3x`}
+          />
+        </picture>
       </div>
       <div className="container">
         <div className="preview__description text">
           <h3>More quality, less noise</h3>
-          <p>Export as GIF, MP4, WebM or APNG with optional audio, highlight clicks and trimming.</p>
+          <p>Export as GIF, MP4, WebM, or APNG with optional audio, highlight clicks and trimming.</p>
           <a href="https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38">
             <span>How Kap was built</span>
             <RightArrow />
@@ -40,15 +54,19 @@ const Preview = () => (
         overflow: hidden;
       }
 
+<<<<<<< HEAD
       .preview-image {
         position: absolute;
         right: 0;
       }
 
       .preview > img {
+=======
+      .preview img {
+>>>>>>> origin/master
         float: right;
         width: 960px;
-        height: 682px;
+        height: 540px;
         border-radius: 4px 4px 4px 4px;
       }
 
@@ -184,7 +202,7 @@ const Preview = () => (
           height: 0;
         }
 
-        .preview > img {
+        .preview img {
           width: 100%;
           float: none;
           height: auto;

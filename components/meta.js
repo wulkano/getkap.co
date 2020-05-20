@@ -144,44 +144,8 @@ const Meta = ({ children }) => (
         font-size: 1em;
       }
 
-      @font-face {
-        font-family: 'InterUI';
-        font-style: normal;
-        font-weight: 400;
-        font-display: swap; /* or block, swap, fallback, optional */
-        src: url('/static/fonts/interui/Inter-UI-Regular.woff2') format('woff2'),
-          url('/static/fonts/interui/Inter-UI-Regular.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'InterUI';
-        font-style: normal;
-        font-weight: 500;
-        font-display: swap; /* or block, swap, fallback, optional */
-        src: url('/static/fonts/interui/Inter-UI-Medium.woff2') format('woff2'),
-          url('/static/fonts/interui/Inter-UI-Medium.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'InterUI';
-        font-style: normal;
-        font-weight: 700;
-        font-display: swap; /* or block, swap, fallback, optional */
-        src: url('/static/fonts/interui/Inter-UI-Bold.woff2') format('woff2'),
-          url('/static/fonts/interui/Inter-UI-Bold.woff') format('woff');
-      }
-
-      @font-face {
-        font-family: 'InterUI';
-        font-style: normal;
-        font-weight: 900;
-        font-display: swap; /* or block, swap, fallback, optional */
-        src: url('/static/fonts/interui/Inter-UI-Black.woff2') format('woff2'),
-          url('/static/fonts/interui/Inter-UI-Black.woff') format('woff');
-      }
-
       body {
-        font-family: 'InterUI', sans-serif !important; // TODO: how to override eightpoint?
+        font-family: 'Inter', sans-serif !important; // TODO: how to override eightpoint?
         font-size: 1.2rem;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;

@@ -1,12 +1,12 @@
 import React from 'react'
 import screenSizes from '../../../lib/screen-sizes'
 
-const Logo = ({ href, name }) => (
-  <a className="logo" href={href} title={name}>
+const Logo = ({ href, name, alt }) => (
+  <a className="logo" href={href} title={alt}>
     <img
       key={name}
-      src={`/static/images/logos/${name}.png`}
-      srcSet={`/static/images/logos/${name}@2x.png 2x, /static/images/logos/${name}@3x.png 3x`}
+      src={require(`../../../public/static/images/logos/${name}.png`)}
+      srcSet={`${require(`../../../public/static/images/logos/${name}@2x.png`)} 2x, ${require(`../../../public/static/images/logos/${name}@3x.png`)} 3x`}
       alt={name}
     />
 
@@ -30,14 +30,14 @@ const Logo = ({ href, name }) => (
 const Logos = () => (
   <div>
     <div className="logo-row">
-      <Logo name="zeit" href="https://zeit.co/" />
-      <Logo name="circle-ci" href="https://circleci.com/" />
+      <Logo name="vercel" alt="Vercel" href="https://vercel.com/" />
+      <Logo name="circle-ci" alt="Circle CI" href="https://circleci.com/" />
     </div>
 
     <div className="logo-row">
-      <Logo name="sentry" href="https://sentry.io/" />
-      <Logo name="github" href="https://github.com/" />
-      <Logo name="google" href="https://google.com/" />
+      <Logo name="sentry" alt="Sentry" href="https://sentry.io/" />
+      <Logo name="github" alt="GitHub" href="https://github.com/" />
+      <Logo name="google" alt="Google" href="https://google.com/" />
     </div>
 
     <div className="logo-row">
