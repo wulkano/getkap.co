@@ -1,8 +1,6 @@
 # getkap.co <a href="https://circleci.com/gh/wulkano/getkap.co"><img src="https://circleci.com/gh/wulkano/getkap.co.svg?style=shield" alt="Build Status"></a>
 
-Repository for the [Kap] website, built with [next.js](https://github.com/zeit/next.js)
-
-Preview at http://getkap-next.now.sh/
+Repository for the [Kap] website, built with [Next.js](https://github.com/zeit/next.js) and powered by [Vercel](https://vercel.com)
 
 ## Development
 
@@ -18,7 +16,7 @@ The main page is in `./pages/index.js`
 
 Run `npm run dev` to start the website in dev mode.
 
-[kap]: https://getkap.co
+[Kap]: https://getkap.co
 [node.js]: https://nodejs.org
 [fork]: https://help.github.com/articles/fork-a-repo/
 
@@ -29,4 +27,4 @@ Run `npm run dev` to start the website in dev mode.
 
 ## Newsletter
 
-Subscribe [here](http://eepurl.com/ch90_1).
+ [Subscribe for updates](http://eepurl.com/ch90_1).
