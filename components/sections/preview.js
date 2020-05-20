@@ -54,16 +54,7 @@ const Preview = () => (
         overflow: hidden;
       }
 
-<<<<<<< HEAD
-      .preview-image {
-        position: absolute;
-        right: 0;
-      }
-
-      .preview > img {
-=======
       .preview img {
->>>>>>> origin/master
         float: right;
         width: 960px;
         height: 540px;
