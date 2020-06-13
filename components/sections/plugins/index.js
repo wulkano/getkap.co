@@ -23,7 +23,7 @@ const Plugins = () => (
             <Plugin
               title="now"
               color="#FFF"
-              description="Deploy with ZEIT Now&nbsp;&nbsp;&nbsp;"
+              description="Deploy with Vercel Now&nbsp;&nbsp;&nbsp;"
               href="https://github.com/lucaperret/kap-now"
             />
             <Plugin title="streamable" color="#00ffbe" description="Upload to Streamable" href="https://github.com/kevva/kap-streamable" />
