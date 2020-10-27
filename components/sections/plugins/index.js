@@ -21,7 +21,7 @@ const Plugins = () => (
           <div className="list">
             <Plugin title="giphy" color="#ffd500" description="Share GIFs on Giphy" href="https://github.com/wulkano/kap-giphy" />
             <Plugin
-              title="now"
+              title="vercel"
               color="#FFF"
               description="Deploy with Vercel Now&nbsp;&nbsp;&nbsp;"
               href="https://github.com/delianides/kap-vercel"
