@@ -21,10 +21,10 @@ const Plugins = () => (
           <div className="list">
             <Plugin title="giphy" color="#ffd500" description="Share GIFs on Giphy" href="https://github.com/wulkano/kap-giphy" />
             <Plugin
-              title="now"
+              title="vercel"
               color="#FFF"
-              description="Deploy with ZEIT Now&nbsp;&nbsp;&nbsp;"
-              href="https://github.com/lucaperret/kap-now"
+              description="Deploy with Vercel&nbsp;&nbsp;&nbsp;"
+              href="https://github.com/delianides/kap-vercel"
             />
             <Plugin title="streamable" color="#00ffbe" description="Upload to Streamable" href="https://github.com/kevva/kap-streamable" />
           </div>
