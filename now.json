@@ -1,5 +1,8 @@
 {
   "redirects": [
-    { "source": "/download", "destination": "https://kap-latest-release.now.sh/api" }
+    { "source": "/download", "destination": "https://kap-latest-release.now.sh/api" },
+    { "source": "/button/install", "destination": "/static/images/install.png" },
+    { "source": "/deep-link/install/(.*)", "destination": "kap://install-plugin/$1"},
+    { "source": "/deep-link/configure/(.*)", "destination": "kap://configure-plugin/$1"}
   ]
 }
