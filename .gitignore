@@ -8,3 +8,5 @@ node_modules
 out
 dist
 .now
+.vercel
+.DS_Store

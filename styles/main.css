@@ -1,0 +1,205 @@
+:root {
+  --purple: #7247ff;
+  --teal: #00ffbe;
+  --screen-phone: 425px;
+  --screen-tablet: 768px;
+  --screen-laptop: 1020px;
+  --screen-wide: 1440px;
+}
+
+/* Eightpoint reset */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+header,
+footer,
+section,
+article,
+nav,
+canvas,
+aside,
+figcaption,
+figure,
+hgroup,
+menuitem,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Oxygen-Sans, 'Fira Sans', 'Droid Sans', Ubuntu,
+    Cantarell, 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+pre,
+code,
+kbd,
+samp,
+tt {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+}
+
+body {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 1.2rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--purple);
+  color: white;
+}
+
+.grid {
+  max-width: 100%;
+  width: 1168px;
+}
+
+/**
+  * Typography
+**/
+h1 {
+  font-size: 4.8rem;
+  line-height: 1.333em;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+  line-height: 1.5em;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 1.333em;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5em;
+}
+
+p.paragraph--medium {
+  font-weight: 500;
+}
+
+@media (max-width: 425px) {
+  h1 {
+    font-size: 3.2rem;
+    line-height: 1.5em;
+  }
+}
+
+/* Links */
+a {
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1.5em;
+  color: var(--purple);
+}

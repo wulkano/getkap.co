@@ -1,6 +1,5 @@
-import React from 'react'
 import Section from '../section'
-import Grid, { Column } from '../../grid'
+import Grid, { Column } from '../../Grid'
 import WulkanoAndFriends from './wulkano-and-friends'
 import Links from './links'
 import Form from './form'
