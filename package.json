@@ -28,7 +28,6 @@
   },
   "homepage": "https://getkap.co",
   "dependencies": {
-    "@zeit/next-css": "^1.0.2-canary.2",
     "eightpoint": "^0.0.1",
     "imagemin-mozjpeg": "^8.0.0",
     "imagemin-optipng": "^7.1.0",
@@ -48,7 +47,6 @@
     "lint-staged": "^7.0.2",
     "next-compose-plugins": "^2.2.0",
     "next-optimized-images": "^2.5.3",
-    "now": "^10.2.2",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.11.1"
   }
