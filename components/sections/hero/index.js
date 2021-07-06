@@ -1,4 +1,3 @@
-import React from 'react'
 import Button from '../../Button'
 import KapWindow from './kap-window'
 import Info from './info'

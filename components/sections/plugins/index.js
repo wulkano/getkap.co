@@ -1,4 +1,3 @@
-import React from 'react'
 import Section from '../section'
 import Plugin from './plugin'
 import styles from './plugins.module.css'
