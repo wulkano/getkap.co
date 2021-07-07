@@ -1,0 +1,10 @@
+.fill {
+  width: 100vw;
+  height: 100vh;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

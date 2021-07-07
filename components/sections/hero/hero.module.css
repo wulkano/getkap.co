@@ -1,0 +1,176 @@
+@keyframes bg {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.hero {
+  flex: 1;
+  min-height: 48rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 0 32px;
+  background-image: radial-gradient(farthest-corner at -0% 100%, var(--purple) 30%, var(--teal) 95%);
+  background-size: 150% 150%;
+  animation: bg 12s ease-in infinite alternate;
+  will-change: transform;
+  transform-style: preserve-3d;
+}
+
+.curveContainer {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+}
+
+.curve {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 190vw;
+  padding-bottom: 4.5%;
+  background: url("/static/images/curve-mobile.svg") center bottom;
+  background-size: cover;
+  margin-bottom: -3px;
+}
+
+.heroContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  text-align: center;
+  width: 48rem;
+  max-width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 64px;
+  z-index: 100;
+  min-height: 48px;
+}
+.header .buttonText {
+  width: 54px; /* fixed size to prevent jumping */
+  text-align: right;
+}
+
+@media (max-width: 425px) {
+  .heroContent {
+    padding: 48px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent h2 {
+    max-width: 288px;
+    line-height: 1.2;
+    font-size: 2rem;
+  }
+}
+
+
+/* Info Styles */
+.info {
+  max-width: 390px;
+  width: 100%;
+  margin: 0 32px;
+  margin-top: 32px;
+}
+.info a {
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  color: #ffffff;
+  float: left;
+}
+.info a:hover {
+  text-decoration: underline;
+}
+.info span {
+  opacity: 0.8;
+  font-size: 12px;
+  font-weight: normal;
+  float: right;
+  clearfix: both;
+}
+
+@media (max-width: 425px) {
+  .info {
+    display: block;
+    margin: 0 16px;
+    width: 100vw;
+    margin-top: 32px;
+  }
+  .info span {
+    padding-top: 8px;
+  }
+  .info a,
+  .info span {
+    display: block;
+    float: none;
+  }
+}
+
+
+/* Kap Window Styles */
+.window img {
+  max-width: 464px;
+  height: auto;
+  opacity: 1;
+  user-select: none;
+  user-drag: none;
+  width: 100%;
+}
+
+.window {
+  z-index: 100;
+  max-width: 464px;
+  max-height: 66px;
+  width: 100%;
+  height: 66px;
+  box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  margin: 0 32px;
+  margin-bottom: -32px;
+}
+
+@media (max-width: 768px) {
+  .window {
+    height: auto;
+  }
+}
+@media (max-width: 425px) {
+  .window,
+  .window img {
+    width: 100% !important;
+    height: auto;
+  }
+  .window {
+    margin-bottom: -12px;
+    height: auto;
+  }
+}

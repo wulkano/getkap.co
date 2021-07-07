@@ -1,92 +1,16 @@
 import React from 'react'
-import colors from '../../../lib/colors'
-import screenSizes from '../../../lib/screen-sizes'
+import styles from './community.module.css'
 
 const Quote = ({ handle, name, text }) => (
-  <div className="item">
-    <div className="card">
+  <div className={styles.item}>
+    <div className={styles.card}>
       <p>{text}</p>
-      <div className="quote-info">
-        <a href={`https://twitter.com/${handle}`} className="handle">
+      <div className={styles.quoteInfo}>
+        <a href={`https://twitter.com/${handle}`} className={styles.handle}>
           {handle}
         </a>
       </div>
     </div>
-
-    <style jsx>{`
-      .card {
-        max-width: 320px;
-        border-radius: 4px;
-        background-color: #f9f9f9;
-        padding: 32px;
-        border-radius: 4px;
-        margin-bottom: 32px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-
-      @media only screen and (max-width: 1020px) {
-        .item {
-          width: 100%;
-          flex: 1;
-          padding: 0 8px;
-        }
-
-        .card {
-          flex: 1;
-          margin-bottom: 16px;
-        }
-      }
-
-      @media only screen and (max-width: 640px) {
-        .item {
-          width: 100%;
-          flex: 1;
-          padding: 0 16px;
-        }
-
-        .card {
-          max-width: 100%;
-          flex: 1;
-          margin-bottom: 16px;
-        }
-      }
-
-      p {
-        color: #000000;
-        line-height: 1.43;
-        font-size: 14px;
-        font-weight: normal;
-        margin-bottom: 16px;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      .quote-info {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-
-      .name {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.43;
-        color: #000000;
-      }
-
-      .handle {
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 1.43;
-        color: #666;
-        margin-left: auto;
-      }
-    `}</style>
   </div>
 )
 
@@ -165,9 +89,9 @@ const QUOTES = [
 ]
 
 const Columns = ({ columns, quotes }) => (
-  <div style={{ display: 'flex' }} className="columns">
+  <div style={{ display: 'flex' }} className={styles.columns}>
     {Array.apply(null, { length: columns }).map((_, index) => (
-      <div className="column" key={`column-${index}`}>
+      <div className={styles.column} key={`column-${index}`}>
         {quotes
           .filter((_, i) => i % columns === index)
           .map(quote => (
@@ -175,53 +99,14 @@ const Columns = ({ columns, quotes }) => (
           ))}
       </div>
     ))}
-    <style jsx>{`
-      @media only screen and (min-width: 1020px) {
-        .column {
-          margin: 0 16px;
-        }
-      }
-      @media only screen and (max-width: 1020px) {
-        .column {
-          margin: 0 0px;
-        }
-        .columns {
-          margin: 0 8px;
-        }
-      }
-    `}</style>
   </div>
 )
 
 const ShowAll = ({ onClick }) => (
-  <div>
-    <a onClick={onClick} title="Show all quotes">
+  <div className={styles.showAll}>
+    <a className={styles.showAllLink} onClick={onClick} title="Show all quotes">
       Show all
     </a>
-    <style jsx>{`
-      div {
-        margin: 16px;
-      }
-      a {
-        text-transform: uppercase;
-        color: white;
-        width: 100%;
-
-        margin: 16px 0;
-        text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: ${colors.purple};
-        padding: 16px;
-        border: solid 2px #f1f1f1;
-        font-size: 12px;
-        font-weight: bold;
-
-        border-radius: 4px;
-        height: 48px;
-      }
-    `}</style>
   </div>
 )
 
@@ -249,18 +134,9 @@ export default class Quotes extends React.Component {
     const quotes = show ? QUOTES : QUOTES.slice(0, 2 * columns)
 
     return (
-      <div className="grid">
+      <div className={styles.grid}>
         <Columns quotes={quotes} columns={columns} />
         {!show && <ShowAll onClick={() => this.setState({ showAll: true })} />}
-        <style jsx>{`
-          .grid {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-          }
-        `}</style>
       </div>
     )
   }

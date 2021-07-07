@@ -1,9 +1,8 @@
-import React from 'react'
-import colors from '../../../lib/colors'
 import ReactGA from 'react-ga'
+import styles from './footer.module.css'
 
 const Links = () => (
-  <ul>
+  <ul className={styles.links}>
     <li>
       <a target="_blank" rel="noopener" onClick={() => ReactGA.pageview('/download')} href="/download" download>
         Download
@@ -24,26 +23,6 @@ const Links = () => (
         License
       </a>
     </li>
-    <style jsx>{`
-      a {
-        width: 74px;
-        height: 24px;
-        font-size: 16px;
-        font-weight: normal;
-        line-height: 1.5;
-        letter-spacing: normal;
-        text-align: left;
-        color: ${colors.purple};
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      li {
-        margin-bottom: 12px;
-      }
-    `}</style>
   </ul>
 )
 
