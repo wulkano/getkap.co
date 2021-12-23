@@ -4,7 +4,7 @@ import WulkanoAndFriends from './wulkano-and-friends'
 import Links from './links'
 import Form from './form'
 
-export default () => (
+const Footer = () => (
   <Section>
     <Grid>
       <Column>
@@ -19,3 +19,5 @@ export default () => (
     </Grid>
   </Section>
 )
+
+export default Footer

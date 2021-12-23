@@ -7,7 +7,7 @@ import Plugins from '../components/sections/plugins'
 import Community from '../components/sections/community'
 import Footer from '../components/sections/footer'
 
-export default () => (
+const Index = () => (
   <Meta>
     <Hero />
     <Preview />
@@ -16,3 +16,5 @@ export default () => (
     <Footer />
   </Meta>
 )
+
+export default Index
