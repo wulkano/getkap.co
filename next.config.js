@@ -3,7 +3,7 @@ module.exports = {
     return [
       {
         source: '/download',
-        destination: 'https://kap-latest-release.now.sh/api',
+        destination: '/api/download',
         permanent: true,
       },
       {
