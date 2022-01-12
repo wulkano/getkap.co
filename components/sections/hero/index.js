@@ -11,7 +11,7 @@ const Hero = () => (
     <header className={`${styles.header} grid`}>
       <Logo />
       {/* Download Button */}
-      <Button theme="light" onClick={() => ReactGA.pageview('/download')} href="/download" download>
+      <Button theme="light" onClick={() => ReactGA.pageview('/download')} href="/api/download" download>
         <DownloadIcon />
         <span className={styles.buttonText}>Get kap</span>
       </Button>
