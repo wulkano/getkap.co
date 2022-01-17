@@ -4,8 +4,13 @@ import styles from './footer.module.css'
 const Links = () => (
   <ul className={styles.links}>
     <li>
-      <a target="_blank" rel="noopener" onClick={() => ReactGA.pageview('/download')} href="/download" download>
-        Download
+      <a target="_blank" rel="noopener" onClick={() => ReactGA.pageview('/download/arm64')} href="/download/arm64" download>
+        Download for Apple (M1)
+      </a>
+    </li>
+    <li>
+      <a target="_blank" rel="noopener" onClick={() => ReactGA.pageview('/download/x64')} href="/download/x64" download>
+        Download for Intel
       </a>
     </li>
     <li>

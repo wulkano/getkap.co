@@ -12,6 +12,7 @@
   font-size: 1.2rem;
   transition: transform 0.12s ease-in-out;
   z-index: 1;
+  cursor: pointer;
 }
 
 .button :global(img:first-child),
@@ -19,7 +20,13 @@
   margin-right: 12px;
 }
 
-.button:hover {
+.button :global(img:last-child),
+.button :global(svg:last-child) {
+  margin-left: 8px;
+}
+
+.button:hover,
+.button[aria-expanded="true"] {
   transform: scale(1.12);
 }
 
