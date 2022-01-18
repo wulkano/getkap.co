@@ -12,6 +12,39 @@
   }
 }
 
+.popoverContent {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+}
+
+.popoverContent li {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  height: 48px;
+}
+
+.popoverContent li a {
+  padding: 4px 8px;
+  flex: 1;
+  border-radius: 2px;
+}
+
+.popoverContent li a:hover {
+  background: var(--purple);
+  color: #fff;
+}
+
+.popoverContent li + li {
+  border-top: 1px solid #f1f1f1
+}
+
+.popoverArrow {
+  fill: #fff;
+}
+
 .hero {
   flex: 1;
   min-height: 48rem;
@@ -63,6 +96,10 @@
   max-width: 100%;
 }
 
+.downloadButton {
+  padding-right: 12px;
+}
+
 .header {
   display: flex;
   flex-direction: row;
@@ -71,7 +108,8 @@
   z-index: 100;
   min-height: 48px;
 }
-.header .buttonText {
+.header .buttonText,
+.header .buttonArchText {
   width: 54px; /* fixed size to prevent jumping */
   text-align: right;
 }
