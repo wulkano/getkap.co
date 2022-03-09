@@ -36,7 +36,7 @@ const Hero = () => (
                 href="/api/download/x64"
                 download
               >
-                Download for Intel
+                Download for Apple (Intel)
               </a>
             </li>
           </ul>

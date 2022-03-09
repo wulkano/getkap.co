@@ -10,7 +10,7 @@ const Links = () => (
     </li>
     <li>
       <a target="_blank" rel="noopener" onClick={() => ReactGA.pageview('/download/x64')} href="/api/download/x64" download>
-        Download for Intel
+        Download for Apple (Intel)
       </a>
     </li>
     <li>
