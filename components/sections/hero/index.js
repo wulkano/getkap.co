@@ -45,8 +45,8 @@ const Hero = () => (
     </header>
 
     <div className={styles.heroContent}>
-      <h1>Capture your screen</h1>
-      <h3>An open-source screen recorder built with web technology.</h3>
+      <h1>👋</h1>
+      <h3>Hallo!</h3>
       <Info />
     </div>
     <KapWindow />
