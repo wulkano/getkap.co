@@ -1,8 +1,4 @@
 import Head from 'next/head'
-import ReactGA from 'react-ga'
-
-// Google Analytics
-ReactGA.initialize('UA-84705099-3')
 
 const Meta = ({ children }) => (
   <>
