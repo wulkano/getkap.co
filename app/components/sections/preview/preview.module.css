@@ -25,6 +25,12 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.arrow {
+  color: #7146fe;
+  height: 24px;
+  width: 24px;
+}
+
 .overlay {
   width: 100%;
   height: 100%;

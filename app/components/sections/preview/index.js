@@ -1,7 +1,7 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import Section from '../section'
-import RightArrow from '../../../public/static/images/arrow-right.svg'
-import AppPreviewImage from '../../../public/static/images/preview/kap-app-preview.png'
+import RightArrow from '../../svg/arrow-right'
+import AppPreviewImage from '@/public/static/images/preview/kap-app-preview.png'
 import styles from './preview.module.css'
 
 const Preview = () => (
@@ -24,7 +24,9 @@ const Preview = () => (
           <p>Export as GIF, MP4, WebM, or APNG with optional audio, highlight clicks and trimming.</p>
           <a href="https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38">
             <span>How Kap was built</span>
-            <RightArrow />
+            <i className={styles.arrow}>
+              <RightArrow />
+            </i>
           </a>
         </div>
       </div>

@@ -73,8 +73,7 @@ const QUOTES = [
   {
     handle: '@bitandbang',
     name: 'Tierney Cyren',
-    text:
-      'I use Kap daily for GIF capture, including technical demo GIFs I create for the @NodeSource blog. Highly recommend you gif it a shot! 🙌',
+    text: 'I use Kap daily for GIF capture, including technical demo GIFs I create for the @NodeSource blog. Highly recommend you gif it a shot! 🙌',
   },
   {
     handle: '@stephenmeszaros',
@@ -94,7 +93,7 @@ const Columns = ({ columns, quotes }) => (
       <div className={styles.column} key={`column-${index}`}>
         {quotes
           .filter((_, i) => i % columns === index)
-          .map(quote => (
+          .map((quote) => (
             <Quote key={quote.handle} {...quote} />
           ))}
       </div>
@@ -115,7 +114,7 @@ export default class Quotes extends React.Component {
 
   componentDidMount() {
     const screenSizeBreaks = ['320', '640', '1020', '1400']
-    const matchers = screenSizeBreaks.map(size => window.matchMedia(`(min-width: ${size}px)`))
+    const matchers = screenSizeBreaks.map((size) => window.matchMedia(`(min-width: ${size}px)`))
 
     const setColumns = () =>
       this.setState({
@@ -123,7 +122,7 @@ export default class Quotes extends React.Component {
       })
 
     setColumns()
-    matchers.forEach(matcher => matcher.addListener(setColumns))
+    matchers.forEach((matcher) => matcher.addListener(setColumns))
   }
 
   render() {

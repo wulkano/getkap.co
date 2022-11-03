@@ -61,6 +61,11 @@
   transform-style: preserve-3d;
 }
 
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
 .curveContainer {
   overflow: hidden;
   position: absolute;
