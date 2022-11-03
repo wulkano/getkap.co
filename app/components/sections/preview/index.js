@@ -24,7 +24,7 @@ const Preview = () => (
           <p>Export as GIF, MP4, WebM, or APNG with optional audio, highlight clicks and trimming.</p>
           <a href="https://medium.com/wulkano-friends/from-idea-to-product-and-beyond-a12850403c38">
             <span>How Kap was built</span>
-            <i class={styles.arrow}>
+            <i className={styles.arrow}>
               <RightArrow />
             </i>
           </a>
