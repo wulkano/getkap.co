@@ -1,9 +1,9 @@
-import WulkanoLogo from '../../../public/static/images/logos/wulkano.svg'
+import WulkanoLogo from '../../svg/wulkano-logo'
 import styles from './footer.module.css'
 
 const WulkanoAndFriends = () => (
   <div className={styles.container}>
-    <a title="Wulkano" href="https://wulkano.com" target="_blank" rel="noopener">
+    <a title="Wulkano" href="https://wulkano.com" target="_blank" rel="noopener" className={styles.logo}>
       <WulkanoLogo />
     </a>
 

@@ -1,5 +1,5 @@
-import Image from 'next/image'
-import kapWindowImage from '../../../public/static/images/app-light.png'
+import Image from 'next/legacy/image'
+import kapWindowImage from '@/public/static/images/app-light.png'
 import styles from './hero.module.css'
 
 const KapWindow = () => (

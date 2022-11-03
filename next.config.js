@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   experimental: {
+    swcMinify: true,
     appDir: true,
   },
   async redirects() {

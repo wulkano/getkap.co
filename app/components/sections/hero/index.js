@@ -1,16 +1,17 @@
 import * as Popover from '@radix-ui/react-popover'
-import Button from '../../Button'
 import KapWindow from './kap-window'
 import Info from './info'
-import Logo from '../../../public/static/images/kap.svg'
-import ExpandMoreIcon from '../../../public/static/images/expand-more.svg'
+import Logo from '../../svg/logo'
+import ExpandMoreIcon from '../../svg/expand-more'
 import styles from './hero.module.css'
 import buttonStyles from '../../Button/Button.module.css'
 
 const Hero = () => (
   <section className={styles.hero}>
     <header className={`${styles.header} grid`}>
-      <Logo />
+      <div className={styles.logo}>
+        <Logo />
+      </div>
       {/* Download Button */}
       <Popover.Root>
         <Popover.Trigger className={`${buttonStyles.button} ${buttonStyles.light} ${styles.downloadButton}`}>

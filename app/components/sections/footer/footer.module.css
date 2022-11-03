@@ -68,12 +68,24 @@
   margin-bottom: 12px;
 }
 
+.arrow {
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
 /* Friends Styling */
 .container {
   display: flex;
   align-items: center;
   width: 152px;
   margin-top: -1.6rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
 }
 
 .friends {

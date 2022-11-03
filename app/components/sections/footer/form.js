@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Confetti from 'react-dom-confetti'
-import RightArrow from '../../../public/static/images/arrow-right-white.svg'
+import RightArrow from '../../svg/arrow-right'
 import styles from './footer.module.css'
 
 function Input({ boom }) {
@@ -8,7 +8,9 @@ function Input({ boom }) {
     <div className={styles.inputContainer}>
       <input type="email" id="EMAIL" name="EMAIL" placeholder="Email address" />
       <button type="submit" aria-label="Submit">
-        <RightArrow />
+        <i className={styles.arrow}>
+          <RightArrow />
+        </i>
         <Confetti
           active={boom}
           config={{

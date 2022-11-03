@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import styles from './community.module.css'
 
 const Logo = ({ href, name, alt }) => (
