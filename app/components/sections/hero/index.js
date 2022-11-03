@@ -18,20 +18,22 @@ const Hero = () => (
           <span className={styles.buttonText}>Get kap</span>
           <ExpandMoreIcon />
         </Popover.Trigger>
-        <Popover.Content className={styles.popoverContent} sideOffset={5} align="end">
-          <ul>
-            <li>
-              <a href="/api/download/arm64" download>
-                Download for Apple (M1)
-              </a>
-            </li>
-            <li>
-              <a href="/api/download/x64" download>
-                Download for Apple (Intel)
-              </a>
-            </li>
-          </ul>
-        </Popover.Content>
+        <Popover.Portal>
+          <Popover.Content className={styles.popoverContent} sideOffset={5} align="end">
+            <ul>
+              <li>
+                <a href="/api/download/arm64" download>
+                  Download for Apple (M1)
+                </a>
+              </li>
+              <li>
+                <a href="/api/download/x64" download>
+                  Download for Apple (Intel)
+                </a>
+              </li>
+            </ul>
+          </Popover.Content>
+        </Popover.Portal>
       </Popover.Root>
     </header>
 
