@@ -43,8 +43,8 @@
     "@types/react": "^17.0.38",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
-    "postcss-preset-env": "^7.1.0",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.4"
+    "postcss-preset-env": "^9.3.0",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3"
   }
 }
