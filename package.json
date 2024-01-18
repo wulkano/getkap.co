@@ -2,6 +2,7 @@
   "name": "getkap.co",
   "version": "2.0.0",
   "description": "The source for getkap.co",
+  "type": "module",
   "main": " ",
   "scripts": {
     "dev": "next",
@@ -30,7 +31,7 @@
     "@vercel/analytics": "^1.1.2",
     "eightpoint": "^0.0.1",
     "eslint-config-next": "^14.0.4",
-    "got": "^12.0.1",
+    "got": "^14.0.0",
     "next": "^14.0.4",
     "prop-types": "^15.8.0",
     "react": "^18.2.0",

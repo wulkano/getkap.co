@@ -1,5 +1,5 @@
 import './global.css'
-import Analytics from './components/analytics';
+import Analytics from './components/analytics.jsx';
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ["latin"] });
