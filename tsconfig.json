@@ -20,13 +20,16 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@/public/*": ["public/*"],
+      "@/public/*": [
+        "public/*"
+      ]
     },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",

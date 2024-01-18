@@ -2,7 +2,6 @@
 module.exports = {
   experimental: {
     swcMinify: true,
-    appDir: true,
   },
   async redirects() {
     return [
