@@ -42,7 +42,7 @@
   "devDependencies": {
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
-    "husky": "^8.0.3",
+    "husky": "^9.0.6",
     "lint-staged": "^15.2.0",
     "postcss-preset-env": "^9.3.0",
     "prettier": "^3.2.4",
