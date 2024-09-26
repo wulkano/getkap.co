@@ -1,6 +1,9 @@
 # getkap.co (Kap Website)
 
-Repository for the [Kap] website, built with [Next.js](https://github.com/zeit/next.js) and powered by [Vercel](https://vercel.com)
+Repository for the [Kap] website, built with [Next.js](https://github.com/zeit/next.js) and powered by [Vercel](https://vercel.com).
+
+## Introduction
+Kap is a free and open-source screen recording application designed for macOS. This repository contains the source code for the official Kap website, which showcases the features of the app, provides download links, and offers support and resources for users and contributors. The website is built using Next.js and powered by Vercel.
 
 ## Table of Contents
 1. [Development](#development)
@@ -9,13 +12,15 @@ Repository for the [Kap] website, built with [Next.js](https://github.com/zeit/n
 2. [Related Repositories](#related-repositories)
 3. [Newsletter](#newsletter)
 4. [FAQ](#faq)
+5. [How to Get Help](#how-to-get-help)
+6. [License](#license)
 
 ## Development
 ### Requirements
 
 1.  Have [node.js] installed
 2.  [Fork] and clone the repository to your machine
-3.  `yarn` or `npm install` to install the relevant node packages
+3.  Run `yarn` or `npm install` to install the relevant node packages
 
 ### Making changes
 
@@ -50,3 +55,16 @@ The Kap website is built using [Next.js](https://nextjs.org/) and powered by [Ve
 
 ### 5. Where can I find the code for the Kap app itself?
 You can find the code for the Kap screen recording app in [this repository](https://github.com/wulkano/kap).
+
+## How to Get Help
+If you run into any issues or have questions, there are several ways to get help:
+- Open a [GitHub Issue](https://github.com/wulkano/kap/issues).
+- Visit our [community forum](https://getkap.co/community) for discussion and support.
+- Check out the official [Kap Documentation](https://getkap.co/docs).
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/wulkano/kap/blob/main/LICENSE) file for details.
+
+[Kap]: https://getkap.co
+[node.js]: https://nodejs.org
+[fork]: https://help.github.com/articles/fork-a-repo/
