@@ -1,4 +1,5 @@
-import React from 'react'
+'use client'
+
 import styles from './community.module.css'
 
 const Quote = ({ handle, name, text }) => (
@@ -109,34 +110,36 @@ const ShowAll = ({ onClick }) => (
   </div>
 )
 
-export default class Quotes extends React.Component {
-  state = { columns: 0, showAll: null }
+import React, { useEffect, useState } from 'react'
 
-  componentDidMount() {
+export default function Quotes() {
+  const [columns, setColumns] = useState(0)
+  const [showAll, setShowAll] = useState(null)
+
+  useEffect(() => {
     const screenSizeBreaks = ['320', '640', '1020', '1400']
     const matchers = screenSizeBreaks.map((size) => window.matchMedia(`(min-width: ${size}px)`))
 
-    const setColumns = () =>
-      this.setState({
-        columns: matchers.reduce((columns, m, i) => (columns = m.matches ? i + 1 : columns), 1),
-      })
+    const updateColumns = () => {
+      setColumns(matchers.reduce((cols, m, i) => (m.matches ? i + 1 : cols), 1))
+    }
 
-    setColumns()
-    matchers.forEach((matcher) => matcher.addListener(setColumns))
-  }
+    updateColumns()
+    matchers.forEach((matcher) => matcher.addListener(updateColumns))
 
-  render() {
-    const { columns, showAll } = this.state
+    return () => {
+      matchers.forEach((matcher) => matcher.removeListener(updateColumns))
+    }
+  }, [])
 
-    // TODO: hide "Show all" button with CSS additionally to avoid showing on first load.
-    const show = showAll || columns > 2
-    const quotes = show ? QUOTES : QUOTES.slice(0, 2 * columns)
+  // TODO: hide "Show all" button with CSS additionally to avoid showing on first load.
+  const show = showAll || columns > 2
+  const quotes = show ? QUOTES : QUOTES.slice(0, 2 * columns)
 
-    return (
-      <div className={styles.grid}>
-        <Columns quotes={quotes} columns={columns} />
-        {!show && <ShowAll onClick={() => this.setState({ showAll: true })} />}
-      </div>
-    )
-  }
+  return (
+    <div className={styles.grid}>
+      <Columns quotes={quotes} columns={columns} />
+      {!show && <ShowAll onClick={() => setShowAll(true)} />}
+    </div>
+  )
 }
