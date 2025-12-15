@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 import Confetti from 'react-dom-confetti'
 import RightArrow from '../../svg/arrow-right'

@@ -5,11 +5,11 @@
   "type": "module",
   "main": " ",
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
-    "start": "NODE_ENV=production next start",
-    "test": "echo \"No test specified\" && exit 0",
-    "precommit": "lint-staged"
+    "start": "next start",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
   "lint-staged": {
     "*.js": [
@@ -30,23 +30,23 @@
     "@radix-ui/react-popover": "^1.0.7",
     "@vercel/analytics": "^1.1.2",
     "eightpoint": "^0.0.1",
-    "eslint-config-next": "^14.0.4",
+    "eslint-config-next": "16.0.10",
     "got": "^14.0.0",
-    "next": "14.2.35",
+    "next": "16.0.10",
     "prop-types": "^15.8.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "react-dom-confetti": "^0.2.0",
     "react-ga": "^3.3.0"
   },
   "devDependencies": {
-    "@types/node": "^20.11.5",
-    "@types/react": "^18.2.48",
-    "husky": "^9.0.6",
+    "@types/node": "^22.13",
+    "@types/react": "19.2.7",
+    "eslint": "^9.39.2",
     "lint-staged": "^15.2.0",
     "postcss-preset-env": "^9.3.0",
     "prettier": "^3.2.4",
-    "typescript": "^5.3.3"
+    "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@10.25.0+sha512.5e82639027af37cf832061bcc6d639c219634488e0f2baebe785028a793de7b525ffcd3f7ff574f5e9860654e098fe852ba8ac5dd5cefe1767d23a020a92f501"
 }
